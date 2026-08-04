@@ -33,7 +33,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: linux-amd64
-          path: dist/ERMerchantEditor-linux-amd64.tar.gz
+          path: dist/ER-Merchant-Editor-linux-amd64-*.zip
           if-no-files-found: error
 
   windows:
@@ -51,13 +51,11 @@ jobs:
           go test ./...
           go vet ./...
       - name: Build Windows release
-        run: scripts/build-windows.sh
+        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build-windows.sh
       - uses: actions/upload-artifact@v4
         with:
           name: windows-amd64
-          path: |
-            dist/windows-amd64/ERMerchantEditor.exe
-            dist/windows-amd64/shopwrite.exe
+          path: dist/ER-Merchant-Editor-windows-amd64-*.zip
           if-no-files-found: error
 
   publish:

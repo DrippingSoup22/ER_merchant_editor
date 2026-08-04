@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Fast post-edit sanity check: `go vet` + `go test`, native toolchain, NO
-# build artifacts. This is the iteration-loop command -- scripts/build.sh,
-# writes a 90MB exe + 4 CLI targets) is only for producing the shippable
-# binary, not for checking that an edit compiles.
+# build artifacts. This is the iteration-loop command; scripts/build.sh is
+# only for producing shippable archives, not for checking that an edit compiles.
 #
 # SCOPE IT to the package(s) you touched -- fixture/editor tests are slow
 # (AES-decrypt the fixture save; editor needs cgo/X11), so passing a package

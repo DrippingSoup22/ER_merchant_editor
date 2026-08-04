@@ -8,14 +8,14 @@ are Windows and Linux; macOS packaging is retained only as future groundwork.
 Build output is ignored under `dist/`:
 
 - `scripts/build-windows.sh` produces
-  `dist/windows-amd64/ERMerchantEditor.exe` and `shopwrite.exe`.
+  `dist/ER-Merchant-Editor-windows-<arch>-<version>.zip`.
 - `scripts/build-linux.sh` produces
-  `dist/ERMerchantEditor-linux-<arch>.tar.gz`.
+  `dist/ER-Merchant-Editor-linux-<arch>-<version>.zip`.
 - `scripts/build.sh` is a developer convenience dispatcher for the current
   host. Release CI calls each native target script directly.
 
-All runtime catalog data and item icons are embedded. The CLI imports only
-`internal/assets/data`, so it does not carry the large icon collection.
+Each public archive contains the desktop application, not the diagnostic
+`shopwrite` CLI. All runtime catalog data and item icons are embedded.
 
 ## Windows
 
@@ -51,7 +51,7 @@ common 1.0 scale report and match the Windows visual baseline. Native Linux
 uses its compositor's scale unchanged. `ER_EDITOR_UI_SCALE` can override the
 multiplier with a value between `0.5` and `3`.
 
-The initial artifact is a tarball with the binary and desktop metadata.
+The release artifact is a ZIP with the binary and desktop metadata.
 AppImage or Flatpak can be added under `packaging/linux` without changing the
 Go package layout.
 

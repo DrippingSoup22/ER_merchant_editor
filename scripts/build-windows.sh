@@ -2,14 +2,22 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-out="dist/windows-amd64"
-mkdir -p "$out"
+arch="amd64"
+version="${VERSION:-0.0.0}"
+version="${version#v}"
+if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  version="0.0.0"
+fi
+package="ER-Merchant-Editor-windows-$arch-$version"
+out="dist/windows-$arch"
+bundle="$out/$package"
+archive="dist/$package.zip"
+mkdir -p "$bundle"
 
-echo "building ER Merchant Editor for windows/amd64"
-CGO_ENABLED=0 GOOS=windows GOARCH=amd64 \
+echo "building ER Merchant Editor for windows/$arch"
+CGO_ENABLED=0 GOOS=windows GOARCH="$arch" \
   go build -trimpath -ldflags "-H windowsgui -s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
-  -o "$out/ERMerchantEditor.exe" ./cmd/ermerchanteditor
+  -o "$bundle/ERMerchantEditor.exe" ./cmd/ermerchanteditor
 
-CGO_ENABLED=0 GOOS=windows GOARCH=amd64 \
-  go build -trimpath -ldflags "-s -w" \
-  -o "$out/shopwrite.exe" ./cmd/shopwrite
+rm -f "$archive"
+go run ./tools/packagezip -root "$bundle" -out "$archive"

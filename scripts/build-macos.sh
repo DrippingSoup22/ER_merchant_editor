@@ -24,8 +24,6 @@ echo "building ER Merchant Editor for darwin/$arch"
 CGO_ENABLED=1 go build -trimpath \
   -ldflags "-s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
   -o "$contents/MacOS/ERMerchantEditor" ./cmd/ermerchanteditor
-CGO_ENABLED=0 go build -trimpath -ldflags "-s -w" \
-  -o "$contents/MacOS/shopwrite" ./cmd/shopwrite
 
 sed "s/@VERSION@/$version/g" packaging/macos/Info.plist > "$contents/Info.plist"
 iconset="$out/ERMerchantEditor.iconset"

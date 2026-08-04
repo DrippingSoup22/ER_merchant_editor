@@ -8,18 +8,24 @@ if [[ "$(go env GOOS)" != linux ]]; then
 fi
 
 arch="$(go env GOARCH)"
+version="${VERSION:-0.0.0}"
+version="${version#v}"
+if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  version="0.0.0"
+fi
+package="ER-Merchant-Editor-linux-$arch-$version"
 out="dist/linux-$arch"
-bundle="$out/ERMerchantEditor-linux-$arch"
+bundle="$out/$package"
+archive="dist/$package.zip"
 mkdir -p "$bundle"
 
 echo "building ER Merchant Editor for linux/$arch"
 CGO_ENABLED=1 go build -trimpath \
   -ldflags "-s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
   -o "$bundle/ERMerchantEditor" ./cmd/ermerchanteditor
-CGO_ENABLED=0 go build -trimpath -ldflags "-s -w" \
-  -o "$bundle/shopwrite" ./cmd/shopwrite
 cp packaging/linux/io.github.daniele.ERMerchantEditor.desktop "$bundle/"
 cp packaging/windows/winres/icon.png "$bundle/ERMerchantEditor.png"
 cp packaging/linux/README.txt "$bundle/"
 
-tar -C "$out" -czf "dist/ERMerchantEditor-linux-$arch.tar.gz" "$(basename "$bundle")"
+rm -f "$archive"
+go run ./tools/packagezip -root "$bundle" -out "$archive"
