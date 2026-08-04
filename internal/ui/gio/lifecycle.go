@@ -132,7 +132,6 @@ func (s *State) consumeReset() {
 		s.merchantsPath = ""
 		s.clearSelection()
 		s.resetStagingCommon()
-		s.setFooterStatus("Loaded " + s.LoadedName())
 		return
 	}
 	if applied {
@@ -146,7 +145,6 @@ func (s *State) consumeReset() {
 			}
 		}
 		s.resetStagingCommon()
-		s.setFooterStatus("Saved " + s.LoadedName())
 	}
 }
 
@@ -159,7 +157,6 @@ func (s *State) consumeReset() {
 func (s *State) resetStagingCommon() {
 	s.Session.ClearPending()
 	s.PickingForRows = nil
-	s.footerStatus = ""
 	s.formRowIDs = nil // reseed the form editors from the rewritten values
 	s.pendingOpen = false
 	s.pendingMerchantFilter = ""

@@ -66,26 +66,10 @@ func (s *State) layoutCharactersPanel(gtx layout.Context, th *material.Theme) la
 	lockedHere := s.flagsColumnLockedCount()
 	lockedEverywhere := s.allMerchantsLockedCount()
 	if clicked := s.unlockAllBtn.Clicked(gtx); clicked && (s.merchantUnlockUndo != nil || lockedHere > 0) {
-		undoing := s.merchantUnlockUndo != nil
 		s.toggleMerchantUnlocks()
-		if undoing {
-			if s.combinedPendingCount() > 0 {
-				s.setFooterStatus("Removed this merchant's staged unlocks")
-			}
-		} else {
-			s.setFooterStatus(fmt.Sprintf("Staged %d unlocks for %s", lockedHere, s.UnlockMerchant))
-		}
 	}
 	if clicked := s.unlockAllMerchantsBtn.Clicked(gtx); clicked && (s.allMerchantsUndo != nil || lockedEverywhere > 0) {
-		undoing := s.allMerchantsUndo != nil
 		s.toggleEveryMerchantUnlocks()
-		if undoing {
-			if s.combinedPendingCount() > 0 {
-				s.setFooterStatus("Removed all staged merchant unlocks")
-			}
-		} else {
-			s.setFooterStatus(fmt.Sprintf("Staged %d merchant unlocks", lockedEverywhere))
-		}
 	}
 	return layout.Flex{Axis: layout.Vertical}.Layout(gtx,
 		layout.Rigid(func(gtx layout.Context) layout.Dimensions {

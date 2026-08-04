@@ -133,7 +133,6 @@ func (s *State) merchantViewModeButton(gtx layout.Context, th *material.Theme, b
 			s.merchantGamePreview = preview
 			s.MerchantList.Position = layout.Position{}
 		}
-		s.setFooterStatus(s.merchantModeHint())
 	}
 	b := material.Button(th, btn, label)
 	b.Inset = layout.Inset{Top: 6, Bottom: 6, Left: 12, Right: 12}
@@ -150,17 +149,10 @@ func (s *State) merchantViewModeButton(gtx layout.Context, th *material.Theme, b
 }
 
 // layoutStockCountRow draws the stock count and a right-aligned Edit button
-// when rows are selected. The grid-mode explanation lives in the shared
-// footer status area, leaving this row focused on stock controls.
+// when rows are selected.
 func (s *State) layoutStockCountRow(gtx layout.Context, th *material.Theme, stock int) layout.Dimensions {
 	if s.editBtn.Clicked(gtx) {
 		s.showRowEditor = true
-		n := len(s.SelectedRowIDs)
-		if n == 1 {
-			s.setFooterStatus("Edit the selected item, then apply to stage the change")
-		} else {
-			s.setFooterStatus(fmt.Sprintf("Edit %d selected items, then apply to stage the changes", n))
-		}
 	}
 	sideControls := func(gtx layout.Context) layout.Dimensions {
 		return layout.Flex{Axis: layout.Horizontal, Alignment: layout.Middle}.Layout(gtx,
@@ -185,13 +177,6 @@ func (s *State) layoutStockCountRow(gtx layout.Context, th *material.Theme, stoc
 		)
 	}
 	return sideControls(gtx)
-}
-
-func (s *State) merchantModeHint() string {
-	if s.merchantGamePreview {
-		return "Game preview — Elden Ring groups this stock by category and subcategory"
-	}
-	return "Edit layout — replaced or swapped items remain in their exact stock slots"
 }
 
 // merchantLabel builds a merchant combo entry: just the name, or (behind

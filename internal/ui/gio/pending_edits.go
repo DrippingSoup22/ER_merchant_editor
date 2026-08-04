@@ -78,30 +78,47 @@ func (s *State) closePendingModal() {
 	s.ClearApplyErr()
 }
 
-// setFooterStatus records a concise result from a meaningful UI action. It
-// intentionally does not fire for ordinary selection/click noise.
-func (s *State) setFooterStatus(message string) { s.footerStatus = message }
-
-// clearFooterStatusWhenNoPending prevents an obsolete "review" message from
-// surviving after the final staged edit was removed.
-func (s *State) clearFooterStatusWhenNoPending() {
-	if s.combinedPendingCount() == 0 {
-		s.setFooterStatus("")
-	}
-}
-
-// footerStatusMessage is intentionally quiet by default. The footer centre
-// only shows event-driven information from controls that need explanation.
+// footerStatusMessage derives guidance from current state. Retaining the last
+// action as text made the footer drift out of sync after later actions, most
+// visibly when cancelling Save As left "Preparing ... to save" on screen.
 func (s *State) footerStatusMessage() string {
-	if s.footerStatus == "" && s.Catalog != nil && !s.Catalog.Loaded() {
-		return "Load a save file to begin"
+	if msg := s.BusyMsg(); msg != "" {
+		return msg
 	}
-	return s.footerStatus
+	if s.Session == nil || s.Catalog == nil || !s.Catalog.Loaded() {
+		if s.InlineErr() != "" {
+			return "Could not load that file — check the message above"
+		}
+		return "Open a save file to begin"
+	}
+	if s.itemInfoOpen {
+		return ""
+	}
+	if s.Picking() {
+		return s.pickingStatusMessage()
+	}
+	count := s.combinedPendingCount()
+	if s.ApplyErr() != "" {
+		return "Save stopped — review the error and adjust your staged changes"
+	}
+	if s.pendingOpen {
+		return fmt.Sprintf("Review %d staged change%s, then save a new copy", count, plural(count))
+	}
+	if s.showRowEditor && len(s.editingRows()) > 0 {
+		return "Adjust the selected stock, then Apply to stage the changes"
+	}
+	if count > 0 {
+		return fmt.Sprintf("%d change%s staged — review Pending, then save a new copy", count, plural(count))
+	}
+	if name := s.LoadedName(); name != "" {
+		return "Editing " + name + " — the original stays unchanged until you save a copy"
+	}
+	return "Save loaded — changes are staged until you save a copy"
 }
 
 // layoutFooterPendingControls draws the shared footer bar's Save button
 // (left), contextual status (centre), and "Pending (N)" toggle (right).
-// The centre remains blank when no guidance is needed.
+// The centre stays current because footerStatusMessage derives it from state.
 func (s *State) layoutFooterPendingControls(gtx layout.Context, th *material.Theme) layout.Dimensions {
 	return s.layoutFooterPendingControlsWithStatus(gtx, th, true)
 }
@@ -114,14 +131,11 @@ func (s *State) layoutFooterPendingControlsWithStatus(gtx layout.Context, th *ma
 	if count > 0 && s.pendingBtn.Clicked(gtx) {
 		if s.pendingOpen {
 			s.closePendingModal()
-			s.setFooterStatus("Pending changes hidden")
 		} else {
 			s.pendingOpen = true
-			s.setFooterStatus("Review staged changes before saving")
 		}
 	}
 	if count > 0 && !s.Busy() && s.saveBtn.Clicked(gtx) {
-		s.setFooterStatus(fmt.Sprintf("Preparing %d staged change%s to save", count, plural(count)))
 		s.startCombinedSave()
 	}
 
@@ -171,8 +185,9 @@ func (s *State) layoutFooterStatus(gtx layout.Context, th *material.Theme) layou
 	}
 	return layout.Stack{Alignment: layout.Center}.Layout(gtx,
 		layout.Stacked(func(gtx layout.Context) layout.Dimensions {
-			label := material.H6(th, message)
+			label := material.Body1(th, message)
 			label.Color = colorAmber
+			label.MaxLines = 1
 			return label.Layout(gtx)
 		}),
 	)
@@ -214,7 +229,7 @@ func (s *State) layoutFooterStatusOverlay(gtx layout.Context, th *material.Theme
 // in these states, otherwise the dimmed original and bright overlay duplicate
 // each other (and appear vertically misaligned).
 func (s *State) footerStatusOverlayActive() bool {
-	if s.Picking() || s.pendingOpen || s.ApplyErr() != "" || s.itemInfoOpen {
+	if s.Picking() || s.pendingOpen || s.ApplyErr() != "" {
 		return true
 	}
 	return s.showRowEditor && len(s.editingRows()) > 0

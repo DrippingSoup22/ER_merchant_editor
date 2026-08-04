@@ -59,17 +59,6 @@ func TestMerchantHeaderLabelCompactsGenericMerchantLocations(t *testing.T) {
 	}
 }
 
-func TestMerchantModeHintExplainsSelectedView(t *testing.T) {
-	s := &State{}
-	if got, want := s.merchantModeHint(), "Edit layout — replaced or swapped items remain in their exact stock slots"; got != want {
-		t.Errorf("edit layout hint = %q, want %q", got, want)
-	}
-	s.merchantGamePreview = true
-	if got, want := s.merchantModeHint(), "Game preview — Elden Ring groups this stock by category and subcategory"; got != want {
-		t.Errorf("game preview hint = %q, want %q", got, want)
-	}
-}
-
 // TestMerchantStockFilterUsesTopLevelCategories guards the merchant grid
 // against regressing to its old subcategory filter. The merchant panel must
 // match the Catalog's broad categories so a player can isolate, for example,
@@ -532,8 +521,8 @@ func TestCancelPickingClosesEditorAndClearsSelection(t *testing.T) {
 	if len(s.draftRowIDs) != 0 || len(s.draftEdits) != 0 || len(s.draftGateEdits) != 0 {
 		t.Error("CancelPicking must discard every unapplied draft edit")
 	}
-	if s.footerStatus != "Item replacement cancelled" {
-		t.Errorf("footer status = %q, want cancellation feedback", s.footerStatus)
+	if got, want := s.footerStatusMessage(), "Open a save file to begin"; got != want {
+		t.Errorf("footer status after cancellation = %q, want %q", got, want)
 	}
 }
 

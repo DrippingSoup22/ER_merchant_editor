@@ -112,7 +112,6 @@ func (s *State) RemovePendingFlagsForChar(charIndex int) {
 		(s.allMerchantsUndo != nil && s.allMerchantsUndo.charIndex == charIndex) {
 		s.clearBulkUnlockUndo()
 	}
-	s.clearFooterStatusWhenNoPending()
 }
 
 // removeFlagBtn returns the retained per-character "Remove all" button

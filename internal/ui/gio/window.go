@@ -407,7 +407,6 @@ func (s *State) layoutHeader(gtx layout.Context, th *material.Theme) layout.Dime
 func (s *State) viewTabButton(gtx layout.Context, th *material.Theme, btn *widget.Clickable, label string, target int) layout.Dimensions {
 	if btn.Clicked(gtx) {
 		s.view = target
-		s.setFooterStatus(fmt.Sprintf("Opened %s", label))
 	}
 	b := material.Button(th, btn, label)
 	if s.view == target {

@@ -245,10 +245,6 @@ type State struct {
 	// doc comment).
 	PickingForRows []int64
 
-	// footerStatus is an event-driven message shown in the otherwise empty
-	// centre of the shared bottom bar. It is deliberately not a permanent
-	// hint: controls set it when their result needs explaining.
-	footerStatus          string
 	footerStatusBarHeight int // measured each frame; lets modal overlays reuse the footer's exact baseline
 
 	// --- row-edit bar draft ---

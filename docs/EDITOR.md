@@ -29,8 +29,8 @@ sequencing logic belongs in the application layer.
 - **Settings**: theme/font and editing defaults, cell sizing, risky-item
   visibility, and Reset to Vanilla.
 
-One shared footer shows all staged operations and opens one Save As dialog.
-The Pending modal can remove individual edits before saving.
+One shared footer shows contextual guidance and the live staged-change count.
+Pending lists/removes edits; Save File writes them together through Save As.
 
 ## Staging invariants
 

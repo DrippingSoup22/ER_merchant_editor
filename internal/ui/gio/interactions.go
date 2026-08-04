@@ -281,7 +281,6 @@ func parseItemPayload(payload string) []int64 {
 // fans out to all of them.
 func (s *State) StartPicking(rowIDs []int64) {
 	s.PickingForRows = append([]int64(nil), rowIDs...)
-	s.setFooterStatus(s.pickingStatusMessage())
 }
 
 // CancelPicking abandons the replacement and closes the whole edit flow. A
@@ -291,7 +290,6 @@ func (s *State) StartPicking(rowIDs []int64) {
 func (s *State) CancelPicking() {
 	s.PickingForRows = nil
 	s.clearRowSelection()
-	s.setFooterStatus("Item replacement cancelled")
 }
 
 // Picking reports whether an item is currently being picked for one or more
@@ -301,9 +299,9 @@ func (s *State) Picking() bool { return len(s.PickingForRows) > 0 }
 func (s *State) pickingStatusMessage() string {
 	n := len(s.PickingForRows)
 	if n == 1 {
-		return "Choose a catalog item to replace the selected stock item"
+		return "Choose a replacement item from the catalog, or press Cancel"
 	}
-	return fmt.Sprintf("Choose %d catalog items to replace the selected stock items", n)
+	return fmt.Sprintf("Choose the next replacement from the catalog — %d items remaining", n)
 }
 
 // consumeNextPickingRow pops and returns the FRONT row still queued for a
@@ -322,11 +320,6 @@ func (s *State) consumeNextPickingRow() *catalog.Row {
 		id := s.PickingForRows[0]
 		s.PickingForRows = s.PickingForRows[1:]
 		if r := byID[id]; r != nil {
-			if s.Picking() {
-				s.setFooterStatus(s.pickingStatusMessage())
-			} else {
-				s.setFooterStatus("Item replacement staged — review it in Pending before saving")
-			}
 			return r
 		}
 	}
@@ -440,11 +433,6 @@ func (s *State) applyDraft() {
 		s.setRowUnlockForSelectedChar(edit.row, edit.target)
 	}
 	s.reseedDraft()
-	if s.combinedPendingCount() > 0 {
-		s.setFooterStatus("Edits staged — review them in Pending before saving")
-	} else {
-		s.setFooterStatus("")
-	}
 	s.invalidate()
 }
 

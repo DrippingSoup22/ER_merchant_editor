@@ -6,8 +6,66 @@ package gio
 
 import (
 	"reflect"
+	"strings"
 	"testing"
+
+	"github.com/DrippingSoup22/ER_merchant_editor/internal/catalog"
 )
+
+func TestFooterStatusTracksCurrentState(t *testing.T) {
+	cat, err := catalog.New()
+	if err != nil {
+		t.Fatal(err)
+	}
+	s := NewState(cat)
+	if got, want := s.footerStatusMessage(), "Open a save file to begin"; got != want {
+		t.Errorf("unloaded status = %q, want %q", got, want)
+	}
+
+	s.inlineErr = "bad save"
+	if got := s.footerStatusMessage(); !strings.Contains(got, "check the message above") {
+		t.Errorf("load-error status = %q, want guidance to the inline error", got)
+	}
+
+	s.busy, s.busyMsg = true, "Loading save..."
+	if got, want := s.footerStatusMessage(), "Loading save..."; got != want {
+		t.Errorf("busy status = %q, want %q", got, want)
+	}
+}
+
+func TestFooterStatusUpdatesWithPendingCount(t *testing.T) {
+	s := NewState(loadedTestCatalog(t))
+	s.loadedName = "fixture.dat"
+	if got := s.footerStatusMessage(); !strings.Contains(got, "original stays unchanged") {
+		t.Errorf("loaded status = %q, want save-copy safety guidance", got)
+	}
+
+	s.PendingEdits[1] = &RowEdit{}
+	if got := s.footerStatusMessage(); !strings.HasPrefix(got, "1 change staged") {
+		t.Errorf("one-change status = %q", got)
+	}
+	s.PendingEdits[2] = &RowEdit{}
+	if got := s.footerStatusMessage(); !strings.HasPrefix(got, "2 changes staged") {
+		t.Errorf("two-change status = %q", got)
+	}
+
+	s.pendingOpen = true
+	if got := s.footerStatusMessage(); !strings.HasPrefix(got, "Review 2 staged changes") {
+		t.Errorf("pending-review status = %q", got)
+	}
+
+	s.pendingOpen = false
+	s.StartPicking([]int64{10, 11})
+	if got := s.footerStatusMessage(); !strings.Contains(got, "2 items remaining") {
+		t.Errorf("picker status = %q", got)
+	}
+
+	s.PickingForRows = nil
+	s.itemInfoOpen = true
+	if got := s.footerStatusMessage(); got != "" {
+		t.Errorf("item-info status = %q, want no unrelated footer overlay", got)
+	}
+}
 
 // TestPendingMerchantKey covers the single place the "" -> "Unknown merchant"
 // fallback is decided.

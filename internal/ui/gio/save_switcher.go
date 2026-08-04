@@ -23,7 +23,7 @@ func (s *State) layoutOpenMessage(gtx layout.Context, th *material.Theme) layout
 
 	msg := s.BusyMsg()
 	color := colorMuted
-	if !s.Busy() {
+	if msg == "" {
 		msg = s.InlineErr()
 		color = colorError
 	}

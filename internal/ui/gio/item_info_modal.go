@@ -91,7 +91,6 @@ func (s *State) layoutItemInfoOverlay(gtx layout.Context, th *material.Theme) {
 		},
 		func(gtx layout.Context) {
 			s.pressListener(gtx, &s.itemInfoModalTag, gtx.Constraints.Max, &s.itemInfoModalHit)
-			s.layoutFooterStatusOverlay(gtx, th)
 		},
 	)
 }
