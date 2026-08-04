@@ -4,6 +4,7 @@ import (
 	"archive/zip"
 	"os"
 	"path/filepath"
+	"runtime"
 	"testing"
 )
 
@@ -35,7 +36,10 @@ func TestCreateArchiveIncludesBundleAndPreservesExecutableMode(t *testing.T) {
 		if entry.Name != wantName {
 			continue
 		}
-		if entry.Mode().Perm() != 0o755 {
+		// Windows has no POSIX executable bit: os.WriteFile creates this test
+		// fixture as 0666 there. Linux must retain 0755 so the extracted GUI
+		// remains directly runnable.
+		if runtime.GOOS != "windows" && entry.Mode().Perm() != 0o755 {
 			t.Fatalf("executable mode = %o, want 755", entry.Mode().Perm())
 		}
 		return
