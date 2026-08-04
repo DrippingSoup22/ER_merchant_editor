@@ -1,0 +1,9 @@
+# SHOP_LINEUP_PARAM  rows=1277  paramdef_data_version=3
+Traceback (most recent call last):
+  File "/mnt/c/Users/danie/Desktop/ER_merchant_editor/app/savescan.py", line 502, in <module>
+    main()
+  File "/mnt/c/Users/danie/Desktop/ER_merchant_editor/app/savescan.py", line 498, in main
+    args.func(args)
+  File "/mnt/c/Users/danie/Desktop/ER_merchant_editor/app/savescan.py", line 429, in cmd_rows
+    print(json.dumps(decode_shop_row_enriched(
+BrokenPipeError: [Errno 32] Broken pipe
