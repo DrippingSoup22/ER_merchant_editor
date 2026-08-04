@@ -24,6 +24,7 @@ echo "building ER Merchant Editor for linux/$arch"
 CGO_ENABLED=1 go build -trimpath \
   -ldflags "-s -w -X gioui.org/app.ID=io.github.DrippingSoup22.ERMerchantEditor" \
   -o "$bundle/ERMerchantEditor" ./cmd/ermerchanteditor
+cp packaging/windows/winres/icon.png "$bundle/ERMerchantEditor.png"
 
 rm -f "$archive"
 go run ./tools/packagezip -root "$bundle" -out "$archive"

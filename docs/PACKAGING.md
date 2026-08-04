@@ -50,9 +50,9 @@ common 1.0 scale report and match the Windows visual baseline. Native Linux
 uses its compositor's scale unchanged. `ER_EDITOR_UI_SCALE` can override the
 multiplier with a value between `0.5` and `3`.
 
-The release artifact is a ZIP containing only the portable executable.
-Desktop integration belongs in a future AppImage, Flatpak, or native package,
-where launcher metadata and icons can be installed correctly.
+The release artifact is a ZIP containing the portable executable and its
+application icon. Full desktop integration belongs in a future AppImage,
+Flatpak, or native package, where launcher metadata can be installed correctly.
 
 ## macOS
 
