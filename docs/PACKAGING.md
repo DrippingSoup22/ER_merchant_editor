@@ -42,18 +42,17 @@ libffi, Xcursor, Xfixes, and Vulkan development packages. CI builds against
 Ubuntu 22.04 to avoid unnecessarily raising the glibc baseline.
 
 The current dialog adapter requires `zenity`, `matedialog`, or `qarma` at
-runtime. This dependency is explicit in the archive README. The platform
-interface in `internal/platform/dialogs` allows a later XDG-portal adapter
-without touching the editor core or views.
+runtime. The platform interface in `internal/platform/dialogs` allows a later
+XDG-portal adapter without touching the editor core or views.
 
 Under WSL, the GUI applies a 1.25 display multiplier to compensate for WSLg's
 common 1.0 scale report and match the Windows visual baseline. Native Linux
 uses its compositor's scale unchanged. `ER_EDITOR_UI_SCALE` can override the
 multiplier with a value between `0.5` and `3`.
 
-The release artifact is a ZIP with the binary and desktop metadata.
-AppImage or Flatpak can be added under `packaging/linux` without changing the
-Go package layout.
+The release artifact is a ZIP containing only the portable executable.
+Desktop integration belongs in a future AppImage, Flatpak, or native package,
+where launcher metadata and icons can be installed correctly.
 
 ## macOS
 

@@ -46,6 +46,9 @@ between steps 2 and 3.
 6. Prepare the output for your console with the same external save workflow.
    If you play online, follow the two-load procedure above.
 
+On Linux, file dialogs require `zenity`, `matedialog`, or `qarma`; install one
+with your distribution's package manager if Browse or Save does not open.
+
 Before an output file is created, the editor rebuilds the save and verifies it
 with a byte-exact round trip. A failed verification produces an error instead
 of a potentially damaged save.

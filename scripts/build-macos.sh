@@ -22,7 +22,7 @@ mkdir -p "$contents/MacOS" "$contents/Resources"
 
 echo "building ER Merchant Editor for darwin/$arch"
 CGO_ENABLED=1 go build -trimpath \
-  -ldflags "-s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
+  -ldflags "-s -w -X gioui.org/app.ID=io.github.DrippingSoup22.ERMerchantEditor" \
   -o "$contents/MacOS/ERMerchantEditor" ./cmd/ermerchanteditor
 
 sed "s/@VERSION@/$version/g" packaging/macos/Info.plist > "$contents/Info.plist"

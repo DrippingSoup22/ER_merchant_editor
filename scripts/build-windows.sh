@@ -16,7 +16,7 @@ mkdir -p "$bundle"
 
 echo "building ER Merchant Editor for windows/$arch"
 CGO_ENABLED=0 GOOS=windows GOARCH="$arch" \
-  go build -trimpath -ldflags "-H windowsgui -s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
+  go build -trimpath -ldflags "-H windowsgui -s -w -X gioui.org/app.ID=io.github.DrippingSoup22.ERMerchantEditor" \
   -o "$bundle/ERMerchantEditor.exe" ./cmd/ermerchanteditor
 
 rm -f "$archive"

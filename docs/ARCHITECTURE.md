@@ -59,9 +59,8 @@ internal/savefile  -> internal/assets/data
 4. The application layer owns save orchestration and translates staged editor
    operations into low-level save mutations; the UI does not write save
    containers itself.
-5. Platform builds are native CI jobs. Windows resources, Linux desktop
-   metadata and future macOS bundle metadata remain outside Go application
-   logic.
+5. Platform builds are native CI jobs. Windows resources and future macOS
+   bundle metadata remain outside Go application logic.
 6. Generated binaries, virtual environments, user saves, test copies, and
    release artifacts are never tracked.
 
