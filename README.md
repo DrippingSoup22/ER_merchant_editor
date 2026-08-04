@@ -6,9 +6,8 @@ stock slot for any of 2596 items, set its price, quantity and upgrade
 level, and unlock stock that's still gated behind progression — then write
 it all out to a new save in one batch.
 
-A native Windows desktop application with a platform-independent editor core.
-Linux and macOS build/packaging support is in place and is the next release
-focus.
+A native Windows and Linux desktop application with a platform-independent
+editor core. macOS is future work and is not currently distributed.
 
 **[Download the latest release →](../../releases/latest)**
 
@@ -89,9 +88,8 @@ first.
 
 ## Using it
 
-1. Download an available build. Run the Windows `.exe`; when Linux and macOS
-   builds are published, extract and run `ERMerchantEditor` or open the
-   macOS `.app` respectively.
+1. Download an available build. Run the Windows `.exe`, or extract the Linux
+   archive and run `ERMerchantEditor`.
 2. Paste or browse to your decrypted `.dat` save and hit **Load**.
 3. Edit. Every change is staged, not applied — **Pending (N)** shows
    exactly what will be written, and anything can be removed before saving.
@@ -112,9 +110,8 @@ scripts/build.sh              # build GUI targets supported by this host
 go run ./cmd/ermerchanteditor # or run the GUI directly
 ```
 
-Windows cross-compiles without cgo. Linux and macOS releases are built and
-tested natively; see `docs/PACKAGING.md` for their toolchain and packaging
-requirements.
+Windows cross-compiles without cgo. Linux releases are built and tested
+natively; see `docs/PACKAGING.md` for packaging requirements.
 
 ## Under the hood
 

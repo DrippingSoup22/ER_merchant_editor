@@ -60,7 +60,8 @@ internal/savefile  -> internal/assets/data
    operations into low-level save mutations; the UI does not write save
    containers itself.
 5. Platform builds are native CI jobs. Windows resources, Linux desktop
-   metadata, and macOS bundle metadata remain outside Go application logic.
+   metadata and future macOS bundle metadata remain outside Go application
+   logic.
 6. Generated binaries, virtual environments, user saves, test copies, and
    release artifacts are never tracked.
 
@@ -68,4 +69,6 @@ internal/savefile  -> internal/assets/data
 
 Preserve observable behavior, keep imports flowing inward, and test the
 smallest affected core package while iterating. Run `scripts/check.sh` before
-handoff; use native packaging jobs for Linux and macOS GUI verification.
+handoff; use native packaging jobs for current Windows and Linux release
+verification. macOS verification is deferred until it becomes a release
+target.

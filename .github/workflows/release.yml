@@ -60,37 +60,8 @@ jobs:
             dist/windows-amd64/shopwrite.exe
           if-no-files-found: error
 
-  macos:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - runner: macos-15-intel
-            arch: amd64
-          - runner: macos-15
-            arch: arm64
-    runs-on: ${{ matrix.runner }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
-        with:
-          go-version-file: go.mod
-      - name: Verify native architecture
-        run: test "$(go env GOARCH)" = "${{ matrix.arch }}"
-      - name: Test and vet
-        run: |
-          go test ./...
-          go vet ./...
-      - name: Build macOS app bundle
-        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build-macos.sh
-      - uses: actions/upload-artifact@v4
-        with:
-          name: macos-${{ matrix.arch }}
-          path: dist/ERMerchantEditor-macos-${{ matrix.arch }}.zip
-          if-no-files-found: error
-
   publish:
-    needs: [linux, windows, macos]
+    needs: [linux, windows]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
@@ -103,7 +74,7 @@ jobs:
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
         uses: actions/upload-artifact@v4
         with:
-          name: ERMerchantEditor-all-platforms
+          name: ERMerchantEditor-windows-linux
           path: release/*
           if-no-files-found: error
       - name: Attach artifacts to draft release

@@ -2,7 +2,8 @@
 
 ER Merchant Editor is a released Go/Gio desktop application for editing
 merchant stock in decrypted Elden Ring PS4/PS5 saves. Windows is established;
-native Linux and macOS packaging is present and is the next release focus.
+native Linux packaging is present. macOS remains future work and is not part
+of the current release.
 
 ## Scope
 
