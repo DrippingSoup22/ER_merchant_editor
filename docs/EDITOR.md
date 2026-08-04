@@ -29,7 +29,7 @@ sequencing logic belongs in the application layer.
 - **Settings**: theme/font and editing defaults, cell sizing, risky-item
   visibility, and Reset to Vanilla.
 
-One shared footer shows contextual guidance and the live staged-change count.
+One shared footer shows action results, contextual guidance, and the live staged-change count.
 Pending lists/removes edits; Save File writes them together through Save As.
 
 ## Staging invariants
@@ -79,3 +79,6 @@ window. Do not mutate maps, widget state, or the loaded catalog concurrently.
 Dimension, staging, modal, and interaction tests guard these rules. Real-window
 checks are still required for new layouts because unit tests cannot validate
 native dialogs, font rendering, or platform window behavior.
+
+Every dimmed overlay follows one input rule: pointer-down outside its bright
+panel cancels the active flow; presses inside the bright area do not dismiss it.

@@ -67,6 +67,38 @@ func TestFooterStatusUpdatesWithPendingCount(t *testing.T) {
 	}
 }
 
+func TestFooterNoticeAndImmediateGuidancePriority(t *testing.T) {
+	s := NewState(loadedTestCatalog(t))
+	s.setFooterNotice("Opened Settings — customize appearance and editing defaults")
+	if got := s.footerStatusMessage(); got != s.footerNotice {
+		t.Fatalf("event notice = %q, want %q", got, s.footerNotice)
+	}
+
+	s.StartPicking([]int64{10})
+	if got := s.footerStatusMessage(); !strings.Contains(got, "Choose a replacement") {
+		t.Errorf("picker status = %q, want immediate picker instructions", got)
+	}
+
+	s.PickingForRows = nil
+	s.busy, s.busyMsg = true, "Saving copy..."
+	if got, want := s.footerStatusMessage(), "Saving copy..."; got != want {
+		t.Errorf("busy status = %q, want %q", got, want)
+	}
+}
+
+func TestViewOpenedMessagesExplainNextAction(t *testing.T) {
+	tests := map[string]string{
+		"Characters":  "choose a character",
+		"Shop Editor": "select stock",
+		"Settings":    "customize appearance",
+	}
+	for view, nextAction := range tests {
+		if got := viewOpenedMessage(view); !strings.Contains(got, nextAction) {
+			t.Errorf("viewOpenedMessage(%q) = %q, want next-action guidance containing %q", view, got, nextAction)
+		}
+	}
+}
+
 // TestPendingMerchantKey covers the single place the "" -> "Unknown merchant"
 // fallback is decided.
 func TestPendingMerchantKey(t *testing.T) {

@@ -38,6 +38,11 @@ func (s *State) layoutCharactersPanel(gtx layout.Context, th *material.Theme) la
 		idx := s.CharList[i].Index
 		if s.charBtn(idx).Clicked(gtx) {
 			s.selectCharacter(idx)
+			if s.SelectedChar < 0 {
+				s.setFooterNotice("Character deselected — choose one to inspect merchant unlocks")
+			} else {
+				s.setFooterNotice("Selected " + s.selectedCharName() + " — choose a merchant to inspect its unlocks")
+			}
 		}
 	}
 	s.ensureMerchantGated()
@@ -45,6 +50,11 @@ func (s *State) layoutCharactersPanel(gtx layout.Context, th *material.Theme) la
 	for _, name := range gatedMerchants {
 		if s.merchantUnlockBtn(name).Clicked(gtx) {
 			s.selectFlagMerchant(name)
+			if s.UnlockMerchant == "" {
+				s.setFooterNotice("Merchant closed — choose another merchant to inspect its unlocks")
+			} else {
+				s.setFooterNotice("Opened " + name + " unlocks — check entries to stage changes")
+			}
 		}
 	}
 	for _, g := range groupFlagRows(s.FlagRows) {
@@ -53,6 +63,11 @@ func (s *State) layoutCharactersPanel(gtx layout.Context, th *material.Theme) la
 			for _, r := range g.Rows {
 				s.stageFlag(r.RowID, chk.Value)
 			}
+			if s.combinedPendingCount() == 0 {
+				s.setFooterNotice("Unlock choice restored — no changes remain staged")
+			} else {
+				s.setFooterNotice("Unlock choice updated — Save File writes staged changes to a new copy")
+			}
 		}
 	}
 	if s.UnlockMerchant == twinMaidenHusksMerchantName {
@@ -60,16 +75,33 @@ func (s *State) layoutCharactersPanel(gtx layout.Context, th *material.Theme) la
 			chk := s.bellBearingCheck(b.FlagID)
 			if chk.Update(gtx) {
 				s.stageBellBearing(b.FlagID, chk.Value)
+				if s.combinedPendingCount() == 0 {
+					s.setFooterNotice("Bell Bearing choice restored — no changes remain staged")
+				} else {
+					s.setFooterNotice("Bell Bearing choice updated — Save File writes staged changes to a new copy")
+				}
 			}
 		}
 	}
 	lockedHere := s.flagsColumnLockedCount()
 	lockedEverywhere := s.allMerchantsLockedCount()
 	if clicked := s.unlockAllBtn.Clicked(gtx); clicked && (s.merchantUnlockUndo != nil || lockedHere > 0) {
+		undoing := s.merchantUnlockUndo != nil
 		s.toggleMerchantUnlocks()
+		if undoing {
+			s.setFooterNotice("Removed this merchant's staged unlocks")
+		} else {
+			s.setFooterNotice(fmt.Sprintf("Staged %d unlocks for %s — save a new copy to write them", lockedHere, s.UnlockMerchant))
+		}
 	}
 	if clicked := s.unlockAllMerchantsBtn.Clicked(gtx); clicked && (s.allMerchantsUndo != nil || lockedEverywhere > 0) {
+		undoing := s.allMerchantsUndo != nil
 		s.toggleEveryMerchantUnlocks()
+		if undoing {
+			s.setFooterNotice("Removed all staged merchant unlocks")
+		} else {
+			s.setFooterNotice(fmt.Sprintf("Staged %d merchant unlocks — save a new copy to write them", lockedEverywhere))
+		}
 	}
 	return layout.Flex{Axis: layout.Vertical}.Layout(gtx,
 		layout.Rigid(func(gtx layout.Context) layout.Dimensions {

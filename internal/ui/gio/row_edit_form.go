@@ -81,7 +81,7 @@ func (s *State) layoutRowEditOverlay(gtx layout.Context, th *material.Theme) {
 		return
 	}
 	for s.rowEditScrim.Clicked(gtx) {
-		s.clearRowSelection()
+		s.cancelRowEditing()
 	}
 
 	components.Backdrop(gtx,
@@ -96,7 +96,7 @@ func (s *State) layoutRowEditOverlay(gtx layout.Context, th *material.Theme) {
 		&s.rowEditScrim,
 		&s.rowEditPanelBlocker,
 		&s.rowEditScrimPressTag,
-		s.clearRowSelection,
+		s.cancelRowEditing,
 		func(gtx *layout.Context) {
 			// 720dp: wide enough for formActionsRow's 4 buttons on one line
 			// even with the longest gate label ("Unlock all (All
@@ -138,7 +138,7 @@ func (s *State) layoutRowEditPanel(gtx layout.Context, th *material.Theme, rows 
 		s.clearRowSelection()
 	}
 	if s.closeDraftBtn.Clicked(gtx) {
-		s.clearRowSelection()
+		s.cancelRowEditing()
 	}
 
 	// The raw row id means nothing to a player -- the merchant this row
@@ -174,6 +174,11 @@ func (s *State) layoutRowEditPanel(gtx layout.Context, th *material.Theme, rows 
 		layout.Rigid(func(gtx layout.Context) layout.Dimensions { return s.layoutRowEditBody(gtx, th, rows) }),
 	)
 	return dims
+}
+
+func (s *State) cancelRowEditing() {
+	s.clearRowSelection()
+	s.setFooterNotice("Editing cancelled — unapplied draft changes were discarded")
 }
 
 // layoutRowEditBody renders the edit-form content for the selected row(s)

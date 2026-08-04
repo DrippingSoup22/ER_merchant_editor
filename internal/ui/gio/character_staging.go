@@ -108,6 +108,7 @@ func (s *State) stageFlagForRow(rowID int64, target bool) {
 func (s *State) RemovePendingFlagsForChar(charIndex int) {
 	delete(s.PendingFlagEdits, charIndex)
 	delete(s.PendingBellBearingEdits, charIndex)
+	s.clearFooterNoticeWhenNoPending()
 	if (s.merchantUnlockUndo != nil && s.merchantUnlockUndo.charIndex == charIndex) ||
 		(s.allMerchantsUndo != nil && s.allMerchantsUndo.charIndex == charIndex) {
 		s.clearBulkUnlockUndo()

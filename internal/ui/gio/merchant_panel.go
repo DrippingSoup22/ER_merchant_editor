@@ -58,6 +58,9 @@ func (s *State) layoutMerchantPanel(gtx layout.Context, th *material.Theme) layo
 	s.syncMerchants()
 	if s.MerchantCombo.Changed() {
 		s.fetchMerchantRows()
+		if s.lastMerchant != "" {
+			s.setFooterNotice("Opened " + s.lastMerchant + " — select stock, then Edit to change it")
+		}
 	}
 	if s.MerchantCategoryCombo.Changed() {
 		s.MerchantList.Position = layout.Position{}
@@ -132,6 +135,11 @@ func (s *State) merchantViewModeButton(gtx layout.Context, th *material.Theme, b
 		if s.merchantGamePreview != preview {
 			s.merchantGamePreview = preview
 			s.MerchantList.Position = layout.Position{}
+		}
+		if preview {
+			s.setFooterNotice("Game Preview groups stock like Elden Ring; use Edit Layout to preserve exact slots")
+		} else {
+			s.setFooterNotice("Edit Layout preserves exact stock slots for replacements and swaps")
 		}
 	}
 	b := material.Button(th, btn, label)

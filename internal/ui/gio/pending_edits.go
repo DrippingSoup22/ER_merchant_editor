@@ -76,11 +76,26 @@ func (s *State) removeAllBtn(merchant string) *widget.Clickable {
 func (s *State) closePendingModal() {
 	s.pendingOpen = false
 	s.ClearApplyErr()
+	if count := s.combinedPendingCount(); count > 0 {
+		s.setFooterNotice(fmt.Sprintf("Closed Pending Edits — Save File writes all %d staged change%s to a new copy", count, plural(count)))
+	}
 }
 
-// footerStatusMessage derives guidance from current state. Retaining the last
-// action as text made the footer drift out of sync after later actions, most
-// visibly when cancelling Save As left "Preparing ... to save" on screen.
+// setFooterNotice records the result of a meaningful action. Immediate state
+// guidance (busy work, a modal, or an active edit) takes priority over it.
+func (s *State) setFooterNotice(message string) { s.footerNotice = message }
+
+// clearFooterNoticeWhenNoPending prevents review/save guidance from surviving
+// after the final staged edit is removed.
+func (s *State) clearFooterNoticeWhenNoPending() {
+	if s.combinedPendingCount() == 0 {
+		s.footerNotice = ""
+	}
+}
+
+// footerStatusMessage combines action results with current-state guidance.
+// State that requires the user's attention always wins, so an old event can
+// never contradict what the UI is asking them to do now.
 func (s *State) footerStatusMessage() string {
 	if msg := s.BusyMsg(); msg != "" {
 		return msg
@@ -105,7 +120,10 @@ func (s *State) footerStatusMessage() string {
 		return fmt.Sprintf("Review %d staged change%s, then save a new copy", count, plural(count))
 	}
 	if s.showRowEditor && len(s.editingRows()) > 0 {
-		return "Adjust the selected stock, then Apply to stage the changes"
+		return "Change item or edit its values; Apply stages the changes, X discards them"
+	}
+	if s.footerNotice != "" {
+		return s.footerNotice
 	}
 	if count > 0 {
 		return fmt.Sprintf("%d change%s staged — review Pending, then save a new copy", count, plural(count))
@@ -185,7 +203,7 @@ func (s *State) layoutFooterStatus(gtx layout.Context, th *material.Theme) layou
 	}
 	return layout.Stack{Alignment: layout.Center}.Layout(gtx,
 		layout.Stacked(func(gtx layout.Context) layout.Dimensions {
-			label := material.Body1(th, message)
+			label := material.H6(th, message)
 			label.Color = colorAmber
 			label.MaxLines = 1
 			return label.Layout(gtx)

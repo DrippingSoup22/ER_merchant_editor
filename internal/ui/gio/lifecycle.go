@@ -127,14 +127,17 @@ func (s *State) consumeReset() {
 	s.mu.Unlock()
 
 	if pending {
+		loadedName := s.LoadedName()
 		s.clearRowSelection()
 		s.lastMerchant = ""
 		s.merchantsPath = ""
 		s.clearSelection()
 		s.resetStagingCommon()
+		s.setFooterNotice("Loaded " + loadedName + " — select a merchant to begin editing")
 		return
 	}
 	if applied {
+		savedName := s.LoadedName()
 		// The catalog's save path moved to the Save-As target; adopt it without
 		// repopulating the merchant combo (same merchants, updated rows). The
 		// apply worker pre-warmed the row decode, so this re-read is cheap.
@@ -145,6 +148,7 @@ func (s *State) consumeReset() {
 			}
 		}
 		s.resetStagingCommon()
+		s.setFooterNotice("Saved " + savedName + " — this copy is now open for editing")
 	}
 }
 
@@ -157,6 +161,7 @@ func (s *State) consumeReset() {
 func (s *State) resetStagingCommon() {
 	s.Session.ClearPending()
 	s.PickingForRows = nil
+	s.footerNotice = ""
 	s.formRowIDs = nil // reseed the form editors from the rewritten values
 	s.pendingOpen = false
 	s.pendingMerchantFilter = ""

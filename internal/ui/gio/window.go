@@ -407,6 +407,7 @@ func (s *State) layoutHeader(gtx layout.Context, th *material.Theme) layout.Dime
 func (s *State) viewTabButton(gtx layout.Context, th *material.Theme, btn *widget.Clickable, label string, target int) layout.Dimensions {
 	if btn.Clicked(gtx) {
 		s.view = target
+		s.setFooterNotice(viewOpenedMessage(label))
 	}
 	b := material.Button(th, btn, label)
 	if s.view == target {
@@ -417,6 +418,19 @@ func (s *State) viewTabButton(gtx layout.Context, th *material.Theme, btn *widge
 		b.Color = colorFg
 	}
 	return b.Layout(gtx)
+}
+
+func viewOpenedMessage(label string) string {
+	switch label {
+	case "Characters":
+		return "Opened Characters — choose a character and merchant to manage unlocks"
+	case "Shop Editor":
+		return "Opened Shop Editor — select stock, then Edit to change it"
+	case "Settings":
+		return "Opened Settings — customize appearance and editing defaults"
+	default:
+		return "Opened " + label
+	}
 }
 
 // layoutPanels is the Shop Editor view: the catalog/merchant grids, side

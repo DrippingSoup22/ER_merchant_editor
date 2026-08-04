@@ -1,6 +1,6 @@
 package components
 
-// Modal is a blocking error dialog: a full-window scrim that swallows input
+// Modal is a blocking error dialog: a full-window, press-to-dismiss scrim
 // over a centered message panel with an OK button.
 
 import (
@@ -27,21 +27,33 @@ var (
 // the caller each frame; when it reports true the caller hides the modal.
 //
 // The same type doubles as a Yes/No confirm dialog via LayoutConfirm/
-// CancelClicked/ConfirmClicked (added 2026-07-31 for Reset to Vanilla) --
-// Layout/OKClicked (the original OK-only error alert) are untouched.
+// CancelClicked/ConfirmClicked. Both variants dismiss when the dimmed area
+// is pressed; only a press inside the bright panel leaves them open.
 type Modal struct {
-	ok           widget.Clickable
-	cancel       widget.Clickable
-	scrim        widget.Clickable // click-to-dismiss area outside the panel
-	panelBlocker widget.Clickable // swallows blank panel presses before they reach the scrim
+	ok            widget.Clickable
+	cancel        widget.Clickable
+	scrim         widget.Clickable // click-to-dismiss area outside the panel
+	panelBlocker  widget.Clickable // swallows blank panel presses before they reach the scrim
+	scrimPressTag int              // pointer-down dismissal, below the bright panel
+	scrimPressed  bool
 }
 
-// OKClicked reports whether OK was clicked this frame.
-func (m *Modal) OKClicked(gtx layout.Context) bool {
-	// Drain scrim clicks so they never reach widgets underneath.
+// dismissClicked drains both the compatibility click target and the dedicated
+// pointer-down target. The latter makes dismissal immediate, without waiting
+// for the button to be released.
+func (m *Modal) dismissClicked(gtx layout.Context) bool {
+	dismissed := m.scrimPressed
+	m.scrimPressed = false
 	for m.scrim.Clicked(gtx) {
+		dismissed = true
 	}
-	return m.ok.Clicked(gtx)
+	return dismissed
+}
+
+// OKClicked reports whether OK or the dimmed area was pressed this frame.
+func (m *Modal) OKClicked(gtx layout.Context) bool {
+	ok := m.ok.Clicked(gtx)
+	return m.dismissClicked(gtx) || ok
 }
 
 // CancelClicked reports whether Cancel OR a scrim click happened this frame
@@ -50,11 +62,8 @@ func (m *Modal) OKClicked(gtx layout.Context) bool {
 // BEFORE ConfirmClicked each frame so a scrim tap can never also register
 // as a confirm in the same frame.
 func (m *Modal) CancelClicked(gtx layout.Context) bool {
-	scrimClicked := false
-	for m.scrim.Clicked(gtx) {
-		scrimClicked = true
-	}
-	return m.cancel.Clicked(gtx) || scrimClicked
+	cancel := m.cancel.Clicked(gtx)
+	return m.dismissClicked(gtx) || cancel
 }
 
 // ConfirmClicked reports whether the confirm button was clicked this frame.
@@ -98,8 +107,8 @@ func (m *Modal) layoutPanel(gtx layout.Context, th *material.Theme, title, body 
 		},
 		&m.scrim,
 		&m.panelBlocker,
-		nil,
-		nil,
+		&m.scrimPressTag,
+		func() { m.scrimPressed = true },
 		func(gtx *layout.Context) { gtx.Constraints.Max.X = gtx.Dp(unit.Dp(460)) },
 		func(gtx layout.Context) layout.Dimensions {
 			return layout.Flex{Axis: layout.Vertical}.Layout(gtx,

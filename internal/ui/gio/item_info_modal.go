@@ -49,6 +49,7 @@ func (s *State) openItemInfo(id int64, level int) {
 
 func (s *State) closeItemInfo() {
 	s.itemInfoOpen = false
+	s.setFooterNotice("Closed item info — right-click any item to view its details")
 }
 
 // layoutItemInfoOverlay draws the popup: a full-window scrim plus a

@@ -290,6 +290,7 @@ func (s *State) StartPicking(rowIDs []int64) {
 func (s *State) CancelPicking() {
 	s.PickingForRows = nil
 	s.clearRowSelection()
+	s.setFooterNotice("Item replacement cancelled — no draft changes were staged")
 }
 
 // Picking reports whether an item is currently being picked for one or more
@@ -320,6 +321,9 @@ func (s *State) consumeNextPickingRow() *catalog.Row {
 		id := s.PickingForRows[0]
 		s.PickingForRows = s.PickingForRows[1:]
 		if r := byID[id]; r != nil {
+			if !s.Picking() {
+				s.setFooterNotice("Item replacement staged in the editor — Apply keeps it; X discards it")
+			}
 			return r
 		}
 	}
@@ -433,6 +437,11 @@ func (s *State) applyDraft() {
 		s.setRowUnlockForSelectedChar(edit.row, edit.target)
 	}
 	s.reseedDraft()
+	if s.combinedPendingCount() > 0 {
+		s.setFooterNotice("Edits staged — review them in Pending or save them to a new copy")
+	} else {
+		s.setFooterNotice("No changes were staged")
+	}
 	s.invalidate()
 }
 

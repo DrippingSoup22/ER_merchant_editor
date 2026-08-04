@@ -245,6 +245,11 @@ type State struct {
 	// doc comment).
 	PickingForRows []int64
 
+	// footerNotice records the result of the latest meaningful action. Modal,
+	// busy, and editing states override it with immediate instructions; once
+	// those states end, the result remains useful instead of the footer falling
+	// back to a generic description of the current state.
+	footerNotice          string
 	footerStatusBarHeight int // measured each frame; lets modal overlays reuse the footer's exact baseline
 
 	// --- row-edit bar draft ---

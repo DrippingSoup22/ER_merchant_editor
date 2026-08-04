@@ -529,6 +529,7 @@ func (s *State) ClearItemSwap(edits map[int64]*RowEdit, rowID int64) {
 // afterward would silently resurrect the edit this Remove just discarded.
 func (s *State) RemoveRowEdits(rowID int64) {
 	delete(s.PendingEdits, rowID)
+	s.clearFooterNoticeWhenNoPending()
 	delete(s.draftEdits, rowID)
 }
 
@@ -543,6 +544,7 @@ func (s *State) RemoveMerchantEdits(merchant string) {
 			delete(s.draftEdits, id)
 		}
 	}
+	s.clearFooterNoticeWhenNoPending()
 }
 
 // setRowEntry writes the row's staged edits into edits, removing the entry

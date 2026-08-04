@@ -68,22 +68,33 @@ func TestModalCancelButtonClick(t *testing.T) {
 	}
 }
 
-// TestModalOKClickedSwallowsScrim covers the OK-only alert path: OKClicked
-// drains scrim clicks so they never reach widgets underneath, and reports
-// true only for a real OK-button click.
-func TestModalOKClickedSwallowsScrim(t *testing.T) {
+// TestModalOKClickedDismissesOnScrim covers the general overlay rule for an
+// OK-only alert: the dimmed region dismisses it just like the OK button.
+func TestModalOKClickedDismissesOnScrim(t *testing.T) {
 	var m Modal
 	gtx := headlessGtx()
 
-	// A scrim click on an OK-only alert is swallowed (not an acknowledgement).
+	// A scrim click on an OK-only alert dismisses it.
 	m.scrim.Click()
-	if m.OKClicked(gtx) {
-		t.Error("OKClicked = true after a scrim click, want false (scrim is swallowed, not OK)")
+	if !m.OKClicked(gtx) {
+		t.Error("OKClicked = false after a scrim click, want true (dimmed area dismisses the alert)")
 	}
 
 	// A real OK-button click acknowledges.
 	m.ok.Click()
 	if !m.OKClicked(gtx) {
 		t.Error("OKClicked = false after clicking OK, want true")
+	}
+}
+
+func TestModalScrimPressDismisses(t *testing.T) {
+	var m Modal
+	gtx := headlessGtx()
+	m.scrimPressed = true
+	if !m.CancelClicked(gtx) {
+		t.Error("CancelClicked = false after scrim pointer-down, want true")
+	}
+	if m.scrimPressed {
+		t.Error("scrimPressed was not consumed")
 	}
 }
