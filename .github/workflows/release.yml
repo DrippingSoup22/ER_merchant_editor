@@ -1,9 +1,8 @@
 name: Release
 
-# The whole app is pure Go (no cgo on the Windows target), so an
-# ubuntu-latest runner cross-compiles the Windows exe with a plain
-# `go build` -- no Windows runner, no Python, no PyInstaller. See
-# docs/PACKAGING.md.
+# The Windows GUI cross-compiles with plain Go; the Linux GUI is built
+# natively with Gio's X11/Wayland dependencies. No Windows runner, Python,
+# or PyInstaller is needed. See docs/PACKAGING.md.
 
 on:
   push:
@@ -24,24 +23,35 @@ jobs:
         with:
           go-version: stable
 
-      - name: Vet and test
-        # The GUI's native-Linux target needs X11/Wayland cgo dev packages
-        # (dev-only; the shipped exe is the CGO-free Windows target), so the
-        # full tree is vetted under GOOS=windows and tests run on the pure-Go
-        # packages. Tests needing the (gitignored) fixture save self-skip.
+      - name: Install Linux GUI build dependencies
         run: |
-          go test ./app/catalog/... ./app/shopwrite/...
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwayland-dev libx11-dev libx11-xcb-dev libxkbcommon-x11-dev \
+            libgles2-mesa-dev libegl1-mesa-dev libxcursor-dev libxfixes-dev \
+            libvulkan-dev
+
+      - name: Vet and test
+        # Tests needing the (gitignored) fixture save self-skip.
+        run: |
+          go test ./...
+          go vet ./...
           CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go vet ./...
 
-      - name: Build (Windows exe + shopwrite CLI, all targets)
+      - name: Build (Windows and Linux GUIs + shopwrite CLI)
         run: bash app/build.sh
 
       - name: Upload build artifact (manual runs, no tag)
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
         uses: actions/upload-artifact@v4
         with:
-          name: ERMerchantEditor-windows
-          path: app/dist/ERMerchantEditor.exe
+          name: ERMerchantEditor-linux-and-windows
+          path: |
+            app/dist/ERMerchantEditor-windows-amd64.exe
+            app/dist/ERMerchantEditor-linux-amd64
+            app/dist/io.github.daniele.ERMerchantEditor.desktop
+            app/dist/io.github.daniele.ERMerchantEditor.png
+            app/dist/install-linux-desktop.sh
           if-no-files-found: error
 
       - name: Attach to GitHub Release (tag push only)
@@ -52,4 +62,9 @@ jobs:
         with:
           draft: true
           name: "ER Merchant Editor ${{ github.ref_name }}"
-          files: app/dist/ERMerchantEditor.exe
+          files: |
+            app/dist/ERMerchantEditor-windows-amd64.exe
+            app/dist/ERMerchantEditor-linux-amd64
+            app/dist/io.github.daniele.ERMerchantEditor.desktop
+            app/dist/io.github.daniele.ERMerchantEditor.png
+            app/dist/install-linux-desktop.sh

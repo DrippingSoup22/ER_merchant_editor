@@ -1,19 +1,27 @@
 # Packaging
 
-Goal: a user downloads one file and double-clicks it. No installer, no
-runtime dependencies. Achieved (2026-07-27, Go/Gio rewrite): the whole app
-is **one pure-Go binary** — GUI (Gio), read side, write engine, all 5 data
-JSONs and all 2752 item icons embedded via `go:embed`.
+Goal: a user downloads one file and runs it. No installer. The Windows build
+has no runtime dependencies; the Linux build uses the standard desktop
+libraries listed below. Both embed the GUI (Gio), read side, write engine,
+all 5 data JSONs, and all 2752 item icons via `go:embed`.
 
 ## Build
 
 `bash app/build.sh` (any OS, incl. WSL) produces:
-- `app/dist/ERMerchantEditor.exe` — windows/amd64 GUI, **87MB** single
+- `app/dist/ERMerchantEditor-windows-amd64.exe` — windows/amd64 GUI, **87MB** single
   file (`-H windowsgui -s -w -trimpath`, CGO_ENABLED=0 — Gio renders via
   Direct3D syscalls on Windows, no cgo, so this cross-compiles from
   anywhere). No launch-time extraction (the PyInstaller-era exe re-unpacked
   85MB of icons to temp on every start).
-- `app/dist/shopwrite/<goos>-<goarch>/shopwrite[.exe]` — the CLI, 4
+- `app/dist/ERMerchantEditor-linux-amd64` — linux/amd64 GUI, one executable
+  with the same embedded data. It is built natively with cgo for Gio's Linux
+  backend and is intended for x86_64 Linux desktops.
+- `app/dist/install-linux-desktop.sh`,
+  `app/dist/io.github.daniele.ERMerchantEditor.desktop`, and
+  `app/dist/io.github.daniele.ERMerchantEditor.png` — optional per-user
+  desktop integration. Linux associates a window icon through these desktop
+  resources rather than through the executable itself.
+- `app/dist/shopwrite/<goos>-<goarch>/shopwrite[.exe]` — the CLI, 2
   targets, standalone (schema embedded, no data/ sibling).
 
 Windows exe metadata (icon/manifest/version) comes from the **committed**
@@ -30,24 +38,38 @@ Toolchain: apt go1.22 + `GOTOOLCHAIN=auto` fetches the pinned ≥1.25
 toolchain once (go.mod directive). First build needs network for the
 module cache (gio/x/zenity/compress); offline after that.
 
-## Linux dev builds (WSLg)
+## Linux GUI (release and development)
 
-The **Windows target** is cgo-free, but building/running the GUI natively
-on Linux needs cgo + dev packages:
+The Windows target is cgo-free. Building the GUI natively on Linux needs cgo
+and these dev packages:
 `libwayland-dev libx11-dev libx11-xcb-dev libxkbcommon-x11-dev
 libgles2-mesa-dev libegl1-mesa-dev libxcursor-dev libxfixes-dev
-libvulkan-dev` plus the `zenity` binary (file dialogs). WSLg runs the
-window fine (Mesa EGL warnings at startup are normal). This is dev-only
-convenience; nothing shipped depends on it.
+libvulkan-dev`. The release executable needs the corresponding runtime
+libraries provided by a normal Linux desktop, plus the `zenity` binary for
+file dialogs. Run it with:
+
+```
+chmod +x ERMerchantEditor-linux-amd64
+./ERMerchantEditor-linux-amd64
+
+# Optional: install a launcher and taskbar icon for this user.
+./install-linux-desktop.sh
+```
+
+WSLg runs the window fine (Mesa EGL warnings at startup are normal). It can
+report a 1.0 UI scale even when Windows uses 125%; the native Linux desktop
+scale remains automatic. For a WSLg-only override, launch with
+`ER_MERCHANT_EDITOR_SCALE=1.25 ./ERMerchantEditor-linux-amd64` (valid range:
+0.75 through 2.0).
 
 ## CI (`.github/workflows/release.yml`)
 
-`ubuntu-latest`, plain `setup-go` (stable) → `go vet` + `go test ./...`
-(fixture-dependent tests self-skip; the gitignored save fixture never
-reaches CI) → `bash app/build.sh` → on `v*` tag push, attach the exe to a
-**draft** GitHub Release; on `workflow_dispatch`, upload it as a workflow
-artifact instead. No Windows runner, no Python, no secrets beyond
-`GITHUB_TOKEN`.
+`ubuntu-latest`, plain `setup-go` (stable) + Linux GUI build dependencies →
+`go vet` + `go test ./...` (fixture-dependent tests self-skip; the gitignored
+save fixture never reaches CI) → `bash app/build.sh` → on `v*` tag push,
+attach the Windows and Linux GUIs to a **draft** GitHub Release; on
+`workflow_dispatch`, upload both as a workflow artifact instead. No Windows
+runner, no Python, no secrets beyond `GITHUB_TOKEN`.
 
 ## Superseded
 

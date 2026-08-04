@@ -66,7 +66,7 @@ func run(state *editor.State) error {
 		case app.DestroyEvent:
 			return e.Err
 		case app.FrameEvent:
-			gtx := app.NewContext(&ops, e)
+			gtx := app.NewContext(&ops, applyUIScaleOverride(e))
 			// The theme lives on State (rebuilt when the settings view
 			// switches palettes).
 			state.Layout(gtx, state.Theme())
