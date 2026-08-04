@@ -144,9 +144,11 @@ type BackdropStyle struct {
 // receives the post-inset constraints. panelBlocker is an invisible opaque
 // input layer over the entire visible panel, beneath its content's buttons.
 // It prevents blank panel clicks from leaking through to the click-to-dismiss
-// scrim. scrimPressTag/onScrimPress optionally close a dialog on the initial
-// pointer press (rather than waiting for release); that input layer sits below
-// the panel blocker and all controls, so it can only fire on the dimmed area.
+// scrim. scrimPressTag/onScrimPress optionally replace the Clickable with a
+// single pointer-down handler. Keeping both layers active makes them compete
+// for the first gesture, which can turn dismissal into a second-click action.
+// The pointer layer sits below the panel blocker and all controls, so it can
+// only fire on the dimmed area.
 // afterPanel (if non-nil) runs inside the deferred region after the panel,
 // with the ORIGINAL full-window gtx.
 func Backdrop(gtx layout.Context, style BackdropStyle, scrim, panelBlocker *widget.Clickable, scrimPressTag event.Tag, onScrimPress func(), sizePanel func(*layout.Context), content layout.Widget, afterPanel func(layout.Context)) {
@@ -155,19 +157,21 @@ func Backdrop(gtx layout.Context, style BackdropStyle, scrim, panelBlocker *widg
 		for panelBlocker.Clicked(gtx) {
 		}
 	}
-	// Scrim: full-window fill + a click-swallowing area.
+	// Scrim: full-window fill + exactly one opaque input layer. When a press
+	// callback is supplied, do not also lay out the release-based Clickable:
+	// overlapping handlers can route the first gesture to the wrong target.
 	paint.FillShape(gtx.Ops, style.Scrim, clip.Rect{Max: gtx.Constraints.Max}.Op())
-	scrim.Layout(gtx, func(gtx layout.Context) layout.Dimensions {
-		return layout.Dimensions{Size: gtx.Constraints.Max}
-	})
 	if scrimPressTag != nil {
 		pressed := false
 		for {
-			ev, ok := gtx.Event(pointer.Filter{Target: scrimPressTag, Kinds: pointer.Press})
+			ev, ok := gtx.Event(pointer.Filter{
+				Target: scrimPressTag,
+				Kinds:  pointer.Cancel | pointer.Press | pointer.Release | pointer.Move | pointer.Drag | pointer.Enter | pointer.Leave | pointer.Scroll,
+			})
 			if !ok {
 				break
 			}
-			if _, ok := ev.(pointer.Event); ok {
+			if pev, ok := ev.(pointer.Event); ok && pev.Kind == pointer.Press {
 				pressed = true
 			}
 		}
@@ -177,6 +181,10 @@ func Backdrop(gtx layout.Context, style BackdropStyle, scrim, panelBlocker *widg
 		area := clip.Rect{Max: gtx.Constraints.Max}.Push(gtx.Ops)
 		event.Op(gtx.Ops, scrimPressTag)
 		area.Pop()
+	} else if scrim != nil {
+		scrim.Layout(gtx, func(gtx layout.Context) layout.Dimensions {
+			return layout.Dimensions{Size: gtx.Constraints.Max}
+		})
 	}
 
 	layout.Center.Layout(gtx, func(gtx layout.Context) layout.Dimensions {
