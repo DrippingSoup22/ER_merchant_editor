@@ -6,6 +6,7 @@ package main
 import (
 	"log"
 	"os"
+	"strconv"
 
 	"gioui.org/app"
 	"gioui.org/op"
@@ -52,6 +53,7 @@ func run(state *gio.State) error {
 		app.Maximized.Option(),
 	)
 	state.SetWindow(w)
+	uiScale := configuredUIScale(os.Getenv("ER_EDITOR_UI_SCALE"), platformUIScale())
 
 	// Dev convenience: load a save immediately if ER_EDITOR_SAVE is set. Never
 	// point this at save_files/ (read-only originals) — copy into
@@ -67,10 +69,27 @@ func run(state *gio.State) error {
 			return e.Err
 		case app.FrameEvent:
 			gtx := app.NewContext(&ops, e)
+			gtx.Metric.PxPerDp *= uiScale
+			gtx.Metric.PxPerSp *= uiScale
 			// The theme lives on State (rebuilt when the settings view
 			// switches palettes).
 			state.Layout(gtx, state.Theme())
 			e.Frame(gtx.Ops)
 		}
 	}
+}
+
+// configuredUIScale returns the platform baseline unless the user supplies a
+// sensible multiplier. The override is useful on Linux because compositors
+// (especially WSLg) do not always expose the host desktop's display scaling.
+func configuredUIScale(raw string, platformDefault float32) float32 {
+	if raw == "" {
+		return platformDefault
+	}
+	scale, err := strconv.ParseFloat(raw, 32)
+	if err != nil || scale < 0.5 || scale > 3 {
+		log.Printf("ignoring invalid ER_EDITOR_UI_SCALE %q (expected 0.5-3)", raw)
+		return platformDefault
+	}
+	return float32(scale)
 }

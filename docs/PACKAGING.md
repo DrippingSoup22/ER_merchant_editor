@@ -49,6 +49,11 @@ runtime. This dependency is explicit in the archive README. The platform
 interface in `internal/platform/dialogs` allows a later XDG-portal adapter
 without touching the editor core or views.
 
+Under WSL, the GUI applies a 1.25 display multiplier to compensate for WSLg's
+common 1.0 scale report and match the Windows visual baseline. Native Linux
+uses its compositor's scale unchanged. `ER_EDITOR_UI_SCALE` can override the
+multiplier with a value between `0.5` and `3`.
+
 The initial artifact is a tarball with the binary and desktop metadata.
 AppImage or Flatpak can be added under `packaging/linux` without changing the
 Go package layout.
