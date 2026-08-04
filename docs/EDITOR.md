@@ -750,7 +750,8 @@ status").
 
 ## Codebase cleanup pass (2026-08-01)
 
-Full-codebase audit (5 parallel read-only reviews across every `app/` package)
+Full-codebase audit (5 parallel read-only reviews across every application
+package in the pre-cross-platform layout)
 + phased execution plan. Phase 1 bug fixes (committed):
 - **Save-As dialog data-loss race**: `startCombinedSave` sets `busy` for the
   whole flow (click through completion/cancel/error), not just once the native

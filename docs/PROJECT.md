@@ -179,7 +179,9 @@ Both treated as read-only (see CLAUDE.md for the copy/backup rule).
 - 2026-07-26: write-back end-to-end with edit UI, user-verified live. PS4
   edits need a second game launch only when playing **online**; offline they
   load from the first launch.
-- 2026-07-27: repo restructured (`app/` ships, `tools/` dev-only). Public
+- 2026-07-27: repo restructured (the then-current `app/` shipped and `tools/`
+  was dev-only; the later cross-platform restructure moved shipped Go code to
+  `cmd/` and `internal/`). Public
   release stack pivoted **Tauri+React+FastAPI -> Dear PyGui -> Go/Gio (final)**,
   each fully shipped before being discarded — Tauri even published a live
   `v0.1.0` (3-OS CI, 7 installers) — dropped for 4 toolchains + 2 IPC

@@ -9,12 +9,17 @@ dialogs, or platform packaging code.
 
 ```text
 cmd
-  -> internal/ui/gio
-       -> internal/application
-            -> internal/catalog
-            -> internal/character
-            -> internal/savefile
-       -> internal/platform
+  -> internal/ui/gio, or directly to the core for CLI commands
+
+internal/ui/gio
+  -> internal/application (session state and save orchestration)
+  -> internal/catalog, internal/character (domain/read models)
+  -> internal/platform (desktop services)
+
+internal/application
+  -> internal/catalog
+  -> internal/character
+  -> internal/savefile
 
 internal/catalog   -> internal/savefile, internal/assets/data
 internal/character -> internal/character/flags, internal/character/slot
@@ -30,6 +35,8 @@ internal/savefile  -> internal/assets/data
 - `internal/application` owns an editing session: loading, staged changes,
   mutation translation, and save orchestration. It contains no GUI widgets.
 - `internal/ui/gio` owns window layout and retained widget/view state only.
+  It may consume core domain/read-model types for presentation, but does not
+  own save-format mutation or write orchestration.
 - `internal/platform` owns replaceable operating-system services such as file
   dialogs and application paths.
 - `internal/assets` contains embedded runtime data and item icons. Fonts and
