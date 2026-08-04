@@ -1,5 +1,4 @@
 /save_files/
-/working_copies/
 /.claude/
 /CLAUDE.md
 __pycache__/
@@ -7,5 +6,3 @@ __pycache__/
 /tools/.venv/
 /tools/itemdb_extract/itemdb_extract
 /dist/
-# Kept for developers who built the pre-restructure layout locally.
-/app/dist/

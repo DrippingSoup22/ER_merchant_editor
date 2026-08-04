@@ -61,11 +61,11 @@ internal/savefile  -> internal/assets/data
    containers itself.
 5. Platform builds are native CI jobs. Windows resources, Linux desktop
    metadata, and macOS bundle metadata remain outside Go application logic.
-6. Generated binaries, virtual environments, user saves, working copies, and
+6. Generated binaries, virtual environments, user saves, test copies, and
    release artifacts are never tracked.
 
-## Migration policy
+## Change policy
 
-The restructure is intentionally incremental. Every commit must preserve
-observable behavior, keep imports flowing in the direction above, and pass the
-available unit tests and cross-build checks before the next boundary is moved.
+Preserve observable behavior, keep imports flowing inward, and test the
+smallest affected core package while iterating. Run `scripts/check.sh` before
+handoff; use native packaging jobs for Linux and macOS GUI verification.

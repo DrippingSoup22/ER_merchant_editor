@@ -6,8 +6,9 @@ stock slot for any of 2596 items, set its price, quantity and upgrade
 level, and unlock stock that's still gated behind progression — then write
 it all out to a new save in one batch.
 
-One native desktop application for Windows, Linux, and macOS, with the save
-editor core shared across every platform.
+A native Windows desktop application with a platform-independent editor core.
+Linux and macOS build/packaging support is in place and is the next release
+focus.
 
 **[Download the latest release →](../../releases/latest)**
 
@@ -88,8 +89,9 @@ first.
 
 ## Using it
 
-1. Download the build for your platform. Run the Windows `.exe`, extract the
-   Linux archive and run `ERMerchantEditor`, or open the macOS `.app`.
+1. Download an available build. Run the Windows `.exe`; when Linux and macOS
+   builds are published, extract and run `ERMerchantEditor` or open the
+   macOS `.app` respectively.
 2. Paste or browse to your decrypted `.dat` save and hit **Load**.
 3. Edit. Every change is staged, not applied — **Pending (N)** shows
    exactly what will be written, and anything can be removed before saving.
@@ -101,9 +103,9 @@ doesn't verify, you get an error instead of a file.
 
 ## Building from source
 
-Optional; skip it if you downloaded a release. Requires Go 1.22+ (the build
-pulls the pinned newer toolchain itself via `GOTOOLCHAIN=auto`; the first
-build needs network access for the module cache).
+Optional; skip it if you downloaded a release. The required Go version is
+declared in `go.mod`; `GOTOOLCHAIN=auto` can fetch it. A first build may need
+network access for the toolchain and module cache.
 
 ```
 scripts/build.sh              # build GUI targets supported by this host
