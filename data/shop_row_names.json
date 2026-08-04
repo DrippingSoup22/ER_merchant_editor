@@ -1,0 +1,5046 @@
+{
+  "100000": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100002": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Ruin Fragment"
+  },
+  "100004": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Buckler"
+  },
+  "100009": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Furlcalling Finger Remedy"
+  },
+  "100010": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Silver-Pickled Fowl Foot"
+  },
+  "100011": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Stormhawk Feather"
+  },
+  "100012": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Caestus"
+  },
+  "100013": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Great Arrow"
+  },
+  "100014": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Ballista Bolt"
+  },
+  "100015": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Bandit Manchettes"
+  },
+  "100016": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Bandit Boots"
+  },
+  "100017": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Bandit Garb"
+  },
+  "100018": {
+    "merchant": "Gatekeeper Gostoc",
+    "item_label": "Ancient Dragon Smithing Stone"
+  },
+  "100025": {
+    "merchant": null,
+    "item_label": "Memory Stone"
+  },
+  "100026": {
+    "merchant": null,
+    "item_label": "Stonesword Key"
+  },
+  "100050": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Glintstone Pebble"
+  },
+  "100051": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Scholar's Armament"
+  },
+  "100052": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Scholar's Shield"
+  },
+  "100053": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Crystal Barrage"
+  },
+  "100054": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Glintstone Arc"
+  },
+  "100055": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Glintstone Stars"
+  },
+  "100056": {
+    "merchant": "Sorceress Sellen - Quest",
+    "item_label": "Shard Spiral"
+  },
+  "100057": {
+    "merchant": "Sorceress Sellen - Conspectus Scroll",
+    "item_label": "Glintstone Cometshard"
+  },
+  "100058": {
+    "merchant": "Sorceress Sellen - Conspectus Scroll",
+    "item_label": "Star Shower"
+  },
+  "100059": {
+    "merchant": "Sorceress Sellen - Academy Scroll",
+    "item_label": "Great Glintstone Shard"
+  },
+  "100060": {
+    "merchant": "Sorceress Sellen - Academy Scroll",
+    "item_label": "Swift Glintstone Shard"
+  },
+  "100061": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Glintblade Phalanx"
+  },
+  "100062": {
+    "merchant": "Sorceress Sellen",
+    "item_label": "Carian Slicer"
+  },
+  "100075": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Impaling Thrust"
+  },
+  "100076": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Spinning Slash"
+  },
+  "100077": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Quickstep"
+  },
+  "100078": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Stamp (Upward Cut)"
+  },
+  "100079": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Kick"
+  },
+  "100080": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: War Cry"
+  },
+  "100081": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Endure"
+  },
+  "100082": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Parry"
+  },
+  "100083": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Storm Blade"
+  },
+  "100084": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Eruption"
+  },
+  "100085": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: Assassin's Gambit"
+  },
+  "100086": {
+    "merchant": "Knight Bernahl",
+    "item_label": "Ash of War: No Skill"
+  },
+  "100100": {
+    "merchant": "Patches",
+    "item_label": "Margit's Shackle"
+  },
+  "100101": {
+    "merchant": "Patches",
+    "item_label": "Missionary's Cookbook [2]"
+  },
+  "100102": {
+    "merchant": "Patches",
+    "item_label": "Stonesword Key"
+  },
+  "100103": {
+    "merchant": "Patches",
+    "item_label": "Furlcalling Finger Remedy"
+  },
+  "100104": {
+    "merchant": "Patches",
+    "item_label": "Glass Shard"
+  },
+  "100105": {
+    "merchant": "Patches",
+    "item_label": "Gold-Pickled Fowl Foot"
+  },
+  "100108": {
+    "merchant": "Patches",
+    "item_label": "Parrying Dagger"
+  },
+  "100111": {
+    "merchant": "Patches",
+    "item_label": "Sacrificial Twig"
+  },
+  "100112": {
+    "merchant": "Patches",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100113": {
+    "merchant": "Patches",
+    "item_label": "Grace Mimic"
+  },
+  "100114": {
+    "merchant": "Patches",
+    "item_label": "Fan Daggers"
+  },
+  "100115": {
+    "merchant": "Patches",
+    "item_label": "Great Arrow"
+  },
+  "100116": {
+    "merchant": "Patches",
+    "item_label": "Ballista Bolt"
+  },
+  "100117": {
+    "merchant": "Patches",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100118": {
+    "merchant": "Patches",
+    "item_label": "Fan Daggers"
+  },
+  "100119": {
+    "merchant": "Patches",
+    "item_label": "Estoc"
+  },
+  "100120": {
+    "merchant": "Patches",
+    "item_label": "Great Arrow"
+  },
+  "100121": {
+    "merchant": "Patches",
+    "item_label": "Ballista Bolt"
+  },
+  "100122": {
+    "merchant": "Patches",
+    "item_label": "Horse Crest Wooden Shield"
+  },
+  "100126": {
+    "merchant": "D Hunter of The Dead",
+    "item_label": "Litany of Proper Death"
+  },
+  "100127": {
+    "merchant": "D Hunter of The Dead",
+    "item_label": "Order's Blade"
+  },
+  "100150": {
+    "merchant": "Blackguard Big Boggart",
+    "item_label": "Rya's Necklace"
+  },
+  "100155": {
+    "merchant": "Blackguard Big Boggart",
+    "item_label": "Boiled Crab"
+  },
+  "100160": {
+    "merchant": "Blackguard Big Boggart",
+    "item_label": "Boiled Prawn"
+  },
+  "100175": {
+    "merchant": "Gowry",
+    "item_label": "Night Shard"
+  },
+  "100176": {
+    "merchant": "Gowry",
+    "item_label": "Night Maiden's Mist"
+  },
+  "100177": {
+    "merchant": "Gowry",
+    "item_label": "Glintstone Stars"
+  },
+  "100185": {
+    "merchant": "Gowry",
+    "item_label": "Pest Threads"
+  },
+  "100200": {
+    "merchant": "Sorcerer Rogier",
+    "item_label": "Ash of War: Spinning Weapon"
+  },
+  "100201": {
+    "merchant": "Sorcerer Rogier",
+    "item_label": "Ash of War: Glintstone Pebble"
+  },
+  "100202": {
+    "merchant": "Sorcerer Rogier",
+    "item_label": "Ash of War: Carian Greatsword"
+  },
+  "100225": {
+    "merchant": "Iji",
+    "item_label": "Somber Smithing Stone [1]"
+  },
+  "100226": {
+    "merchant": "Iji",
+    "item_label": "Somber Smithing Stone [2]"
+  },
+  "100227": {
+    "merchant": "Iji",
+    "item_label": "Somber Smithing Stone [3]"
+  },
+  "100228": {
+    "merchant": "Iji",
+    "item_label": "Somber Smithing Stone [4]"
+  },
+  "100229": {
+    "merchant": "Iji",
+    "item_label": "Carian Filigreed Crest"
+  },
+  "100250": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Glintstone Pebble"
+  },
+  "100251": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Glintstone Arc"
+  },
+  "100252": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Starlight"
+  },
+  "100275": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Carian Phalanx"
+  },
+  "100276": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Glintstone Icecrag"
+  },
+  "100277": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Freezing Mist"
+  },
+  "100278": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Carian Retaliation"
+  },
+  "100279": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Glintstone Cometshard"
+  },
+  "100280": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Star Shower"
+  },
+  "100281": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Great Glintstone Shard"
+  },
+  "100282": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Swift Glintstone Shard"
+  },
+  "100283": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Glintblade Phalanx"
+  },
+  "100284": {
+    "merchant": "Preceptor Seluvis",
+    "item_label": "Carian Slicer"
+  },
+  "100300": {
+    "merchant": "Preceptor Seluvis - Ranni Quest",
+    "item_label": "Finger Maiden Therolina Puppet"
+  },
+  "100301": {
+    "merchant": "Preceptor Seluvis - Ranni Quest",
+    "item_label": "Dolores the Sleeping Arrow Puppet"
+  },
+  "100302": {
+    "merchant": "Preceptor Seluvis - Ranni Quest",
+    "item_label": "Jarwight Puppet"
+  },
+  "100310": {
+    "merchant": "Preceptor Seluvis - Dung Eater Quest",
+    "item_label": "Dung Eater Puppet"
+  },
+  "100325": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Glintstone Craftsman's Cookbook [7]"
+  },
+  "100326": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Ritual Pot"
+  },
+  "100329": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Old Fang"
+  },
+  "100330": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Slumbering Egg"
+  },
+  "100334": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Ash of War: Carian Retaliation"
+  },
+  "100335": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Celestial Dew"
+  },
+  "100336": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Larval Tear"
+  },
+  "100337": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Budding Horn"
+  },
+  "100338": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Ripple Blade"
+  },
+  "100339": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Black Leather Shield"
+  },
+  "100340": {
+    "merchant": "Pidia Carian Servant",
+    "item_label": "Weathered Map"
+  },
+  "100350": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Rejection"
+  },
+  "100351": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Urgent Heal"
+  },
+  "100352": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Heal"
+  },
+  "100353": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Cure Poison"
+  },
+  "100354": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Flame Fortification"
+  },
+  "100355": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Magic Fortification"
+  },
+  "100356": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Catch Flame"
+  },
+  "100357": {
+    "merchant": "Brother Corhyn",
+    "item_label": "Flame Sling"
+  },
+  "100358": {
+    "merchant": "Brother Corhyn - Altus Plateau",
+    "item_label": "Great Heal"
+  },
+  "100359": {
+    "merchant": "Brother Corhyn - Altus Plateau",
+    "item_label": "Lightning Fortification"
+  },
+  "100360": {
+    "merchant": "Brother Corhyn - Goldmask",
+    "item_label": "Discus of Light"
+  },
+  "100361": {
+    "merchant": "Brother Corhyn - Erdtree Sanctuary",
+    "item_label": "Immutable Shield"
+  },
+  "100362": {
+    "merchant": "Brother Corhyn - Fire Monks' Prayerbook",
+    "item_label": "O Flame!"
+  },
+  "100363": {
+    "merchant": "Brother Corhyn - Fire Monks' Prayerbook",
+    "item_label": "Surge"
+  },
+  "100364": {
+    "merchant": "Brother Corhyn - Giant's Prayerbook",
+    "item_label": "Giantsflame Take Thee"
+  },
+  "100365": {
+    "merchant": "Brother Corhyn - Giant's Prayerbook",
+    "item_label": "Flame"
+  },
+  "100366": {
+    "merchant": "Brother Corhyn - Godskin Prayerbook",
+    "item_label": "Black Flame"
+  },
+  "100367": {
+    "merchant": "Brother Corhyn - Godskin Prayerbook",
+    "item_label": "Black Flame Blade"
+  },
+  "100368": {
+    "merchant": "Brother Corhyn - Two Fingers' Prayerbook",
+    "item_label": "Lord's Heal"
+  },
+  "100369": {
+    "merchant": "Brother Corhyn - Two Fingers' Prayerbook",
+    "item_label": "Lord's Aid"
+  },
+  "100370": {
+    "merchant": "Brother Corhyn - Assassin's Prayerbook",
+    "item_label": "Assassin's Approach"
+  },
+  "100371": {
+    "merchant": "Brother Corhyn - Assassin's Prayerbook",
+    "item_label": "Darkness"
+  },
+  "100372": {
+    "merchant": "Brother Corhyn - Golden Order Principia",
+    "item_label": "Radagon's Rings of Light"
+  },
+  "100373": {
+    "merchant": "Brother Corhyn - Golden Order Principia",
+    "item_label": "Law of Regression"
+  },
+  "100374": {
+    "merchant": "Brother Corhyn - Dragon Cult Prayerbook",
+    "item_label": "Lightning Spear"
+  },
+  "100375": {
+    "merchant": "Brother Corhyn - Dragon Cult Prayerbook",
+    "item_label": "Honed Bolt"
+  },
+  "100376": {
+    "merchant": "Brother Corhyn - Dragon Cult Prayerbook",
+    "item_label": "Electrify Armament"
+  },
+  "100377": {
+    "merchant": "Brother Corhyn - Ancient Dragon Prayerbook",
+    "item_label": "Ancient Dragons' Lightning Spear"
+  },
+  "100378": {
+    "merchant": "Brother Corhyn - Ancient Dragon Prayerbook",
+    "item_label": "Ancient Dragons' Lightning Strike"
+  },
+  "100400": {
+    "merchant": "Miriel",
+    "item_label": "Magic Glintblade"
+  },
+  "100401": {
+    "merchant": "Miriel",
+    "item_label": "Carian Greatsword"
+  },
+  "100402": {
+    "merchant": "Miriel - Conspectus Scroll",
+    "item_label": "Glintstone Cometshard"
+  },
+  "100403": {
+    "merchant": "Miriel - Conspectus Scroll",
+    "item_label": "Star Shower"
+  },
+  "100404": {
+    "merchant": "Miriel - Academy Scroll",
+    "item_label": "Great Glintstone Shard"
+  },
+  "100405": {
+    "merchant": "Miriel - Academy Scroll",
+    "item_label": "Swift Glintstone Shard"
+  },
+  "100406": {
+    "merchant": "Miriel",
+    "item_label": "Glintblade Phalanx"
+  },
+  "100407": {
+    "merchant": "Miriel",
+    "item_label": "Carian Slicer"
+  },
+  "100425": {
+    "merchant": "Miriel",
+    "item_label": "Blessing's Boon"
+  },
+  "100426": {
+    "merchant": "Miriel - Fire Monks' Prayerbook",
+    "item_label": "O Flame!"
+  },
+  "100428": {
+    "merchant": "Miriel - Fire Monks' Prayerbook",
+    "item_label": "Surge"
+  },
+  "100429": {
+    "merchant": "Miriel - Giant's Prayerbook",
+    "item_label": "Giantsflame Take Thee"
+  },
+  "100430": {
+    "merchant": "Miriel - Giant's Prayerbook",
+    "item_label": "Flame"
+  },
+  "100431": {
+    "merchant": "Miriel - Godskin Prayerbook",
+    "item_label": "Black Flame"
+  },
+  "100432": {
+    "merchant": "Miriel - Godskin Prayerbook",
+    "item_label": "Black Flame Blade"
+  },
+  "100433": {
+    "merchant": "Miriel - Two Fingers' Prayerbook",
+    "item_label": "Lord's Heal"
+  },
+  "100434": {
+    "merchant": "Miriel - Two Fingers' Prayerbook",
+    "item_label": "Lord's Aid"
+  },
+  "100435": {
+    "merchant": "Miriel - Assassin's Prayerbook",
+    "item_label": "Assassin's Approach"
+  },
+  "100436": {
+    "merchant": "Miriel - Assassin's Prayerbook",
+    "item_label": "Darkness"
+  },
+  "100437": {
+    "merchant": "Miriel - Golden Order Principia",
+    "item_label": "Radagon's Rings of Light"
+  },
+  "100438": {
+    "merchant": "Miriel - Golden Order Principia",
+    "item_label": "Law of Regression"
+  },
+  "100439": {
+    "merchant": "Miriel - Dragon Cult Prayerbook",
+    "item_label": "Lightning Spear"
+  },
+  "100440": {
+    "merchant": "Miriel - Dragon Cult Prayerbook",
+    "item_label": "Honed Bolt"
+  },
+  "100441": {
+    "merchant": "Miriel - Dragon Cult Prayerbook",
+    "item_label": "Electrify Armament"
+  },
+  "100442": {
+    "merchant": "Miriel - Ancient Dragon Prayerbook",
+    "item_label": "Ancient Dragons' Lightning Spear"
+  },
+  "100443": {
+    "merchant": "Miriel - Ancient Dragon Prayerbook",
+    "item_label": "Ancient Dragons' Lightning Strike"
+  },
+  "100500": {
+    "merchant": "Merchant Kale",
+    "item_label": "Note: Flask of Wondrous Physick"
+  },
+  "100501": {
+    "merchant": "Merchant Kale",
+    "item_label": "Crafting Kit"
+  },
+  "100502": {
+    "merchant": "Merchant Kale",
+    "item_label": "Nomadic Warrior's Cookbook [1]"
+  },
+  "100503": {
+    "merchant": "Merchant Kale",
+    "item_label": "Nomadic Warrior's Cookbook [2]"
+  },
+  "100504": {
+    "merchant": "Merchant Kale",
+    "item_label": "Missionary's Cookbook [1]"
+  },
+  "100505": {
+    "merchant": "Merchant Kale",
+    "item_label": "Furlcalling Finger Remedy"
+  },
+  "100506": {
+    "merchant": "Merchant Kale",
+    "item_label": "Cracked Pot"
+  },
+  "100507": {
+    "merchant": "Merchant Kale",
+    "item_label": "Throwing Dagger"
+  },
+  "100510": {
+    "merchant": "Merchant Kale",
+    "item_label": "Torch"
+  },
+  "100511": {
+    "merchant": "Merchant Kale",
+    "item_label": "Large Leather Shield"
+  },
+  "100513": {
+    "merchant": "Merchant Kale",
+    "item_label": "Telescope"
+  },
+  "100514": {
+    "merchant": "Merchant Kale",
+    "item_label": "Note: Waypoint Ruins"
+  },
+  "100515": {
+    "merchant": "Merchant Kale",
+    "item_label": "Chain Coif"
+  },
+  "100516": {
+    "merchant": "Merchant Kale",
+    "item_label": "Chain Armor"
+  },
+  "100517": {
+    "merchant": "Merchant Kale",
+    "item_label": "Chain Gauntlets"
+  },
+  "100518": {
+    "merchant": "Merchant Kale",
+    "item_label": "Chain Leggings"
+  },
+  "100519": {
+    "merchant": "Merchant Kale",
+    "item_label": "Arrow"
+  },
+  "100520": {
+    "merchant": "Merchant Kale",
+    "item_label": "Bolt"
+  },
+  "100525": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Nomadic Warrior's Cookbook [3]"
+  },
+  "100539": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Note: Flame Chariots"
+  },
+  "100540": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Cracked Pot"
+  },
+  "100541": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Pickled Turtle Neck"
+  },
+  "100542": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Short Sword"
+  },
+  "100543": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Halberd"
+  },
+  "100544": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Arrow"
+  },
+  "100545": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Bolt"
+  },
+  "100546": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Bandit Mask"
+  },
+  "100547": {
+    "merchant": "Merchant - North Limgrave",
+    "item_label": "Smithing Stone [1]"
+  },
+  "100550": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Nomadic Warrior's Cookbook [5]"
+  },
+  "100551": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Armorer's Cookbook [3]"
+  },
+  "100552": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Sliver of Meat"
+  },
+  "100553": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Beast Liver"
+  },
+  "100554": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Lump of Flesh"
+  },
+  "100557": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Arrow"
+  },
+  "100560": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Bolt"
+  },
+  "100561": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100562": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Trina's Lily"
+  },
+  "100563": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Hand Axe"
+  },
+  "100564": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Riveted Wooden Shield"
+  },
+  "100565": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Blue-Gold Kite Shield"
+  },
+  "100566": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "St. Trina's Arrow"
+  },
+  "100567": {
+    "merchant": "Merchant - East Limgrave",
+    "item_label": "Smithing Stone [1]"
+  },
+  "100575": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Armorer's Cookbook [2]"
+  },
+  "100576": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Note: Stonedigger Trolls"
+  },
+  "100585": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Note: Land Squirts"
+  },
+  "100586": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Club"
+  },
+  "100587": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Broadsword"
+  },
+  "100588": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Iron Roundshield"
+  },
+  "100589": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Shortbow"
+  },
+  "100590": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Arrow"
+  },
+  "100591": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Bolt"
+  },
+  "100592": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Neutralizing Boluses"
+  },
+  "100593": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Stanching Boluses"
+  },
+  "100594": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Stimulating Boluses"
+  },
+  "100595": {
+    "merchant": "Merchant - Coastal Cave",
+    "item_label": "Smithing Stone [1]"
+  },
+  "100600": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Stonesword Key"
+  },
+  "100601": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Kukri"
+  },
+  "100602": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Red Thorn Roundshield"
+  },
+  "100603": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Round Shield"
+  },
+  "100604": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Crimson Amber Medallion"
+  },
+  "100605": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Note: Demi-human Mobs"
+  },
+  "100606": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Cracked Pot"
+  },
+  "100607": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Bastard Sword"
+  },
+  "100608": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Light Crossbow"
+  },
+  "100609": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Arrow"
+  },
+  "100610": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Bolt"
+  },
+  "100611": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Great Arrow"
+  },
+  "100612": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Ballista Bolt"
+  },
+  "100613": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Iron Helmet"
+  },
+  "100614": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Scale Armor"
+  },
+  "100615": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Iron Gauntlets"
+  },
+  "100616": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Leather Trousers"
+  },
+  "100617": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Smithing Stone [1]"
+  },
+  "100618": {
+    "merchant": "Merchant - East Weeping Peninsula",
+    "item_label": "Smithing Stone [2]"
+  },
+  "100625": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Nomadic Warrior's Cookbook [11]"
+  },
+  "100626": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Estoc"
+  },
+  "100627": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Kite Shield"
+  },
+  "100628": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Astrologer Hood"
+  },
+  "100629": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Astrologer Robe"
+  },
+  "100630": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Astrologer Gloves"
+  },
+  "100631": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Astrologer Trousers"
+  },
+  "100632": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Lantern"
+  },
+  "100633": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Astrologer's Staff"
+  },
+  "100634": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Arrow"
+  },
+  "100635": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Bolt"
+  },
+  "100636": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Smithing Stone [2]"
+  },
+  "100637": {
+    "merchant": "Merchant - Liurnia of the Lakes",
+    "item_label": "Smithing Stone [3]"
+  },
+  "100650": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Note: Walking Mausoleum"
+  },
+  "100652": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Stonesword Key"
+  },
+  "100654": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Arteria Leaf"
+  },
+  "100656": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Ballista Bolt"
+  },
+  "100657": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Sacrificial Twig"
+  },
+  "100658": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Lantern"
+  },
+  "100659": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Lost Ashes of War"
+  },
+  "100660": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Zweihander"
+  },
+  "100661": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Arrow"
+  },
+  "100662": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Bolt"
+  },
+  "100663": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Great Arrow"
+  },
+  "100664": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100665": {
+    "merchant": "Isolated Merchant - Weeping Peninsula",
+    "item_label": "Smithing Stone [2]"
+  },
+  "100675": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Fevor's Cookbook [2]"
+  },
+  "100676": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Trina's Lily"
+  },
+  "100678": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Eye of Yelough"
+  },
+  "100680": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Stonesword Key"
+  },
+  "100681": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Lost Ashes of War"
+  },
+  "100682": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Sacrificial Twig"
+  },
+  "100686": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Note: Revenants"
+  },
+  "100687": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Note: Frenzied Flame Village"
+  },
+  "100688": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Fanged Imp Ashes"
+  },
+  "100689": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "St. Trina's Arrow"
+  },
+  "100690": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Meteor Bolt"
+  },
+  "100691": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Blue Cloth Cowl"
+  },
+  "100692": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Blue Cloth Vest"
+  },
+  "100693": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Warrior Gauntlets"
+  },
+  "100694": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Warrior Greaves"
+  },
+  "100695": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100696": {
+    "merchant": "Merchant - Academy of Raya Lucaria",
+    "item_label": "Note: The Preceptor's Secret"
+  },
+  "100700": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Nomadic Warrior's Cookbook [13]"
+  },
+  "100704": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Composite Bow"
+  },
+  "100705": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Rift Shield"
+  },
+  "100706": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Blue Crest Heater Shield"
+  },
+  "100714": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Rune Arc"
+  },
+  "100715": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Bewitching Branch"
+  },
+  "100716": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Arrow"
+  },
+  "100717": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Bolt"
+  },
+  "100718": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Immunizing White Cured Meat"
+  },
+  "100719": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Invigorating White Cured Meat"
+  },
+  "100720": {
+    "merchant": "Merchant - North Liurnia",
+    "item_label": "Clarifying White Cured Meat"
+  },
+  "100725": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Perfume Bottle"
+  },
+  "100726": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Golden Great Arrow"
+  },
+  "100727": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Sentry's Torch"
+  },
+  "100728": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Rune Arc"
+  },
+  "100729": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Golden Sunflower"
+  },
+  "100730": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Distinguished Greatshield"
+  },
+  "100731": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Arrow"
+  },
+  "100732": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Golden Arrow"
+  },
+  "100733": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Bolt"
+  },
+  "100734": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Golden Bolt"
+  },
+  "100735": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Great Arrow"
+  },
+  "100736": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Ballista Bolt"
+  },
+  "100737": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Upper-Class Robe"
+  },
+  "100738": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Consort's Trousers"
+  },
+  "100739": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Prophet Blindfold"
+  },
+  "100740": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Prophet Trousers"
+  },
+  "100741": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Prophet Robe"
+  },
+  "100742": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100743": {
+    "merchant": "Hermit Merchant - Leyndell",
+    "item_label": "Note: Below the Capital"
+  },
+  "100750": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Ancient Dragon Apostle's Cookbook [2]"
+  },
+  "100751": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Note: Imp Shades"
+  },
+  "100752": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Note: Unseen Assassins"
+  },
+  "100753": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Stonesword Key"
+  },
+  "100761": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Lightning Bolt"
+  },
+  "100764": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Scorpion Kite Shield"
+  },
+  "100765": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Gravel Stone"
+  },
+  "100766": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Red Crest Heater Shield"
+  },
+  "100767": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Crossed-Tree Towershield"
+  },
+  "100768": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Arrow"
+  },
+  "100769": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Bolt"
+  },
+  "100770": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Tree Surcoat"
+  },
+  "100771": {
+    "merchant": "Merchant - Altus Plateau",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100775": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Nomadic Warrior's Cookbook [20]"
+  },
+  "100777": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Stonesword Key"
+  },
+  "100784": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Explosive Greatbolt"
+  },
+  "100789": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Arrow"
+  },
+  "100790": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Great Arrow"
+  },
+  "100791": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Bolt"
+  },
+  "100792": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Explosive Bolt"
+  },
+  "100793": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Ballista Bolt"
+  },
+  "100794": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Confessor Hood"
+  },
+  "100795": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Confessor Armor"
+  },
+  "100796": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Confessor Gloves"
+  },
+  "100797": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Confessor Boots"
+  },
+  "100798": {
+    "merchant": "Merchant - Mt. Gelmir",
+    "item_label": "Guilty Hood"
+  },
+  "100801": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Poisonbone Dart"
+  },
+  "100802": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Poisoned Stone"
+  },
+  "100803": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Poisoned Stone Clump"
+  },
+  "100813": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Preserving Boluses"
+  },
+  "100814": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Aeonian Butterfly"
+  },
+  "100815": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Arrow"
+  },
+  "100816": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Fire Arrow"
+  },
+  "100817": {
+    "merchant": "Merchant - Caelid (Aeonia Swamp)",
+    "item_label": "Bolt"
+  },
+  "100825": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Nomadic Warrior's Cookbook [15]"
+  },
+  "100826": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Stonesword Key"
+  },
+  "100827": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Cracked Pot"
+  },
+  "100837": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Note: Gravity's Advantage"
+  },
+  "100838": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Arrow"
+  },
+  "100839": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Bolt"
+  },
+  "100840": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Flaming Bolt"
+  },
+  "100841": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Champion Headband"
+  },
+  "100842": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Champion Pauldron"
+  },
+  "100843": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Champion Bracers"
+  },
+  "100844": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Champion Gaiters"
+  },
+  "100845": {
+    "merchant": "Merchant - South Caelid",
+    "item_label": "Greathelm"
+  },
+  "100875": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Note: Hidden Cave"
+  },
+  "100876": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Ritual Pot"
+  },
+  "100877": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Lost Ashes of War"
+  },
+  "100878": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Gravel Stone"
+  },
+  "100880": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Sacrificial Twig"
+  },
+  "100882": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Land of Reeds Helm"
+  },
+  "100883": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Land of Reeds Armor"
+  },
+  "100884": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Land of Reeds Gauntlets"
+  },
+  "100885": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Land of Reeds Greaves"
+  },
+  "100886": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Note: Gateway"
+  },
+  "100887": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Dragonwound Grease"
+  },
+  "100888": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Spiked Caestus"
+  },
+  "100889": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Beast-Repellent Torch"
+  },
+  "100890": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Arrow"
+  },
+  "100891": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Serpent Arrow"
+  },
+  "100892": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Bolt"
+  },
+  "100893": {
+    "merchant": "Isolated Merchant - Dragonbarrow",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100900": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Missionary's Cookbook [7]"
+  },
+  "100901": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Stonesword Key"
+  },
+  "100903": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Thawfrost Boluses"
+  },
+  "100909": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Rune Arc"
+  },
+  "100910": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Arrow"
+  },
+  "100911": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Bolt"
+  },
+  "100912": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Great Arrow"
+  },
+  "100913": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Ballista Bolt"
+  },
+  "100914": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Lightning Greatbolt"
+  },
+  "100915": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Vagabond Knight Helm"
+  },
+  "100916": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Vagabond Knight Armor"
+  },
+  "100917": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Vagabond Knight Gauntlets"
+  },
+  "100918": {
+    "merchant": "Merchant - Mountaintops of the Giants",
+    "item_label": "Vagabond Knight Greaves"
+  },
+  "100925": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Nomadic Warrior's Cookbook [17]"
+  },
+  "100926": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Nomadic Warrior's Cookbook [18]"
+  },
+  "100928": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Stonesword Key"
+  },
+  "100935": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Dwelling Arrow"
+  },
+  "100936": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Larval Tear"
+  },
+  "100937": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Shotel"
+  },
+  "100938": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Arrow"
+  },
+  "100939": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Bolt"
+  },
+  "100940": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Soap"
+  },
+  "100941": {
+    "merchant": "Merchant - Siofra River",
+    "item_label": "Nascent Butterfly"
+  },
+  "100950": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Nomadic Warrior's Cookbook [16]"
+  },
+  "100951": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Perfumer's Cookbook [4]"
+  },
+  "100953": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Lost Ashes of War"
+  },
+  "100962": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Celestial Dew"
+  },
+  "100963": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Gravity Stone Fan"
+  },
+  "100964": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Gravity Stone Chunk"
+  },
+  "100965": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Prisoner Iron Mask"
+  },
+  "100966": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Prisoner Clothing"
+  },
+  "100967": {
+    "merchant": "Merchant - Ainsel River",
+    "item_label": "Prisoner Trousers"
+  },
+  "100976": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Stonesword Key"
+  },
+  "100977": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Lost Ashes of War"
+  },
+  "100981": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Rune Arc"
+  },
+  "100982": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Festering Bloody Finger"
+  },
+  "100983": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Stanching Boluses"
+  },
+  "100984": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Bloodrose"
+  },
+  "100985": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Dwelling Arrow"
+  },
+  "100986": {
+    "merchant": "Imprisoned Merchant - Mohgwyn",
+    "item_label": "Burred Bolt"
+  },
+  "101503": {
+    "merchant": "Enia - Godfrey",
+    "item_label": "Elden Lord Crown"
+  },
+  "101504": {
+    "merchant": "Enia - Godfrey",
+    "item_label": "Elden Lord Armor"
+  },
+  "101505": {
+    "merchant": "Enia - Godfrey",
+    "item_label": "Elden Lord Bracers"
+  },
+  "101506": {
+    "merchant": "Enia - Godfrey",
+    "item_label": "Elden Lord Greaves"
+  },
+  "101507": {
+    "merchant": "Enia - Radahn",
+    "item_label": "Radahn's Redmane Helm"
+  },
+  "101508": {
+    "merchant": "Enia - Radahn",
+    "item_label": "Radahn's Lion Armor"
+  },
+  "101509": {
+    "merchant": "Enia - Radahn",
+    "item_label": "Radahn's Gauntlets"
+  },
+  "101510": {
+    "merchant": "Enia - Radahn",
+    "item_label": "Radahn's Greaves"
+  },
+  "101511": {
+    "merchant": "Enia - Mohg",
+    "item_label": "Lord of Blood's Robe"
+  },
+  "101512": {
+    "merchant": "Enia - Rennala",
+    "item_label": "Queen's Crescent Crown"
+  },
+  "101513": {
+    "merchant": "Enia - Rennala",
+    "item_label": "Queen's Robe"
+  },
+  "101514": {
+    "merchant": "Enia - Rennala",
+    "item_label": "Queen's Bracelets"
+  },
+  "101515": {
+    "merchant": "Enia - Rennala",
+    "item_label": "Queen's Leggings"
+  },
+  "101516": {
+    "merchant": "Enia - Maliketh",
+    "item_label": "Maliketh's Helm"
+  },
+  "101517": {
+    "merchant": "Enia - Maliketh",
+    "item_label": "Maliketh's Armor"
+  },
+  "101518": {
+    "merchant": "Enia - Maliketh",
+    "item_label": "Maliketh's Gauntlets"
+  },
+  "101519": {
+    "merchant": "Enia - Maliketh",
+    "item_label": "Maliketh's Greaves"
+  },
+  "101520": {
+    "merchant": "Enia - Malenia",
+    "item_label": "Malenia's Winged Helm"
+  },
+  "101521": {
+    "merchant": "Enia - Malenia",
+    "item_label": "Malenia's Armor"
+  },
+  "101522": {
+    "merchant": "Enia - Malenia",
+    "item_label": "Malenia's Gauntlet"
+  },
+  "101523": {
+    "merchant": "Enia - Malenia",
+    "item_label": "Malenia's Greaves"
+  },
+  "101524": {
+    "merchant": "Enia - Margit",
+    "item_label": "Fell Omen Cloak"
+  },
+  "101525": {
+    "merchant": "Enia - Royal Knight Loretta",
+    "item_label": "Royal Knight Helm"
+  },
+  "101526": {
+    "merchant": "Enia - Royal Knight Loretta",
+    "item_label": "Royal Knight Armor"
+  },
+  "101527": {
+    "merchant": "Enia - Royal Knight Loretta",
+    "item_label": "Royal Knight Gauntlets"
+  },
+  "101528": {
+    "merchant": "Enia - Royal Knight Loretta",
+    "item_label": "Royal Knight Greaves"
+  },
+  "101529": {
+    "merchant": "Enia - Commander Niall",
+    "item_label": "Veteran's Helm"
+  },
+  "101530": {
+    "merchant": "Enia - Commander Niall",
+    "item_label": "Veteran's Armor"
+  },
+  "101531": {
+    "merchant": "Enia - Commander Niall",
+    "item_label": "Veteran's Gauntlets"
+  },
+  "101532": {
+    "merchant": "Enia - Commander Niall",
+    "item_label": "Veteran's Greaves"
+  },
+  "101549": {
+    "merchant": "Enia - Radahn",
+    "item_label": "Radahn's Spear"
+  },
+  "101550": {
+    "merchant": "Enia - Elemer of the Briar",
+    "item_label": "Briar Helm"
+  },
+  "101551": {
+    "merchant": "Enia - Elemer of the Briar",
+    "item_label": "Briar Armor"
+  },
+  "101552": {
+    "merchant": "Enia - Elemer of the Briar",
+    "item_label": "Briar Gauntlets"
+  },
+  "101553": {
+    "merchant": "Enia - Elemer of the Briar",
+    "item_label": "Briar Greaves"
+  },
+  "101555": {
+    "merchant": "Enia - Commander Gaius",
+    "item_label": "Gaius's Helm"
+  },
+  "101556": {
+    "merchant": "Enia - Commander Gaius",
+    "item_label": "Gaius's Armor"
+  },
+  "101557": {
+    "merchant": "Enia - Commander Gaius",
+    "item_label": "Gaius's Gauntlets"
+  },
+  "101558": {
+    "merchant": "Enia - Messmer the Impaler",
+    "item_label": "Messmer's Helm"
+  },
+  "101559": {
+    "merchant": "Enia - Messmer the Impaler",
+    "item_label": "Messmer's Armor"
+  },
+  "101560": {
+    "merchant": "Enia - Messmer the Impaler",
+    "item_label": "Messmer's Gauntlets"
+  },
+  "101561": {
+    "merchant": "Enia - Messmer the Impaler",
+    "item_label": "Messmer's Greaves"
+  },
+  "101562": {
+    "merchant": "Enia - Rellana, Twin Moon Knight",
+    "item_label": "Rellana's Helm"
+  },
+  "101563": {
+    "merchant": "Enia - Rellana, Twin Moon Knight",
+    "item_label": "Rellana's Armor"
+  },
+  "101564": {
+    "merchant": "Enia - Rellana, Twin Moon Knight",
+    "item_label": "Rellana's Gloves"
+  },
+  "101565": {
+    "merchant": "Enia - Rellana, Twin Moon Knight",
+    "item_label": "Rellana's Greaves"
+  },
+  "101566": {
+    "merchant": "Enia - Radahn, Consort of Miquella",
+    "item_label": "Young Lion's Helm"
+  },
+  "101567": {
+    "merchant": "Enia - Radahn, Consort of Miquella",
+    "item_label": "Young Lion's Armor"
+  },
+  "101568": {
+    "merchant": "Enia - Radahn, Consort of Miquella",
+    "item_label": "Young Lion's Gauntlets"
+  },
+  "101569": {
+    "merchant": "Enia - Radahn, Consort of Miquella",
+    "item_label": "Young Lion's Greaves"
+  },
+  "101775": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Grafted"
+  },
+  "101776": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Starscourge"
+  },
+  "101777": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Omen King"
+  },
+  "101778": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Blasphemous"
+  },
+  "101779": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Rot Goddess"
+  },
+  "101780": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Full Moon Queen"
+  },
+  "101781": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Blood Lord"
+  },
+  "101785": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Black Blade"
+  },
+  "101786": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of Hoarah Loux"
+  },
+  "101787": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Dragonlord"
+  },
+  "101788": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Lichdragon"
+  },
+  "101789": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Fire Giant"
+  },
+  "101790": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Regal Ancestor"
+  },
+  "101791": {
+    "merchant": "Enia - Forging",
+    "item_label": "Elden Remembrance"
+  },
+  "101792": {
+    "merchant": "Enia - Forging",
+    "item_label": "Remembrance of the Naturalborn"
+  },
+  "101800": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "White Cipher Ring"
+  },
+  "101801": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Blue Cipher Ring"
+  },
+  "101802": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Spirit Calling Bell"
+  },
+  "101803": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Lone Wolf Ashes"
+  },
+  "101804": {
+    "merchant": "Twin Maiden Husks - Haligtree",
+    "item_label": "Black Flame's Protection"
+  },
+  "101805": {
+    "merchant": "Twin Maiden Husks - Haligtree",
+    "item_label": "Lord's Divine Fortification"
+  },
+  "101806": {
+    "merchant": "Twin Maiden Husks - Mohgwyn",
+    "item_label": "Fevor's Cookbook [3]"
+  },
+  "101807": {
+    "merchant": "Twin Maiden Husks - Mohg",
+    "item_label": "Law of Causality"
+  },
+  "101808": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [1]"
+  },
+  "101809": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [2]"
+  },
+  "101810": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Glintstone Scrap"
+  },
+  "101811": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [3]"
+  },
+  "101812": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [4]"
+  },
+  "101813": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Explosive Stone"
+  },
+  "101814": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [5]"
+  },
+  "101815": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [6]"
+  },
+  "101816": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [7]"
+  },
+  "101817": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Smithing Stone [8]"
+  },
+  "101818": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [1]"
+  },
+  "101819": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [2]"
+  },
+  "101820": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [3]"
+  },
+  "101821": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [4]"
+  },
+  "101822": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Cracked Crystal"
+  },
+  "101823": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [5]"
+  },
+  "101824": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [6]"
+  },
+  "101825": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [7]"
+  },
+  "101826": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [8]"
+  },
+  "101827": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Sanctuary Stone"
+  },
+  "101828": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Somber Smithing Stone [9]"
+  },
+  "101829": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [1]"
+  },
+  "101830": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [2]"
+  },
+  "101831": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [3]"
+  },
+  "101832": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [4]"
+  },
+  "101833": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [5]"
+  },
+  "101834": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [6]"
+  },
+  "101835": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [7]"
+  },
+  "101836": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [8]"
+  },
+  "101837": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Grave Glovewort [9]"
+  },
+  "101838": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [1]"
+  },
+  "101839": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [2]"
+  },
+  "101840": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [3]"
+  },
+  "101841": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [4]"
+  },
+  "101842": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [5]"
+  },
+  "101843": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [6]"
+  },
+  "101844": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [7]"
+  },
+  "101845": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [8]"
+  },
+  "101846": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ghost Glovewort [9]"
+  },
+  "101847": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Thin Beast Bones"
+  },
+  "101848": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Hefty Beast Bone"
+  },
+  "101849": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Sliver of Meat"
+  },
+  "101850": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Lump of Flesh"
+  },
+  "101851": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Turtle Neck Meat"
+  },
+  "101852": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Neutralizing Boluses"
+  },
+  "101853": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Stanching Boluses"
+  },
+  "101854": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Thawfrost Boluses"
+  },
+  "101855": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Stimulating Boluses"
+  },
+  "101856": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Gravity Stone Fan"
+  },
+  "101857": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Gravity Stone Chunk"
+  },
+  "101858": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ruin Fragment"
+  },
+  "101859": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Memory Stone"
+  },
+  "101860": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Stonesword Key"
+  },
+  "101861": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Rune Arc"
+  },
+  "101862": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Furled Finger's Trick-Mirror"
+  },
+  "101863": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Host's Trick-Mirror"
+  },
+  "101864": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Dagger"
+  },
+  "101865": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Longsword"
+  },
+  "101866": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Scimitar"
+  },
+  "101867": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Battle Axe"
+  },
+  "101868": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Mace"
+  },
+  "101869": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Short Spear"
+  },
+  "101870": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Rapier"
+  },
+  "101871": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Finger Seal"
+  },
+  "101872": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Longbow"
+  },
+  "101873": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Heater Shield"
+  },
+  "101874": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Knight Helm"
+  },
+  "101875": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Knight Armor"
+  },
+  "101876": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Knight Gauntlets"
+  },
+  "101877": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Knight Greaves"
+  },
+  "101878": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Flask of Wondrous Physick"
+  },
+  "101879": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Crafting Kit"
+  },
+  "101880": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Whetstone Knife"
+  },
+  "101881": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Talisman Pouch"
+  },
+  "101885": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Rada Fruit"
+  },
+  "101886": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Redflesh Mushroom"
+  },
+  "101887": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Mushroom"
+  },
+  "101888": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Whiteflesh Mushroom"
+  },
+  "101889": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Toxic Mushroom"
+  },
+  "101890": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Knot Resin"
+  },
+  "101891": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Root Resin"
+  },
+  "101892": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Fly Mold"
+  },
+  "101893": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "String"
+  },
+  "101894": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Igon's Harpoon"
+  },
+  "101895": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Rabbath's Greatbolt"
+  },
+  "101898": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Enraged Divine Beast"
+  },
+  "101899": {
+    "merchant": "Twin Maiden Husks",
+    "item_label": "Ash of War: Divine Beast Frost Stomp"
+  },
+  "101900": {
+    "merchant": "Remembrance of the Grafted",
+    "item_label": "Axe of Godrick"
+  },
+  "101901": {
+    "merchant": "Remembrance of the Grafted",
+    "item_label": "Grafted Dragon"
+  },
+  "101902": {
+    "merchant": "Remembrance of the Starscourge",
+    "item_label": "Starscourge Greatsword"
+  },
+  "101903": {
+    "merchant": "Remembrance of the Starscourge",
+    "item_label": "Lion Greatbow"
+  },
+  "101904": {
+    "merchant": "Remembrance of the Omen King",
+    "item_label": "Morgott's Cursed Sword"
+  },
+  "101905": {
+    "merchant": "Remembrance of the Omen King",
+    "item_label": "Regal Omen Bairn"
+  },
+  "101906": {
+    "merchant": "Remembrance of the Blasphemous",
+    "item_label": "Blasphemous Blade"
+  },
+  "101907": {
+    "merchant": "Remembrance of the Blasphemous",
+    "item_label": "Rykard's Rancor"
+  },
+  "101908": {
+    "merchant": "Remembrance of the Rot Goddess",
+    "item_label": "Hand of Malenia"
+  },
+  "101909": {
+    "merchant": "Remembrance of the Rot Goddess",
+    "item_label": "Scarlet Aeonia"
+  },
+  "101910": {
+    "merchant": "Remembrance of the Blood Lord",
+    "item_label": "Mohgwyn's Sacred Spear"
+  },
+  "101911": {
+    "merchant": "Remembrance of the Blood Lord",
+    "item_label": "Bloodboon"
+  },
+  "101912": {
+    "merchant": "Remembrance of the Black Blade",
+    "item_label": "Maliketh's Black Blade"
+  },
+  "101913": {
+    "merchant": "Remembrance of the Black Blade",
+    "item_label": "Black Blade"
+  },
+  "101914": {
+    "merchant": "Remembrance of Hoarah Loux",
+    "item_label": "Axe of Godfrey"
+  },
+  "101915": {
+    "merchant": "Remembrance of Hoarah Loux",
+    "item_label": "Ash of War: Hoarah Loux's Earthshaker"
+  },
+  "101916": {
+    "merchant": "Remembrance of the Dragonlord",
+    "item_label": "Dragon King's Cragblade"
+  },
+  "101917": {
+    "merchant": "Remembrance of the Dragonlord",
+    "item_label": "Placidusax's Ruin"
+  },
+  "101918": {
+    "merchant": "Remembrance of The Full Moon Queen",
+    "item_label": "Carian Regal Scepter"
+  },
+  "101919": {
+    "merchant": "Remembrance of The Full Moon Queen",
+    "item_label": "Rennala's Full Moon"
+  },
+  "101920": {
+    "merchant": "Remembrance of the Lichdragon",
+    "item_label": "Fortissax's Lightning Spear"
+  },
+  "101921": {
+    "merchant": "Remembrance of the Lichdragon",
+    "item_label": "Death Lightning"
+  },
+  "101922": {
+    "merchant": "Remembrance of the Fire Giant",
+    "item_label": "Giant's Red Braid"
+  },
+  "101923": {
+    "merchant": "Remembrance of the Fire Giant",
+    "item_label": "Burn"
+  },
+  "101924": {
+    "merchant": "Remembrance of the Regal Ancestor",
+    "item_label": "Winged Greathorn"
+  },
+  "101925": {
+    "merchant": "Remembrance of the Regal Ancestor",
+    "item_label": "Ancestral Spirit's Horn"
+  },
+  "101926": {
+    "merchant": "Elden Remembrance",
+    "item_label": "Marika's Hammer"
+  },
+  "101927": {
+    "merchant": "Elden Remembrance",
+    "item_label": "Sacred Relic Sword"
+  },
+  "101928": {
+    "merchant": "Remembrance of the Naturalborn",
+    "item_label": "Bastard's Stars"
+  },
+  "101929": {
+    "merchant": "Remembrance of the Naturalborn",
+    "item_label": "Ash of War: Waves of Darkness"
+  },
+  "101930": {
+    "merchant": "Remembrance of the Twin Moon Knight",
+    "item_label": "Rellana's Twin Blades"
+  },
+  "101931": {
+    "merchant": "Remembrance of the Twin Moon Knight",
+    "item_label": "Rellana's Twin Moons"
+  },
+  "101932": {
+    "merchant": "Remembrance of the Wild Boar Rider",
+    "item_label": "Sword Lance (Spinning Gravity Thrust)"
+  },
+  "101933": {
+    "merchant": "Remembrance of the Wild Boar Rider",
+    "item_label": "Blades of Stone"
+  },
+  "101934": {
+    "merchant": "Remembrance of Putrescence",
+    "item_label": "Putrescence Cleaver"
+  },
+  "101935": {
+    "merchant": "Remembrance of Putrescence",
+    "item_label": "Vortex of Putrescence"
+  },
+  "101936": {
+    "merchant": "Remembrance of the Saint of the Bud",
+    "item_label": "Poleblade of the Bud"
+  },
+  "101937": {
+    "merchant": "Remembrance of the Saint of the Bud",
+    "item_label": "Rotten Butterflies"
+  },
+  "101938": {
+    "merchant": "Remembrance of the Lord of Frenzied Flame",
+    "item_label": "Greatsword of Damnation"
+  },
+  "101939": {
+    "merchant": "Remembrance of the Lord of Frenzied Flame",
+    "item_label": "Midra's Flame of Frenzy"
+  },
+  "101940": {
+    "merchant": "Remembrance of the Shadow Sunflower",
+    "item_label": "Shadow Sunflower Blossom"
+  },
+  "101941": {
+    "merchant": "Remembrance of the Shadow Sunflower",
+    "item_label": "Land of Shadow"
+  },
+  "101942": {
+    "merchant": "Remembrance of the Impaler",
+    "item_label": "Spear of the Impaler"
+  },
+  "101943": {
+    "merchant": "Remembrance of the Impaler",
+    "item_label": "Messmer's Orb"
+  },
+  "101944": {
+    "merchant": "Remembrance of the Mother of Fingers",
+    "item_label": "Staff of the Great Beyond"
+  },
+  "101945": {
+    "merchant": "Remembrance of the Mother of Fingers",
+    "item_label": "Gazing Finger"
+  },
+  "101946": {
+    "merchant": "Remembrance of a God and a Lord",
+    "item_label": "Greatsword of Radahn (Lord)"
+  },
+  "101947": {
+    "merchant": "Remembrance of a God and a Lord",
+    "item_label": "Greatsword of Radahn (Light)"
+  },
+  "101948": {
+    "merchant": "Remembrance of a God and a Lord",
+    "item_label": "Light of Miquella"
+  },
+  "101950": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonfire"
+  },
+  "101951": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonice"
+  },
+  "101952": {
+    "merchant": "Dragon Communion",
+    "item_label": "Glintstone Breath"
+  },
+  "101953": {
+    "merchant": "Dragon Communion",
+    "item_label": "Rotten Breath"
+  },
+  "101954": {
+    "merchant": "Dragon Communion",
+    "item_label": "Agheel's Flame"
+  },
+  "101955": {
+    "merchant": "Dragon Communion",
+    "item_label": "Borealis's Mist"
+  },
+  "101956": {
+    "merchant": "Dragon Communion",
+    "item_label": "Smarag's Glintstone Breath"
+  },
+  "101957": {
+    "merchant": "Dragon Communion",
+    "item_label": "Ekzykes's Decay"
+  },
+  "101958": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonclaw"
+  },
+  "101959": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonmaw"
+  },
+  "101960": {
+    "merchant": "Dragon Communion",
+    "item_label": "Magma Breath"
+  },
+  "101961": {
+    "merchant": "Dragon Communion",
+    "item_label": "Theodorix's Magma"
+  },
+  "101962": {
+    "merchant": "Dragon Communion",
+    "item_label": "Greyoll's Roar"
+  },
+  "101975": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonclaw"
+  },
+  "101976": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonmaw"
+  },
+  "101980": {
+    "merchant": "Dragon Communion",
+    "item_label": "Dragonfire"
+  },
+  "102250": {
+    "merchant": null,
+    "item_label": "Rune Arc"
+  },
+  "102251": {
+    "merchant": null,
+    "item_label": "Arrow"
+  },
+  "102252": {
+    "merchant": null,
+    "item_label": "Bolt"
+  },
+  "102253": {
+    "merchant": null,
+    "item_label": "Great Arrow"
+  },
+  "102254": {
+    "merchant": null,
+    "item_label": "Ballista Bolt"
+  },
+  "102255": {
+    "merchant": null,
+    "item_label": "Note: Sealed Spiritsprings"
+  },
+  "102256": {
+    "merchant": null,
+    "item_label": "Rada Fruit"
+  },
+  "102257": {
+    "merchant": null,
+    "item_label": "Redflesh Mushroom"
+  },
+  "102258": {
+    "merchant": null,
+    "item_label": "Whiteflesh Mushroom"
+  },
+  "102259": {
+    "merchant": null,
+    "item_label": "Knot Resin"
+  },
+  "102260": {
+    "merchant": null,
+    "item_label": "Spellproof Pickled Liver"
+  },
+  "102261": {
+    "merchant": null,
+    "item_label": "Fireproof Pickled Liver"
+  },
+  "102262": {
+    "merchant": null,
+    "item_label": "Lightningproof Pickled Liver"
+  },
+  "102263": {
+    "merchant": null,
+    "item_label": "Holyproof Pickled Liver"
+  },
+  "102264": {
+    "merchant": null,
+    "item_label": "Well-Pickled Turtle Neck"
+  },
+  "102265": {
+    "merchant": null,
+    "item_label": "Black Pyrefly"
+  },
+  "102266": {
+    "merchant": null,
+    "item_label": "Sanguine Amaryllis"
+  },
+  "102270": {
+    "merchant": null,
+    "item_label": "Deadly Poison Perfume Bottle"
+  },
+  "102271": {
+    "merchant": null,
+    "item_label": "Poison Grease"
+  },
+  "102272": {
+    "merchant": null,
+    "item_label": "Drawstring Poison Grease"
+  },
+  "102273": {
+    "merchant": null,
+    "item_label": "Poisonbone Dart"
+  },
+  "102274": {
+    "merchant": null,
+    "item_label": "Poisoned Stone"
+  },
+  "102275": {
+    "merchant": null,
+    "item_label": "Poisoned Stone Clump"
+  },
+  "102276": {
+    "merchant": null,
+    "item_label": "Altus Bloom"
+  },
+  "102277": {
+    "merchant": null,
+    "item_label": "Miranda Powder"
+  },
+  "102278": {
+    "merchant": null,
+    "item_label": "Poisonbloom"
+  },
+  "102279": {
+    "merchant": null,
+    "item_label": "Toxic Mushroom"
+  },
+  "102280": {
+    "merchant": null,
+    "item_label": "Toxic Mossling"
+  },
+  "102281": {
+    "merchant": null,
+    "item_label": "Trina's Lily"
+  },
+  "102282": {
+    "merchant": null,
+    "item_label": "Thiollier's Concoction"
+  },
+  "102300": {
+    "merchant": "Sorcery",
+    "item_label": "Miriam's Vanishing"
+  },
+  "102301": {
+    "merchant": "Sorcery",
+    "item_label": "Glintstone Nail"
+  },
+  "102302": {
+    "merchant": "Sorcery",
+    "item_label": "Glintstone Nails"
+  },
+  "102303": {
+    "merchant": "Sorcery",
+    "item_label": "Fleeting Microcosm"
+  },
+  "102304": {
+    "merchant": "Sorcery",
+    "item_label": "Glintstone Pebble"
+  },
+  "102305": {
+    "merchant": "Sorcery",
+    "item_label": "Great Glintstone Shard"
+  },
+  "102306": {
+    "merchant": "Sorcery",
+    "item_label": "Glintblade Phalanx"
+  },
+  "102307": {
+    "merchant": "Sorcery",
+    "item_label": "Carian Phalanx"
+  },
+  "102308": {
+    "merchant": "Sorcery",
+    "item_label": "Carian Retaliation"
+  },
+  "102350": {
+    "merchant": "Incantation",
+    "item_label": "Bayle's Tyranny"
+  },
+  "102351": {
+    "merchant": "Incantation",
+    "item_label": "Bayle's Flame Lightning"
+  },
+  "102355": {
+    "merchant": "Incantation",
+    "item_label": "Ghostflame Breath"
+  },
+  "102700": {
+    "merchant": null,
+    "item_label": "Remembrance of the Grafted"
+  },
+  "102701": {
+    "merchant": null,
+    "item_label": "Remembrance of the Starscourge"
+  },
+  "102702": {
+    "merchant": null,
+    "item_label": "Remembrance of the Omen King"
+  },
+  "102703": {
+    "merchant": null,
+    "item_label": "Remembrance of the Blasphemous"
+  },
+  "102704": {
+    "merchant": null,
+    "item_label": "Remembrance of the Rot Goddess"
+  },
+  "102705": {
+    "merchant": null,
+    "item_label": "Remembrance of the Full Moon Queen"
+  },
+  "102706": {
+    "merchant": null,
+    "item_label": "Remembrance of the Blood Lord"
+  },
+  "102707": {
+    "merchant": null,
+    "item_label": "Remembrance of a God and a Lord"
+  },
+  "102708": {
+    "merchant": null,
+    "item_label": "Remembrance of the Impaler"
+  },
+  "102710": {
+    "merchant": null,
+    "item_label": "Remembrance of the Black Blade"
+  },
+  "102711": {
+    "merchant": null,
+    "item_label": "Remembrance of Hoarah Loux"
+  },
+  "102712": {
+    "merchant": null,
+    "item_label": "Remembrance of the Dragonlord"
+  },
+  "102713": {
+    "merchant": null,
+    "item_label": "Remembrance of the Lichdragon"
+  },
+  "102714": {
+    "merchant": null,
+    "item_label": "Remembrance of the Fire Giant"
+  },
+  "102715": {
+    "merchant": null,
+    "item_label": "Remembrance of the Regal Ancestor"
+  },
+  "102716": {
+    "merchant": null,
+    "item_label": "Elden Remembrance"
+  },
+  "102717": {
+    "merchant": null,
+    "item_label": "Remembrance of the Naturalborn"
+  },
+  "102718": {
+    "merchant": null,
+    "item_label": "Remembrance of the Wild Boar Rider"
+  },
+  "102720": {
+    "merchant": null,
+    "item_label": "Remembrance of the Shadow Sunflower"
+  },
+  "102721": {
+    "merchant": null,
+    "item_label": "Remembrance of the Twin Moon Knight"
+  },
+  "102722": {
+    "merchant": null,
+    "item_label": "Remembrance of the Saint of the Bud"
+  },
+  "102723": {
+    "merchant": null,
+    "item_label": "Remembrance of the Dancing Lion"
+  },
+  "102724": {
+    "merchant": null,
+    "item_label": "Remembrance of the Lord of Frenzied Flame"
+  },
+  "102725": {
+    "merchant": null,
+    "item_label": "Remembrance of the Mother of Fingers"
+  },
+  "102726": {
+    "merchant": null,
+    "item_label": "Remembrance of Putrescence"
+  },
+  "102800": {
+    "merchant": null,
+    "item_label": "Remembrance of the Grafted"
+  },
+  "102801": {
+    "merchant": null,
+    "item_label": "Remembrance of the Starscourge"
+  },
+  "102802": {
+    "merchant": null,
+    "item_label": "Remembrance of the Omen King"
+  },
+  "102803": {
+    "merchant": null,
+    "item_label": "Remembrance of the Blasphemous"
+  },
+  "102804": {
+    "merchant": null,
+    "item_label": "Remembrance of the Rot Goddess"
+  },
+  "102805": {
+    "merchant": null,
+    "item_label": "Remembrance of the Full Moon Queen"
+  },
+  "102806": {
+    "merchant": null,
+    "item_label": "Remembrance of the Blood Lord"
+  },
+  "102807": {
+    "merchant": null,
+    "item_label": "Remembrance of a God and a Lord"
+  },
+  "102808": {
+    "merchant": null,
+    "item_label": "Remembrance of the Impaler"
+  },
+  "102810": {
+    "merchant": null,
+    "item_label": "Remembrance of the Black Blade"
+  },
+  "102811": {
+    "merchant": null,
+    "item_label": "Remembrance of Hoarah Loux"
+  },
+  "102812": {
+    "merchant": null,
+    "item_label": "Remembrance of the Dragonlord"
+  },
+  "102813": {
+    "merchant": null,
+    "item_label": "Remembrance of the Lichdragon"
+  },
+  "102814": {
+    "merchant": null,
+    "item_label": "Remembrance of the Fire Giant"
+  },
+  "102815": {
+    "merchant": null,
+    "item_label": "Remembrance of the Regal Ancestor"
+  },
+  "102816": {
+    "merchant": null,
+    "item_label": "Elden Remembrance"
+  },
+  "102817": {
+    "merchant": null,
+    "item_label": "Remembrance of the Naturalborn"
+  },
+  "102818": {
+    "merchant": null,
+    "item_label": "Remembrance of the Wild Boar Rider"
+  },
+  "102820": {
+    "merchant": null,
+    "item_label": "Remembrance of the Shadow Sunflower"
+  },
+  "102821": {
+    "merchant": null,
+    "item_label": "Remembrance of the Twin Moon Knight"
+  },
+  "102822": {
+    "merchant": null,
+    "item_label": "Remembrance of the Saint of the Bud"
+  },
+  "102823": {
+    "merchant": null,
+    "item_label": "Remembrance of the Dancing Lion"
+  },
+  "102824": {
+    "merchant": null,
+    "item_label": "Remembrance of the Lord of Frenzied Flame"
+  },
+  "102825": {
+    "merchant": null,
+    "item_label": "Remembrance of the Mother of Fingers"
+  },
+  "102826": {
+    "merchant": null,
+    "item_label": "Remembrance of Putrescence"
+  },
+  "110000": {
+    "merchant": "Alteration",
+    "item_label": "Drake Knight Helm (Altered)"
+  },
+  "110001": {
+    "merchant": "Alteration",
+    "item_label": "Drake Knight Armor (Altered)"
+  },
+  "110002": {
+    "merchant": "Alteration",
+    "item_label": "Scaled Armor (Altered)"
+  },
+  "110003": {
+    "merchant": "Alteration",
+    "item_label": "Perfumer Robe (Altered)"
+  },
+  "110004": {
+    "merchant": "Alteration",
+    "item_label": "Perfumer's Traveling Garb (Altered)"
+  },
+  "110005": {
+    "merchant": "Alteration",
+    "item_label": "Spellblade's Traveling Attire (Altered)"
+  },
+  "110006": {
+    "merchant": "Alteration",
+    "item_label": "Ronin's Armor (Altered)"
+  },
+  "110007": {
+    "merchant": "Alteration",
+    "item_label": "Blaidd's Armor (Altered)"
+  },
+  "110008": {
+    "merchant": "Alteration",
+    "item_label": "Black Knife Armor (Altered)"
+  },
+  "110009": {
+    "merchant": "Alteration",
+    "item_label": "Briar Armor (Altered)"
+  },
+  "110010": {
+    "merchant": "Alteration",
+    "item_label": "Page Garb (Altered)"
+  },
+  "110011": {
+    "merchant": "Alteration",
+    "item_label": "Night's Cavalry Helm (Altered)"
+  },
+  "110012": {
+    "merchant": "Alteration",
+    "item_label": "Night's Cavalry Armor (Altered)"
+  },
+  "110013": {
+    "merchant": "Alteration",
+    "item_label": "Blue Silver Mail Armor (Altered)"
+  },
+  "110014": {
+    "merchant": "Alteration",
+    "item_label": "Nomadic Merchant's Finery (Altered)"
+  },
+  "110015": {
+    "merchant": "Alteration",
+    "item_label": "Tree Sentinel Armor (Altered)"
+  },
+  "110016": {
+    "merchant": "Alteration",
+    "item_label": "Royal Knight Armor (Altered)"
+  },
+  "110017": {
+    "merchant": "Alteration",
+    "item_label": "Nox Monk Hood (Altered)"
+  },
+  "110018": {
+    "merchant": "Alteration",
+    "item_label": "Nox Monk Armor (Altered)"
+  },
+  "110019": {
+    "merchant": "Alteration",
+    "item_label": "Nox Swordstress Crown (Altered)"
+  },
+  "110020": {
+    "merchant": "Alteration",
+    "item_label": "Nox Swordstress Armor (Altered)"
+  },
+  "110021": {
+    "merchant": "Alteration",
+    "item_label": "Gravekeeper Cloak (Altered)"
+  },
+  "110022": {
+    "merchant": "Alteration",
+    "item_label": "Cleanrot Helm (Altered)"
+  },
+  "110023": {
+    "merchant": "Alteration",
+    "item_label": "Cleanrot Armor (Altered)"
+  },
+  "110024": {
+    "merchant": "Alteration",
+    "item_label": "Depraved Perfumer Robe (Altered)"
+  },
+  "110025": {
+    "merchant": "Alteration",
+    "item_label": "All-Knowing Armor (Altered)"
+  },
+  "110026": {
+    "merchant": "Alteration",
+    "item_label": "Twinned Armor (Altered)"
+  },
+  "110029": {
+    "merchant": "Alteration",
+    "item_label": "Prophet Robe (Altered)"
+  },
+  "110030": {
+    "merchant": "Alteration",
+    "item_label": "Astrologer Robe (Altered)"
+  },
+  "110031": {
+    "merchant": "Alteration",
+    "item_label": "Lionel's Armor (Altered)"
+  },
+  "110032": {
+    "merchant": "Alteration",
+    "item_label": "Hoslow's Armor (Altered)"
+  },
+  "110033": {
+    "merchant": "Alteration",
+    "item_label": "Vagabond Knight Armor (Altered)"
+  },
+  "110034": {
+    "merchant": "Alteration",
+    "item_label": "War Surgeon Gown (Altered)"
+  },
+  "110036": {
+    "merchant": "Alteration",
+    "item_label": "Veteran's Armor (Altered)"
+  },
+  "110037": {
+    "merchant": "Alteration",
+    "item_label": "Bloodhound Knight Armor (Altered)"
+  },
+  "110038": {
+    "merchant": "Alteration",
+    "item_label": "Festive Hood (Altered)"
+  },
+  "110039": {
+    "merchant": "Alteration",
+    "item_label": "Commoner's Garb (Altered)"
+  },
+  "110040": {
+    "merchant": "Alteration",
+    "item_label": "Commoner's Simple Garb (Altered)"
+  },
+  "110041": {
+    "merchant": "Alteration",
+    "item_label": "Raging Wolf Armor (Altered)"
+  },
+  "110042": {
+    "merchant": "Alteration",
+    "item_label": "Land of Reeds Armor (Altered)"
+  },
+  "110043": {
+    "merchant": "Alteration",
+    "item_label": "Confessor Hood (Altered)"
+  },
+  "110044": {
+    "merchant": "Alteration",
+    "item_label": "Confessor Armor (Altered)"
+  },
+  "110045": {
+    "merchant": "Alteration",
+    "item_label": "Finger Maiden Robe (Altered)"
+  },
+  "110047": {
+    "merchant": "Alteration",
+    "item_label": "Preceptor's Long Gown (Altered)"
+  },
+  "110049": {
+    "merchant": "Alteration",
+    "item_label": "Eccentric's Hood (Altered)"
+  },
+  "110050": {
+    "merchant": "Alteration",
+    "item_label": "Fingerprint Armor (Altered)"
+  },
+  "110051": {
+    "merchant": "Alteration",
+    "item_label": "Carian Knight Armor (Altered)"
+  },
+  "110052": {
+    "merchant": "Alteration",
+    "item_label": "Errant Sorcerer Robe (Altered)"
+  },
+  "110053": {
+    "merchant": "Alteration",
+    "item_label": "Gelmir Knight Armor (Altered)"
+  },
+  "110054": {
+    "merchant": "Alteration",
+    "item_label": "Godrick Knight Armor (Altered)"
+  },
+  "110055": {
+    "merchant": "Alteration",
+    "item_label": "Cuckoo Knight Armor (Altered)"
+  },
+  "110056": {
+    "merchant": "Alteration",
+    "item_label": "Leyndell Knight Armor (Altered)"
+  },
+  "110057": {
+    "merchant": "Alteration",
+    "item_label": "Redmane Knight Armor (Altered)"
+  },
+  "110058": {
+    "merchant": "Alteration",
+    "item_label": "Mausoleum Knight Armor (Altered)"
+  },
+  "110059": {
+    "merchant": "Alteration",
+    "item_label": "Haligtree Knight Armor (Altered)"
+  },
+  "110060": {
+    "merchant": "Alteration",
+    "item_label": "High Page Clothes (Altered)"
+  },
+  "110061": {
+    "merchant": "Alteration",
+    "item_label": "Rotten Gravekeeper Cloak (Altered)"
+  },
+  "110062": {
+    "merchant": "Alteration",
+    "item_label": "Beast Champion Armor (Altered)"
+  },
+  "110063": {
+    "merchant": "Alteration",
+    "item_label": "Snow Witch Robe (Altered)"
+  },
+  "110064": {
+    "merchant": "Alteration",
+    "item_label": "Crucible Axe Armor (Altered)"
+  },
+  "110065": {
+    "merchant": "Alteration",
+    "item_label": "Crucible Tree Armor (Altered)"
+  },
+  "110066": {
+    "merchant": "Alteration",
+    "item_label": "Fia's Robe (Altered)"
+  },
+  "110067": {
+    "merchant": "Alteration",
+    "item_label": "Alberich's Pointed Hat (Altered)"
+  },
+  "110068": {
+    "merchant": "Alteration",
+    "item_label": "Alberich's Robe (Altered)"
+  },
+  "110069": {
+    "merchant": "Alteration",
+    "item_label": "Traveling Maiden Robe (Altered)"
+  },
+  "110070": {
+    "merchant": "Alteration",
+    "item_label": "Dryleaf Robe (Altered)"
+  },
+  "110073": {
+    "merchant": "Alteration",
+    "item_label": "Thioller's Garb (Altered)"
+  },
+  "110074": {
+    "merchant": "Alteration",
+    "item_label": "High Priest Robe"
+  },
+  "110075": {
+    "merchant": "Alteration",
+    "item_label": "Dancer's Dress (Altered)"
+  },
+  "110076": {
+    "merchant": "Alteration",
+    "item_label": "Igon's Helm (Altered)"
+  },
+  "110077": {
+    "merchant": "Alteration",
+    "item_label": "Igon's Armor (Altered)"
+  },
+  "110078": {
+    "merchant": "Alteration",
+    "item_label": "Ansbach's Attire (Altered)"
+  },
+  "110079": {
+    "merchant": "Alteration",
+    "item_label": "Freyja's Armor (Altered)"
+  },
+  "110080": {
+    "merchant": "Alteration",
+    "item_label": "Armor of Solitude (Altered)"
+  },
+  "110081": {
+    "merchant": "Alteration",
+    "item_label": "Messmer Soldier Armor (Altered)"
+  },
+  "110082": {
+    "merchant": "Alteration",
+    "item_label": "Fire Knight Armor (Altered)"
+  },
+  "110100": {
+    "merchant": "Alteration",
+    "item_label": "Elden Lord Armor (Altered)"
+  },
+  "110101": {
+    "merchant": "Alteration",
+    "item_label": "Radahn's Lion Armor (Altered)"
+  },
+  "110102": {
+    "merchant": "Alteration",
+    "item_label": "Lord of Blood's Robe (Altered)"
+  },
+  "110103": {
+    "merchant": "Alteration",
+    "item_label": "Maliketh's Armor (Altered)"
+  },
+  "110104": {
+    "merchant": "Alteration",
+    "item_label": "Malenia's Armor (Altered)"
+  },
+  "110105": {
+    "merchant": "Alteration",
+    "item_label": "Messmer's Helm (Altered)"
+  },
+  "110106": {
+    "merchant": "Alteration",
+    "item_label": "Young Lion's Armor (Altered)"
+  },
+  "110200": {
+    "merchant": "Reversion",
+    "item_label": "Drake Knight Helm"
+  },
+  "110201": {
+    "merchant": "Reversion",
+    "item_label": "Drake Knight Armor"
+  },
+  "110202": {
+    "merchant": "Reversion",
+    "item_label": "Scaled Armor"
+  },
+  "110203": {
+    "merchant": "Reversion",
+    "item_label": "Perfumer Robe"
+  },
+  "110204": {
+    "merchant": "Reversion",
+    "item_label": "Perfumer's Traveling Garb"
+  },
+  "110205": {
+    "merchant": "Reversion",
+    "item_label": "Spellblade's Traveling Attire"
+  },
+  "110206": {
+    "merchant": "Reversion",
+    "item_label": "Ronin's Armor"
+  },
+  "110207": {
+    "merchant": "Reversion",
+    "item_label": "Blaidd's Armor"
+  },
+  "110208": {
+    "merchant": "Reversion",
+    "item_label": "Black Knife Armor"
+  },
+  "110209": {
+    "merchant": "Reversion",
+    "item_label": "Briar Armor"
+  },
+  "110210": {
+    "merchant": "Reversion",
+    "item_label": "Page Garb"
+  },
+  "110211": {
+    "merchant": "Reversion",
+    "item_label": "Night's Cavalry Helm"
+  },
+  "110212": {
+    "merchant": "Reversion",
+    "item_label": "Night's Cavalry Armor"
+  },
+  "110213": {
+    "merchant": "Reversion",
+    "item_label": "Blue Silver Mail Armor"
+  },
+  "110214": {
+    "merchant": "Reversion",
+    "item_label": "Nomadic Merchant's Finery"
+  },
+  "110215": {
+    "merchant": "Reversion",
+    "item_label": "Tree Sentinel Armor"
+  },
+  "110216": {
+    "merchant": "Reversion",
+    "item_label": "Royal Knight Armor"
+  },
+  "110217": {
+    "merchant": "Reversion",
+    "item_label": "Nox Monk Hood"
+  },
+  "110218": {
+    "merchant": "Reversion",
+    "item_label": "Nox Monk Armor"
+  },
+  "110219": {
+    "merchant": "Reversion",
+    "item_label": "Nox Swordstress Crown"
+  },
+  "110220": {
+    "merchant": "Reversion",
+    "item_label": "Nox Swordstress Armor"
+  },
+  "110221": {
+    "merchant": "Reversion",
+    "item_label": "Gravekeeper Cloak"
+  },
+  "110222": {
+    "merchant": "Reversion",
+    "item_label": "Cleanrot Helm"
+  },
+  "110223": {
+    "merchant": "Reversion",
+    "item_label": "Cleanrot Armor"
+  },
+  "110224": {
+    "merchant": "Reversion",
+    "item_label": "Depraved Perfumer Robe"
+  },
+  "110225": {
+    "merchant": "Reversion",
+    "item_label": "All-Knowing Armor"
+  },
+  "110226": {
+    "merchant": "Reversion",
+    "item_label": "Twinned Armor"
+  },
+  "110229": {
+    "merchant": "Reversion",
+    "item_label": "Prophet Robe"
+  },
+  "110230": {
+    "merchant": "Reversion",
+    "item_label": "Astrologer Robe"
+  },
+  "110231": {
+    "merchant": "Reversion",
+    "item_label": "Lionel's Armor"
+  },
+  "110232": {
+    "merchant": "Reversion",
+    "item_label": "Hoslow's Armor"
+  },
+  "110233": {
+    "merchant": "Reversion",
+    "item_label": "Vagabond Knight Armor"
+  },
+  "110234": {
+    "merchant": "Reversion",
+    "item_label": "War Surgeon Gown"
+  },
+  "110236": {
+    "merchant": "Reversion",
+    "item_label": "Veteran's Armor"
+  },
+  "110237": {
+    "merchant": "Reversion",
+    "item_label": "Bloodhound Knight Armor"
+  },
+  "110238": {
+    "merchant": "Reversion",
+    "item_label": "Festive Hood"
+  },
+  "110239": {
+    "merchant": "Reversion",
+    "item_label": "Commoner's Garb"
+  },
+  "110240": {
+    "merchant": "Reversion",
+    "item_label": "Commoner's Simple Garb"
+  },
+  "110241": {
+    "merchant": "Reversion",
+    "item_label": "Raging Wolf Armor"
+  },
+  "110242": {
+    "merchant": "Reversion",
+    "item_label": "Land of Reeds Armor"
+  },
+  "110243": {
+    "merchant": "Reversion",
+    "item_label": "Confessor Hood"
+  },
+  "110244": {
+    "merchant": "Reversion",
+    "item_label": "Confessor Armor"
+  },
+  "110245": {
+    "merchant": "Reversion",
+    "item_label": "Finger Maiden Robe"
+  },
+  "110247": {
+    "merchant": "Reversion",
+    "item_label": "Preceptor's Long Gown"
+  },
+  "110249": {
+    "merchant": "Reversion",
+    "item_label": "Eccentric's Hood"
+  },
+  "110250": {
+    "merchant": "Reversion",
+    "item_label": "Fingerprint Armor"
+  },
+  "110251": {
+    "merchant": "Reversion",
+    "item_label": "Carian Knight Armor"
+  },
+  "110252": {
+    "merchant": "Reversion",
+    "item_label": "Errant Sorcerer Robe"
+  },
+  "110253": {
+    "merchant": "Reversion",
+    "item_label": "Gelmir Knight Armor"
+  },
+  "110254": {
+    "merchant": "Reversion",
+    "item_label": "Godrick Knight Armor"
+  },
+  "110255": {
+    "merchant": "Reversion",
+    "item_label": "Cuckoo Knight Armor"
+  },
+  "110256": {
+    "merchant": "Reversion",
+    "item_label": "Leyndell Knight Armor"
+  },
+  "110257": {
+    "merchant": "Reversion",
+    "item_label": "Redmane Knight Armor"
+  },
+  "110258": {
+    "merchant": "Reversion",
+    "item_label": "Mausoleum Knight Armor"
+  },
+  "110259": {
+    "merchant": "Reversion",
+    "item_label": "Haligtree Knight Armor"
+  },
+  "110260": {
+    "merchant": "Reversion",
+    "item_label": "High Page Clothes"
+  },
+  "110261": {
+    "merchant": "Reversion",
+    "item_label": "Rotten Gravekeeper Cloak"
+  },
+  "110262": {
+    "merchant": "Reversion",
+    "item_label": "Beast Champion Armor"
+  },
+  "110263": {
+    "merchant": "Reversion",
+    "item_label": "Snow Witch Robe"
+  },
+  "110264": {
+    "merchant": "Reversion",
+    "item_label": "Crucible Axe Armor"
+  },
+  "110265": {
+    "merchant": "Reversion",
+    "item_label": "Crucible Tree Armor"
+  },
+  "110266": {
+    "merchant": "Reversion",
+    "item_label": "Fia's Robe"
+  },
+  "110267": {
+    "merchant": "Reversion",
+    "item_label": "Alberich's Pointed Hat"
+  },
+  "110268": {
+    "merchant": "Reversion",
+    "item_label": "Alberich's Robe"
+  },
+  "110269": {
+    "merchant": "Reversion",
+    "item_label": "Traveling Maiden Robe"
+  },
+  "110270": {
+    "merchant": "Reversion",
+    "item_label": "Dryleaf Robe"
+  },
+  "110273": {
+    "merchant": "Reversion",
+    "item_label": "Thioller's Garb"
+  },
+  "110274": {
+    "merchant": "Reversion",
+    "item_label": "High Priest Robe"
+  },
+  "110275": {
+    "merchant": "Reversion",
+    "item_label": "Dancer's Dress"
+  },
+  "110276": {
+    "merchant": "Reversion",
+    "item_label": "Igon's Helm"
+  },
+  "110277": {
+    "merchant": "Reversion",
+    "item_label": "Igon's Armor"
+  },
+  "110278": {
+    "merchant": "Reversion",
+    "item_label": "Ansbach's Attire"
+  },
+  "110279": {
+    "merchant": "Reversion",
+    "item_label": "Freyja's Armor"
+  },
+  "110280": {
+    "merchant": "Reversion",
+    "item_label": "Armor of Solitude"
+  },
+  "110281": {
+    "merchant": "Reversion",
+    "item_label": "Messmer Soldier Armor"
+  },
+  "110282": {
+    "merchant": "Reversion",
+    "item_label": "Fire Knight Armor"
+  },
+  "110300": {
+    "merchant": "Reversion",
+    "item_label": "Elden Lord Armor"
+  },
+  "110301": {
+    "merchant": "Reversion",
+    "item_label": "Radahn's Lion Armor"
+  },
+  "110302": {
+    "merchant": "Reversion",
+    "item_label": "Lord of Blood's Robe"
+  },
+  "110303": {
+    "merchant": "Reversion",
+    "item_label": "Maliketh's Armor"
+  },
+  "110304": {
+    "merchant": "Reversion",
+    "item_label": "Malenia's Armor"
+  },
+  "110305": {
+    "merchant": "Reversion",
+    "item_label": "Messmer's Helm"
+  },
+  "110306": {
+    "merchant": "Reversion",
+    "item_label": "Young Lion's Armor"
+  },
+  "111000": {
+    "merchant": "Alteration",
+    "item_label": "Drake Knight Helm (Altered)"
+  },
+  "111001": {
+    "merchant": "Alteration",
+    "item_label": "Drake Knight Armor (Altered)"
+  },
+  "111002": {
+    "merchant": "Alteration",
+    "item_label": "Scaled Armor (Altered)"
+  },
+  "111003": {
+    "merchant": "Alteration",
+    "item_label": "Perfumer Robe (Altered)"
+  },
+  "111004": {
+    "merchant": "Alteration",
+    "item_label": "Perfumer's Traveling Garb (Altered)"
+  },
+  "111005": {
+    "merchant": "Alteration",
+    "item_label": "Spellblade's Traveling Attire (Altered)"
+  },
+  "111006": {
+    "merchant": "Alteration",
+    "item_label": "Ronin's Armor (Altered)"
+  },
+  "111007": {
+    "merchant": "Alteration",
+    "item_label": "Blaidd's Armor (Altered)"
+  },
+  "111008": {
+    "merchant": "Alteration",
+    "item_label": "Black Knife Armor (Altered)"
+  },
+  "111009": {
+    "merchant": "Alteration",
+    "item_label": "Briar Armor (Altered)"
+  },
+  "111010": {
+    "merchant": "Alteration",
+    "item_label": "Page Garb (Altered)"
+  },
+  "111011": {
+    "merchant": "Alteration",
+    "item_label": "Night's Cavalry Helm (Altered)"
+  },
+  "111012": {
+    "merchant": "Alteration",
+    "item_label": "Night's Cavalry Armor (Altered)"
+  },
+  "111013": {
+    "merchant": "Alteration",
+    "item_label": "Blue Silver Mail Armor (Altered)"
+  },
+  "111014": {
+    "merchant": "Alteration",
+    "item_label": "Nomadic Merchant's Finery (Altered)"
+  },
+  "111015": {
+    "merchant": "Alteration",
+    "item_label": "Tree Sentinel Armor (Altered)"
+  },
+  "111016": {
+    "merchant": "Alteration",
+    "item_label": "Royal Knight Armor (Altered)"
+  },
+  "111017": {
+    "merchant": "Alteration",
+    "item_label": "Nox Monk Hood (Altered)"
+  },
+  "111018": {
+    "merchant": "Alteration",
+    "item_label": "Nox Monk Armor (Altered)"
+  },
+  "111019": {
+    "merchant": "Alteration",
+    "item_label": "Nox Swordstress Crown (Altered)"
+  },
+  "111020": {
+    "merchant": "Alteration",
+    "item_label": "Nox Swordstress Armor (Altered)"
+  },
+  "111021": {
+    "merchant": "Alteration",
+    "item_label": "Gravekeeper Cloak (Altered)"
+  },
+  "111022": {
+    "merchant": "Alteration",
+    "item_label": "Cleanrot Helm (Altered)"
+  },
+  "111023": {
+    "merchant": "Alteration",
+    "item_label": "Cleanrot Armor (Altered)"
+  },
+  "111024": {
+    "merchant": "Alteration",
+    "item_label": "Depraved Perfumer Robe (Altered)"
+  },
+  "111025": {
+    "merchant": "Alteration",
+    "item_label": "All-Knowing Armor (Altered)"
+  },
+  "111026": {
+    "merchant": "Alteration",
+    "item_label": "Twinned Armor (Altered)"
+  },
+  "111029": {
+    "merchant": "Alteration",
+    "item_label": "Prophet Robe (Altered)"
+  },
+  "111030": {
+    "merchant": "Alteration",
+    "item_label": "Astrologer Robe (Altered)"
+  },
+  "111031": {
+    "merchant": "Alteration",
+    "item_label": "Lionel's Armor (Altered)"
+  },
+  "111032": {
+    "merchant": "Alteration",
+    "item_label": "Hoslow's Armor (Altered)"
+  },
+  "111033": {
+    "merchant": "Alteration",
+    "item_label": "Vagabond Knight Armor (Altered)"
+  },
+  "111034": {
+    "merchant": "Alteration",
+    "item_label": "War Surgeon Gown (Altered)"
+  },
+  "111036": {
+    "merchant": "Alteration",
+    "item_label": "Veteran's Armor (Altered)"
+  },
+  "111037": {
+    "merchant": "Alteration",
+    "item_label": "Bloodhound Knight Armor (Altered)"
+  },
+  "111038": {
+    "merchant": "Alteration",
+    "item_label": "Festive Hood (Altered)"
+  },
+  "111039": {
+    "merchant": "Alteration",
+    "item_label": "Commoner's Garb (Altered)"
+  },
+  "111040": {
+    "merchant": "Alteration",
+    "item_label": "Commoner's Simple Garb (Altered)"
+  },
+  "111041": {
+    "merchant": "Alteration",
+    "item_label": "Raging Wolf Armor (Altered)"
+  },
+  "111042": {
+    "merchant": "Alteration",
+    "item_label": "Land of Reeds Armor (Altered)"
+  },
+  "111043": {
+    "merchant": "Alteration",
+    "item_label": "Confessor Hood (Altered)"
+  },
+  "111044": {
+    "merchant": "Alteration",
+    "item_label": "Confessor Armor (Altered)"
+  },
+  "111045": {
+    "merchant": "Alteration",
+    "item_label": "Finger Maiden Robe (Altered)"
+  },
+  "111047": {
+    "merchant": "Alteration",
+    "item_label": "Preceptor's Long Gown (Altered)"
+  },
+  "111049": {
+    "merchant": "Alteration",
+    "item_label": "Eccentric's Hood (Altered)"
+  },
+  "111050": {
+    "merchant": "Alteration",
+    "item_label": "Fingerprint Armor (Altered)"
+  },
+  "111051": {
+    "merchant": "Alteration",
+    "item_label": "Carian Knight Armor (Altered)"
+  },
+  "111052": {
+    "merchant": "Alteration",
+    "item_label": "Errant Sorcerer Robe (Altered)"
+  },
+  "111053": {
+    "merchant": "Alteration",
+    "item_label": "Gelmir Knight Armor (Altered)"
+  },
+  "111054": {
+    "merchant": "Alteration",
+    "item_label": "Godrick Knight Armor (Altered)"
+  },
+  "111055": {
+    "merchant": "Alteration",
+    "item_label": "Cuckoo Knight Armor (Altered)"
+  },
+  "111056": {
+    "merchant": "Alteration",
+    "item_label": "Leyndell Knight Armor (Altered)"
+  },
+  "111057": {
+    "merchant": "Alteration",
+    "item_label": "Redmane Knight Armor (Altered)"
+  },
+  "111058": {
+    "merchant": "Alteration",
+    "item_label": "Mausoleum Knight Armor (Altered)"
+  },
+  "111059": {
+    "merchant": "Alteration",
+    "item_label": "Haligtree Knight Armor (Altered)"
+  },
+  "111060": {
+    "merchant": "Alteration",
+    "item_label": "High Page Clothes (Altered)"
+  },
+  "111061": {
+    "merchant": "Alteration",
+    "item_label": "Rotten Gravekeeper Cloak (Altered)"
+  },
+  "111062": {
+    "merchant": "Alteration",
+    "item_label": "Beast Champion Armor (Altered)"
+  },
+  "111063": {
+    "merchant": "Alteration",
+    "item_label": "Snow Witch Robe (Altered)"
+  },
+  "111064": {
+    "merchant": "Alteration",
+    "item_label": "Crucible Axe Armor (Altered)"
+  },
+  "111065": {
+    "merchant": "Alteration",
+    "item_label": "Crucible Tree Armor (Altered)"
+  },
+  "111066": {
+    "merchant": "Alteration",
+    "item_label": "Fia's Robe (Altered)"
+  },
+  "111067": {
+    "merchant": "Alteration",
+    "item_label": "Alberich's Pointed Hat (Altered)"
+  },
+  "111068": {
+    "merchant": "Alteration",
+    "item_label": "Alberich's Robe (Altered)"
+  },
+  "111069": {
+    "merchant": "Alteration",
+    "item_label": "Traveling Maiden Robe (Altered)"
+  },
+  "111070": {
+    "merchant": "Alteration",
+    "item_label": "Dryleaf Robe (Altered)"
+  },
+  "111073": {
+    "merchant": "Alteration",
+    "item_label": "Thioller's Garb (Altered)"
+  },
+  "111074": {
+    "merchant": "Alteration",
+    "item_label": "High Priest Robe"
+  },
+  "111075": {
+    "merchant": "Alteration",
+    "item_label": "Dancer's Dress (Altered)"
+  },
+  "111076": {
+    "merchant": "Alteration",
+    "item_label": "Igon's Helm (Altered)"
+  },
+  "111077": {
+    "merchant": "Alteration",
+    "item_label": "Igon's Armor (Altered)"
+  },
+  "111078": {
+    "merchant": "Alteration",
+    "item_label": "Ansbach's Attire (Altered)"
+  },
+  "111079": {
+    "merchant": "Alteration",
+    "item_label": "Freyja's Armor (Altered)"
+  },
+  "111080": {
+    "merchant": "Alteration",
+    "item_label": "Armor of Solitude (Altered)"
+  },
+  "111081": {
+    "merchant": "Alteration",
+    "item_label": "Messmer Soldier Armor (Altered)"
+  },
+  "111082": {
+    "merchant": "Alteration",
+    "item_label": "Fire Knight Armor (Altered)"
+  },
+  "111100": {
+    "merchant": "Alteration",
+    "item_label": "Elden Lord Armor (Altered)"
+  },
+  "111101": {
+    "merchant": "Alteration",
+    "item_label": "Radahn's Lion Armor (Altered)"
+  },
+  "111102": {
+    "merchant": "Alteration",
+    "item_label": "Lord of Blood's Robe (Altered)"
+  },
+  "111103": {
+    "merchant": "Alteration",
+    "item_label": "Maliketh's Armor (Altered)"
+  },
+  "111104": {
+    "merchant": "Alteration",
+    "item_label": "Malenia's Armor (Altered)"
+  },
+  "111105": {
+    "merchant": "Alteration",
+    "item_label": "Messmer's Helm (Altered)"
+  },
+  "111106": {
+    "merchant": "Alteration",
+    "item_label": "Young Lion's Armor (Altered)"
+  },
+  "111200": {
+    "merchant": "Reversion",
+    "item_label": "Drake Knight Helm"
+  },
+  "111201": {
+    "merchant": "Reversion",
+    "item_label": "Drake Knight Armor"
+  },
+  "111202": {
+    "merchant": "Reversion",
+    "item_label": "Scaled Armor"
+  },
+  "111203": {
+    "merchant": "Reversion",
+    "item_label": "Perfumer Robe"
+  },
+  "111204": {
+    "merchant": "Reversion",
+    "item_label": "Perfumer's Traveling Garb"
+  },
+  "111205": {
+    "merchant": "Reversion",
+    "item_label": "Spellblade's Traveling Attire"
+  },
+  "111206": {
+    "merchant": "Reversion",
+    "item_label": "Ronin's Armor"
+  },
+  "111207": {
+    "merchant": "Reversion",
+    "item_label": "Blaidd's Armor"
+  },
+  "111208": {
+    "merchant": "Reversion",
+    "item_label": "Black Knife Armor"
+  },
+  "111209": {
+    "merchant": "Reversion",
+    "item_label": "Briar Armor"
+  },
+  "111210": {
+    "merchant": "Reversion",
+    "item_label": "Page Garb"
+  },
+  "111211": {
+    "merchant": "Reversion",
+    "item_label": "Night's Cavalry Helm"
+  },
+  "111212": {
+    "merchant": "Reversion",
+    "item_label": "Night's Cavalry Armor"
+  },
+  "111213": {
+    "merchant": "Reversion",
+    "item_label": "Blue Silver Mail Armor"
+  },
+  "111214": {
+    "merchant": "Reversion",
+    "item_label": "Nomadic Merchant's Finery"
+  },
+  "111215": {
+    "merchant": "Reversion",
+    "item_label": "Tree Sentinel Armor"
+  },
+  "111216": {
+    "merchant": "Reversion",
+    "item_label": "Royal Knight Armor"
+  },
+  "111217": {
+    "merchant": "Reversion",
+    "item_label": "Nox Monk Hood"
+  },
+  "111218": {
+    "merchant": "Reversion",
+    "item_label": "Nox Monk Armor"
+  },
+  "111219": {
+    "merchant": "Reversion",
+    "item_label": "Nox Swordstress Crown"
+  },
+  "111220": {
+    "merchant": "Reversion",
+    "item_label": "Nox Swordstress Armor"
+  },
+  "111221": {
+    "merchant": "Reversion",
+    "item_label": "Gravekeeper Cloak"
+  },
+  "111222": {
+    "merchant": "Reversion",
+    "item_label": "Cleanrot Helm"
+  },
+  "111223": {
+    "merchant": "Reversion",
+    "item_label": "Cleanrot Armor"
+  },
+  "111224": {
+    "merchant": "Reversion",
+    "item_label": "Depraved Perfumer Robe"
+  },
+  "111225": {
+    "merchant": "Reversion",
+    "item_label": "All-Knowing Armor"
+  },
+  "111226": {
+    "merchant": "Reversion",
+    "item_label": "Twinned Armor"
+  },
+  "111229": {
+    "merchant": "Reversion",
+    "item_label": "Prophet Robe"
+  },
+  "111230": {
+    "merchant": "Reversion",
+    "item_label": "Astrologer Robe"
+  },
+  "111231": {
+    "merchant": "Reversion",
+    "item_label": "Lionel's Armor"
+  },
+  "111232": {
+    "merchant": "Reversion",
+    "item_label": "Hoslow's Armor"
+  },
+  "111233": {
+    "merchant": "Reversion",
+    "item_label": "Vagabond Knight Armor"
+  },
+  "111234": {
+    "merchant": "Reversion",
+    "item_label": "War Surgeon Gown"
+  },
+  "111236": {
+    "merchant": "Reversion",
+    "item_label": "Veteran's Armor"
+  },
+  "111237": {
+    "merchant": "Reversion",
+    "item_label": "Bloodhound Knight Armor"
+  },
+  "111238": {
+    "merchant": "Reversion",
+    "item_label": "Festive Hood"
+  },
+  "111239": {
+    "merchant": "Reversion",
+    "item_label": "Commoner's Garb"
+  },
+  "111240": {
+    "merchant": "Reversion",
+    "item_label": "Commoner's Simple Garb"
+  },
+  "111241": {
+    "merchant": "Reversion",
+    "item_label": "Raging Wolf Armor"
+  },
+  "111242": {
+    "merchant": "Reversion",
+    "item_label": "Land of Reeds Armor"
+  },
+  "111243": {
+    "merchant": "Reversion",
+    "item_label": "Confessor Hood"
+  },
+  "111244": {
+    "merchant": "Reversion",
+    "item_label": "Confessor Armor"
+  },
+  "111245": {
+    "merchant": "Reversion",
+    "item_label": "Finger Maiden Robe"
+  },
+  "111247": {
+    "merchant": "Reversion",
+    "item_label": "Preceptor's Long Gown"
+  },
+  "111249": {
+    "merchant": "Reversion",
+    "item_label": "Eccentric's Hood"
+  },
+  "111250": {
+    "merchant": "Reversion",
+    "item_label": "Fingerprint Armor"
+  },
+  "111251": {
+    "merchant": "Reversion",
+    "item_label": "Carian Knight Armor"
+  },
+  "111252": {
+    "merchant": "Reversion",
+    "item_label": "Errant Sorcerer Robe"
+  },
+  "111253": {
+    "merchant": "Reversion",
+    "item_label": "Gelmir Knight Armor"
+  },
+  "111254": {
+    "merchant": "Reversion",
+    "item_label": "Godrick Knight Armor"
+  },
+  "111255": {
+    "merchant": "Reversion",
+    "item_label": "Cuckoo Knight Armor"
+  },
+  "111256": {
+    "merchant": "Reversion",
+    "item_label": "Leyndell Knight Armor"
+  },
+  "111257": {
+    "merchant": "Reversion",
+    "item_label": "Redmane Knight Armor"
+  },
+  "111258": {
+    "merchant": "Reversion",
+    "item_label": "Mausoleum Knight Armor"
+  },
+  "111259": {
+    "merchant": "Reversion",
+    "item_label": "Haligtree Knight Armor"
+  },
+  "111260": {
+    "merchant": "Reversion",
+    "item_label": "High Page Clothes"
+  },
+  "111261": {
+    "merchant": "Reversion",
+    "item_label": "Rotten Gravekeeper Cloak"
+  },
+  "111262": {
+    "merchant": "Reversion",
+    "item_label": "Beast Champion Armor"
+  },
+  "111263": {
+    "merchant": "Reversion",
+    "item_label": "Snow Witch Robe"
+  },
+  "111264": {
+    "merchant": "Reversion",
+    "item_label": "Crucible Axe Armor"
+  },
+  "111265": {
+    "merchant": "Reversion",
+    "item_label": "Crucible Tree Armor"
+  },
+  "111266": {
+    "merchant": "Reversion",
+    "item_label": "Fia's Robe"
+  },
+  "111267": {
+    "merchant": "Reversion",
+    "item_label": "Alberich's Pointed Hat"
+  },
+  "111268": {
+    "merchant": "Reversion",
+    "item_label": "Alberich's Robe"
+  },
+  "111269": {
+    "merchant": "Reversion",
+    "item_label": "Traveling Maiden Robe"
+  },
+  "111270": {
+    "merchant": "Reversion",
+    "item_label": "Dryleaf Robe"
+  },
+  "111273": {
+    "merchant": "Reversion",
+    "item_label": "Thioller's Garb"
+  },
+  "111274": {
+    "merchant": "Reversion",
+    "item_label": "High Priest Robe"
+  },
+  "111275": {
+    "merchant": "Reversion",
+    "item_label": "Dancer's Dress"
+  },
+  "111276": {
+    "merchant": "Reversion",
+    "item_label": "Igon's Helm"
+  },
+  "111277": {
+    "merchant": "Reversion",
+    "item_label": "Igon's Armor"
+  },
+  "111278": {
+    "merchant": "Reversion",
+    "item_label": "Ansbach's Attire"
+  },
+  "111279": {
+    "merchant": "Reversion",
+    "item_label": "Freyja's Armor"
+  },
+  "111280": {
+    "merchant": "Reversion",
+    "item_label": "Armor of Solitude"
+  },
+  "111281": {
+    "merchant": "Reversion",
+    "item_label": "Messmer Soldier Armor"
+  },
+  "111282": {
+    "merchant": "Reversion",
+    "item_label": "Fire Knight Armor"
+  },
+  "111300": {
+    "merchant": "Reversion",
+    "item_label": "Elden Lord Armor"
+  },
+  "111301": {
+    "merchant": "Reversion",
+    "item_label": "Radahn's Lion Armor"
+  },
+  "111302": {
+    "merchant": "Reversion",
+    "item_label": "Lord of Blood's Robe"
+  },
+  "111303": {
+    "merchant": "Reversion",
+    "item_label": "Maliketh's Armor"
+  },
+  "111304": {
+    "merchant": "Reversion",
+    "item_label": "Malenia's Armor"
+  },
+  "111305": {
+    "merchant": "Reversion",
+    "item_label": "Messmer's Helm"
+  },
+  "111306": {
+    "merchant": "Reversion",
+    "item_label": "Young Lion's Armor"
+  },
+  "112000": {
+    "merchant": null,
+    "item_label": "Ash of War: Impaling Thrust"
+  },
+  "112001": {
+    "merchant": null,
+    "item_label": "Ash of War: Piercing Fang"
+  },
+  "112002": {
+    "merchant": null,
+    "item_label": "Ash of War: Spinning Slash"
+  },
+  "112003": {
+    "merchant": null,
+    "item_label": "Ash of War: Repeating Thrust"
+  },
+  "112004": {
+    "merchant": null,
+    "item_label": "Ash of War: Double Slash"
+  },
+  "112005": {
+    "merchant": null,
+    "item_label": "Ash of War: Unsheathe"
+  },
+  "112006": {
+    "merchant": null,
+    "item_label": "Ash of War: Sword Dance"
+  },
+  "112008": {
+    "merchant": null,
+    "item_label": "Ash of War: Quickstep"
+  },
+  "112009": {
+    "merchant": null,
+    "item_label": "Ash of War: Bloodhound's Step"
+  },
+  "112010": {
+    "merchant": null,
+    "item_label": "Ash of War: Lion's Claw"
+  },
+  "112011": {
+    "merchant": null,
+    "item_label": "Ash of War: Stamp (Upward Cut)"
+  },
+  "112012": {
+    "merchant": null,
+    "item_label": "Ash of War: Stamp (Sweep)"
+  },
+  "112013": {
+    "merchant": null,
+    "item_label": "Ash of War: Wild Strikes"
+  },
+  "112014": {
+    "merchant": null,
+    "item_label": "Ash of War: Earthshaker"
+  },
+  "112015": {
+    "merchant": null,
+    "item_label": "Ash of War: Kick"
+  },
+  "112016": {
+    "merchant": null,
+    "item_label": "Ash of War: Ground Slam"
+  },
+  "112017": {
+    "merchant": null,
+    "item_label": "Ash of War: Hoarah Loux's Earthshaker"
+  },
+  "112018": {
+    "merchant": null,
+    "item_label": "Ash of War: Barbaric Roar"
+  },
+  "112019": {
+    "merchant": null,
+    "item_label": "Ash of War: War Cry"
+  },
+  "112020": {
+    "merchant": null,
+    "item_label": "Ash of War: Troll's Roar"
+  },
+  "112021": {
+    "merchant": null,
+    "item_label": "Ash of War: Braggart's Roar"
+  },
+  "112022": {
+    "merchant": null,
+    "item_label": "Ash of War: Endure"
+  },
+  "112023": {
+    "merchant": null,
+    "item_label": "Ash of War: Charge Forth"
+  },
+  "112024": {
+    "merchant": null,
+    "item_label": "Ash of War: Square Off"
+  },
+  "112025": {
+    "merchant": null,
+    "item_label": "Ash of War: Giant Hunt"
+  },
+  "112026": {
+    "merchant": null,
+    "item_label": "Ash of War: Spinning Strikes"
+  },
+  "112027": {
+    "merchant": null,
+    "item_label": "Ash of War: Storm Assault"
+  },
+  "112028": {
+    "merchant": null,
+    "item_label": "Ash of War: Stormcaller"
+  },
+  "112029": {
+    "merchant": null,
+    "item_label": "Ash of War: Storm Blade"
+  },
+  "112030": {
+    "merchant": null,
+    "item_label": "Ash of War: Vacuum Slice"
+  },
+  "112031": {
+    "merchant": null,
+    "item_label": "Ash of War: Storm Stomp"
+  },
+  "112032": {
+    "merchant": null,
+    "item_label": "Ash of War: Determination"
+  },
+  "112033": {
+    "merchant": null,
+    "item_label": "Ash of War: Royal Knight's Resolve"
+  },
+  "112034": {
+    "merchant": null,
+    "item_label": "Ash of War: Prelate's Charge"
+  },
+  "112035": {
+    "merchant": null,
+    "item_label": "Ash of War: Eruption"
+  },
+  "112036": {
+    "merchant": null,
+    "item_label": "Ash of War: Flaming Strike"
+  },
+  "112037": {
+    "merchant": null,
+    "item_label": "Ash of War: Black Flame Tornado"
+  },
+  "112038": {
+    "merchant": null,
+    "item_label": "Ash of War: Flame of the Redmanes"
+  },
+  "112039": {
+    "merchant": null,
+    "item_label": "Ash of War: Thunderbolt"
+  },
+  "112040": {
+    "merchant": null,
+    "item_label": "Ash of War: Lightning Slash"
+  },
+  "112041": {
+    "merchant": null,
+    "item_label": "Ash of War: Lightning Ram"
+  },
+  "112042": {
+    "merchant": null,
+    "item_label": "Ash of War: Loretta's Slash"
+  },
+  "112043": {
+    "merchant": null,
+    "item_label": "Ash of War: Spinning Weapon"
+  },
+  "112044": {
+    "merchant": null,
+    "item_label": "Ash of War: Glintblade Phalanx"
+  },
+  "112045": {
+    "merchant": null,
+    "item_label": "Ash of War: Glintstone Pebble"
+  },
+  "112046": {
+    "merchant": null,
+    "item_label": "Ash of War: Gravitas"
+  },
+  "112047": {
+    "merchant": null,
+    "item_label": "Ash of War: Carian Grandeur"
+  },
+  "112048": {
+    "merchant": null,
+    "item_label": "Ash of War: Carian Greatsword"
+  },
+  "112049": {
+    "merchant": null,
+    "item_label": "Ash of War: Waves of Darkness"
+  },
+  "112050": {
+    "merchant": null,
+    "item_label": "Ash of War: Cragblade"
+  },
+  "112051": {
+    "merchant": null,
+    "item_label": "Ash of War: Sacred Blade"
+  },
+  "112052": {
+    "merchant": null,
+    "item_label": "Ash of War: Prayerful Strike"
+  },
+  "112053": {
+    "merchant": null,
+    "item_label": "Ash of War: Golden Land"
+  },
+  "112054": {
+    "merchant": null,
+    "item_label": "Ash of War: Sacred Ring of Light"
+  },
+  "112055": {
+    "merchant": null,
+    "item_label": "Ash of War: Golden Slam"
+  },
+  "112056": {
+    "merchant": null,
+    "item_label": "Ash of War: Golden Vow"
+  },
+  "112057": {
+    "merchant": null,
+    "item_label": "Ash of War: Sacred Order"
+  },
+  "112058": {
+    "merchant": null,
+    "item_label": "Ash of War: Shared Order"
+  },
+  "112059": {
+    "merchant": null,
+    "item_label": "Ash of War: Beast's Roar"
+  },
+  "112060": {
+    "merchant": null,
+    "item_label": "Ash of War: Phantom Slash"
+  },
+  "112061": {
+    "merchant": null,
+    "item_label": "Ash of War: Spectral Lance"
+  },
+  "112062": {
+    "merchant": null,
+    "item_label": "Ash of War: Raptor of the Mists"
+  },
+  "112063": {
+    "merchant": null,
+    "item_label": "Ash of War: White Shadow's Lure"
+  },
+  "112064": {
+    "merchant": null,
+    "item_label": "Ash of War: Poison Moth Flight"
+  },
+  "112065": {
+    "merchant": null,
+    "item_label": "Ash of War: Poisonous Mist"
+  },
+  "112066": {
+    "merchant": null,
+    "item_label": "Ash of War: Blood Tax"
+  },
+  "112067": {
+    "merchant": null,
+    "item_label": "Ash of War: Bloody Slash"
+  },
+  "112068": {
+    "merchant": null,
+    "item_label": "Ash of War: Lifesteal Fist"
+  },
+  "112069": {
+    "merchant": null,
+    "item_label": "Ash of War: Blood Blade"
+  },
+  "112070": {
+    "merchant": null,
+    "item_label": "Ash of War: Assassin's Gambit"
+  },
+  "112071": {
+    "merchant": null,
+    "item_label": "Ash of War: Seppuku"
+  },
+  "112072": {
+    "merchant": null,
+    "item_label": "Ash of War: Ice Spear"
+  },
+  "112073": {
+    "merchant": null,
+    "item_label": "Ash of War: Chilling Mist"
+  },
+  "112074": {
+    "merchant": null,
+    "item_label": "Ash of War: Hoarfrost Stomp"
+  },
+  "112075": {
+    "merchant": null,
+    "item_label": "Ash of War: No Skill"
+  },
+  "112076": {
+    "merchant": null,
+    "item_label": "Ash of War: Shield Bash"
+  },
+  "112077": {
+    "merchant": null,
+    "item_label": "Ash of War: Shield Crash"
+  },
+  "112078": {
+    "merchant": null,
+    "item_label": "Ash of War: Barricade Shield"
+  },
+  "112079": {
+    "merchant": null,
+    "item_label": "Ash of War: Parry"
+  },
+  "112080": {
+    "merchant": null,
+    "item_label": "Ash of War: Carian Retaliation"
+  },
+  "112081": {
+    "merchant": null,
+    "item_label": "Ash of War: Storm Wall"
+  },
+  "112082": {
+    "merchant": null,
+    "item_label": "Ash of War: Golden Parry"
+  },
+  "112083": {
+    "merchant": null,
+    "item_label": "Ash of War: Thops's Barrier"
+  },
+  "112084": {
+    "merchant": null,
+    "item_label": "Ash of War: Holy Ground"
+  },
+  "112085": {
+    "merchant": null,
+    "item_label": "Ash of War: Vow of the Indomitable"
+  },
+  "112086": {
+    "merchant": null,
+    "item_label": "Ash of War: Barrage"
+  },
+  "112087": {
+    "merchant": null,
+    "item_label": "Ash of War: Mighty Shot"
+  },
+  "112088": {
+    "merchant": null,
+    "item_label": "Ash of War: Sky Shot"
+  },
+  "112089": {
+    "merchant": null,
+    "item_label": "Ash of War: Through and Through"
+  },
+  "112090": {
+    "merchant": null,
+    "item_label": "Ash of War: Enchanted Shot"
+  },
+  "112091": {
+    "merchant": null,
+    "item_label": "Ash of War: Rain of Arrows"
+  },
+  "112100": {
+    "merchant": null,
+    "item_label": "Ash of War: Dryleaf Whirlwind"
+  },
+  "112101": {
+    "merchant": null,
+    "item_label": "Ash of War: Aspects of the Crucible: Wings"
+  },
+  "112102": {
+    "merchant": null,
+    "item_label": "Ash of War: Spinning Gravity Thrust"
+  },
+  "112103": {
+    "merchant": null,
+    "item_label": "Ash of War: Palm Blast"
+  },
+  "112104": {
+    "merchant": null,
+    "item_label": "Ash of War: Piercing Throw"
+  },
+  "112105": {
+    "merchant": null,
+    "item_label": "Ash of War: Scattershot Throw"
+  },
+  "112106": {
+    "merchant": null,
+    "item_label": "Ash of War: Wall of Sparks"
+  },
+  "112107": {
+    "merchant": null,
+    "item_label": "Ash of War: Rolling Sparks"
+  },
+  "112108": {
+    "merchant": null,
+    "item_label": "Ash of War: Raging Beast"
+  },
+  "112109": {
+    "merchant": null,
+    "item_label": "Ash of War: Savage Claws"
+  },
+  "112110": {
+    "merchant": null,
+    "item_label": "Ash of War: Blind Spot"
+  },
+  "112111": {
+    "merchant": null,
+    "item_label": "Ash of War: Swift Slash"
+  },
+  "112112": {
+    "merchant": null,
+    "item_label": "Ash of War: Overhead Stance"
+  },
+  "112113": {
+    "merchant": null,
+    "item_label": "Ash of War: Wing Stance"
+  },
+  "112114": {
+    "merchant": null,
+    "item_label": "Ash of War: Blinkbolt"
+  },
+  "112115": {
+    "merchant": null,
+    "item_label": "Ash of War: Flame Skewer"
+  },
+  "112116": {
+    "merchant": null,
+    "item_label": "Ash of War: Savage Lion's Claw"
+  },
+  "112117": {
+    "merchant": null,
+    "item_label": "Ash of War: Divine Beast Frost Stomp"
+  },
+  "112118": {
+    "merchant": null,
+    "item_label": "Ash of War: Flame Spear"
+  },
+  "112119": {
+    "merchant": null,
+    "item_label": "Ash of War: Carian Sovereignty"
+  },
+  "112120": {
+    "merchant": null,
+    "item_label": "Ash of War: Shriek of Sorrow"
+  },
+  "112121": {
+    "merchant": null,
+    "item_label": "Ash of War: Ghostflame Call"
+  },
+  "112122": {
+    "merchant": null,
+    "item_label": "Ash of War: The Poison Flower Blooms Twice"
+  },
+  "112123": {
+    "merchant": null,
+    "item_label": "Ash of War: Igon's Drake Hunt"
+  },
+  "112124": {
+    "merchant": null,
+    "item_label": "Ash of War: Shield Strike"
+  },
+  "600000": {
+    "merchant": null,
+    "item_label": "Dagger"
+  },
+  "600001": {
+    "merchant": null,
+    "item_label": "Longsword"
+  },
+  "600002": {
+    "merchant": null,
+    "item_label": "Short Spear"
+  },
+  "600003": {
+    "merchant": null,
+    "item_label": "Mace"
+  },
+  "600004": {
+    "merchant": null,
+    "item_label": "Longbow"
+  },
+  "600005": {
+    "merchant": null,
+    "item_label": "Falchion"
+  },
+  "600006": {
+    "merchant": null,
+    "item_label": "Hand Axe"
+  },
+  "600007": {
+    "merchant": null,
+    "item_label": "Buckler"
+  },
+  "600008": {
+    "merchant": null,
+    "item_label": "Round Shield"
+  },
+  "600009": {
+    "merchant": null,
+    "item_label": "Blue Cloth Cowl"
+  },
+  "600010": {
+    "merchant": null,
+    "item_label": "Blue Cloth Vest"
+  },
+  "600011": {
+    "merchant": null,
+    "item_label": "Warrior Gauntlets"
+  },
+  "600012": {
+    "merchant": null,
+    "item_label": "Warrior Greaves"
+  },
+  "600013": {
+    "merchant": null,
+    "item_label": "Lone Wolf Ashes"
+  },
+  "600014": {
+    "merchant": null,
+    "item_label": "Cracked Pot"
+  },
+  "600016": {
+    "merchant": null,
+    "item_label": "Arrow"
+  },
+  "600017": {
+    "merchant": null,
+    "item_label": "String"
+  },
+  "600018": {
+    "merchant": null,
+    "item_label": "Note: Imp Shades"
+  },
+  "600019": {
+    "merchant": null,
+    "item_label": "Note: Flask of Wondrous Physick"
+  },
+  "600021": {
+    "merchant": null,
+    "item_label": "Miranda Powder"
+  },
+  "900000": {
+    "merchant": "Incantation",
+    "item_label": "Dragonfire"
+  },
+  "900001": {
+    "merchant": "Incantation",
+    "item_label": "Agheel's Flame"
+  },
+  "900002": {
+    "merchant": "Incantation",
+    "item_label": "Magma Breath"
+  },
+  "900003": {
+    "merchant": "Incantation",
+    "item_label": "Dragonice"
+  },
+  "900004": {
+    "merchant": "Incantation",
+    "item_label": "Rotten Breath"
+  },
+  "900010": {
+    "merchant": "Incantation",
+    "item_label": "Dragonfire"
+  },
+  "900011": {
+    "merchant": "Incantation",
+    "item_label": "Agheel's Flame"
+  },
+  "900012": {
+    "merchant": "Incantation",
+    "item_label": "Magma Breath"
+  },
+  "900013": {
+    "merchant": "Incantation",
+    "item_label": "Dragonice"
+  },
+  "900014": {
+    "merchant": "Incantation",
+    "item_label": "Rotten Breath"
+  },
+  "900020": {
+    "merchant": "Incantation",
+    "item_label": "Dragonfire"
+  },
+  "900021": {
+    "merchant": "Incantation",
+    "item_label": "Agheel's Flame"
+  },
+  "900022": {
+    "merchant": "Incantation",
+    "item_label": "Magma Breath"
+  },
+  "900023": {
+    "merchant": "Incantation",
+    "item_label": "Dragonice"
+  },
+  "900024": {
+    "merchant": "Incantation",
+    "item_label": "Rotten Breath"
+  },
+  "900030": {
+    "merchant": "Incantation",
+    "item_label": "Dragonfire"
+  },
+  "900031": {
+    "merchant": "Incantation",
+    "item_label": "Agheel's Flame"
+  },
+  "900032": {
+    "merchant": "Incantation",
+    "item_label": "Magma Breath"
+  },
+  "900033": {
+    "merchant": "Incantation",
+    "item_label": "Dragonice"
+  },
+  "900034": {
+    "merchant": "Incantation",
+    "item_label": "Rotten Breath"
+  },
+  "1600101": {
+    "merchant": null,
+    "item_label": "Dagger"
+  },
+  "1600102": {
+    "merchant": null,
+    "item_label": "Longsword"
+  },
+  "1600103": {
+    "merchant": null,
+    "item_label": "Short Spear"
+  },
+  "1600104": {
+    "merchant": null,
+    "item_label": "Mace"
+  },
+  "1600105": {
+    "merchant": null,
+    "item_label": "Longbow"
+  },
+  "1600106": {
+    "merchant": null,
+    "item_label": "Falchion"
+  },
+  "1600107": {
+    "merchant": null,
+    "item_label": "Hand Axe"
+  },
+  "1600108": {
+    "merchant": null,
+    "item_label": "Buckler"
+  },
+  "1600109": {
+    "merchant": null,
+    "item_label": "Round Shield"
+  },
+  "1600110": {
+    "merchant": null,
+    "item_label": "Blue Cloth Cowl"
+  },
+  "1600111": {
+    "merchant": null,
+    "item_label": "Blue Cloth Vest"
+  },
+  "1600112": {
+    "merchant": null,
+    "item_label": "Warrior Gauntlets"
+  },
+  "1600113": {
+    "merchant": null,
+    "item_label": "Warrior Greaves"
+  },
+  "1600115": {
+    "merchant": null,
+    "item_label": "Cracked Pot"
+  },
+  "1600117": {
+    "merchant": null,
+    "item_label": "Arrow"
+  },
+  "1600118": {
+    "merchant": null,
+    "item_label": "String"
+  },
+  "1600119": {
+    "merchant": null,
+    "item_label": "Note: Imp Shades"
+  },
+  "1600120": {
+    "merchant": null,
+    "item_label": "Note: Flask of Wondrous Physick"
+  },
+  "1600122": {
+    "merchant": null,
+    "item_label": "Miranda Powder"
+  },
+  "1600401": {
+    "merchant": null,
+    "item_label": "Glintstone Staff"
+  },
+  "1600402": {
+    "merchant": null,
+    "item_label": "Finger Seal"
+  },
+  "1600403": {
+    "merchant": null,
+    "item_label": "Clawmark Seal"
+  },
+  "1600404": {
+    "merchant": "Sorcery",
+    "item_label": "Glintstone Pebble"
+  },
+  "1600405": {
+    "merchant": "Sorcery",
+    "item_label": "Stars of Ruin"
+  },
+  "1600407": {
+    "merchant": "Incantation",
+    "item_label": "Flame"
+  },
+  "1600408": {
+    "merchant": "Incantation",
+    "item_label": "Frenzied Burst"
+  },
+  "1600409": {
+    "merchant": null,
+    "item_label": "Carian Knight Helm"
+  },
+  "1600410": {
+    "merchant": null,
+    "item_label": "Carian Knight Armor (Altered)"
+  },
+  "1600411": {
+    "merchant": null,
+    "item_label": "Carian Knight Gauntlets"
+  },
+  "1600412": {
+    "merchant": null,
+    "item_label": "Carian Knight Greaves"
+  },
+  "1600413": {
+    "merchant": null,
+    "item_label": "Champion Headband"
+  },
+  "1600414": {
+    "merchant": null,
+    "item_label": "Champion Pauldron"
+  },
+  "1600415": {
+    "merchant": null,
+    "item_label": "Champion Bracers"
+  },
+  "1600416": {
+    "merchant": null,
+    "item_label": "Champion Gaiters"
+  },
+  "1600417": {
+    "merchant": null,
+    "item_label": "Crimson Amber Medallion"
+  },
+  "1600418": {
+    "merchant": null,
+    "item_label": "Axe Talisman"
+  },
+  "1600419": {
+    "merchant": null,
+    "item_label": "Fire Arrow"
+  },
+  "1600420": {
+    "merchant": null,
+    "item_label": "Note: Stonedigger Trolls"
+  },
+  "9000000": {
+    "merchant": null,
+    "item_label": "Forked Greatsword"
+  },
+  "9000001": {
+    "merchant": null,
+    "item_label": "Iron Greatsword"
+  },
+  "9000002": {
+    "merchant": null,
+    "item_label": "Lordsworn's Greatsword"
+  },
+  "9000003": {
+    "merchant": null,
+    "item_label": "Knight's Greatsword"
+  },
+  "9000004": {
+    "merchant": null,
+    "item_label": "Ordovis's Greatsword"
+  },
+  "9001000": {
+    "merchant": null,
+    "item_label": "Omen Helm"
+  },
+  "9001001": {
+    "merchant": null,
+    "item_label": "Omen Armor"
+  },
+  "9001002": {
+    "merchant": null,
+    "item_label": "Omen Gauntlets"
+  },
+  "9001003": {
+    "merchant": null,
+    "item_label": "Omen Greaves"
+  }
+}

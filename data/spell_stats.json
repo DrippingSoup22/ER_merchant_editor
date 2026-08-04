@@ -1,0 +1,1708 @@
+{
+  "spells": [
+    {
+      "itemId": 1073745824,
+      "fp": 7,
+      "slots": 1,
+      "reqInt": 10,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745825,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 16,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745834,
+      "fp": 5,
+      "slots": 1,
+      "reqInt": 12,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745844,
+      "fp": 17,
+      "slots": 1,
+      "reqInt": 36,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745845,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 52,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745854,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 27,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745864,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 12,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745874,
+      "fp": 23,
+      "slots": 1,
+      "reqInt": 24,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745884,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 23,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745894,
+      "fp": 9,
+      "slots": 1,
+      "reqInt": 13,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745904,
+      "fp": 38,
+      "slots": 1,
+      "reqInt": 25,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745914,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 18,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745924,
+      "fp": 10,
+      "slots": 1,
+      "reqInt": 15,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745934,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 21,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745944,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 25,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745954,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 20,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073745964,
+      "fp": 9,
+      "slots": 1,
+      "reqInt": 15,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746024,
+      "fp": 40,
+      "slots": 3,
+      "reqInt": 60,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746034,
+      "fp": 27,
+      "slots": 2,
+      "reqInt": 52,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746044,
+      "fp": 32,
+      "slots": 1,
+      "reqInt": 43,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746124,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 22,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746125,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 34,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746126,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 29,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746184,
+      "fp": 47,
+      "slots": 2,
+      "reqInt": 70,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746185,
+      "fp": 57,
+      "slots": 2,
+      "reqInt": 68,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746194,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 15,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746204,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 26,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746205,
+      "fp": 39,
+      "slots": 1,
+      "reqInt": 46,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746214,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 14,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746224,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 15,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746234,
+      "fp": 17,
+      "slots": 1,
+      "reqInt": 36,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746244,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 21,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746254,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 24,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746255,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 32,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746264,
+      "fp": 4,
+      "slots": 1,
+      "reqInt": 14,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746274,
+      "fp": 17,
+      "slots": 1,
+      "reqInt": 27,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746284,
+      "fp": 25,
+      "slots": 1,
+      "reqInt": 12,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746294,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 12,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746304,
+      "fp": 10,
+      "slots": 1,
+      "reqInt": 17,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746314,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 15,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746324,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 38,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746334,
+      "fp": 34,
+      "slots": 1,
+      "reqInt": 41,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746344,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 47,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746424,
+      "fp": 13,
+      "slots": 1,
+      "reqInt": 23,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746434,
+      "fp": 7,
+      "slots": 1,
+      "reqInt": 18,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746444,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 38,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746454,
+      "fp": 7,
+      "slots": 1,
+      "reqInt": 18,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746464,
+      "fp": 8,
+      "slots": 1,
+      "reqInt": 17,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746474,
+      "fp": 25,
+      "slots": 1,
+      "reqInt": 35,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746484,
+      "fp": 13,
+      "slots": 1,
+      "reqInt": 12,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746494,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 16,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746524,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 30,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746525,
+      "fp": 60,
+      "slots": 2,
+      "reqInt": 55,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746534,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 18,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746544,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 17,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746545,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 36,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746624,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 19,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746634,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 28,
+      "reqFai": 15,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746644,
+      "fp": 28,
+      "slots": 1,
+      "reqInt": 21,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746654,
+      "fp": 23,
+      "slots": 2,
+      "reqInt": 40,
+      "reqFai": 18,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746724,
+      "fp": 6,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746734,
+      "fp": 9,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 21,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746824,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 16,
+      "reqFai": 14,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746825,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 34,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746834,
+      "fp": 29,
+      "slots": 1,
+      "reqInt": 42,
+      "reqFai": 30,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746844,
+      "fp": 25,
+      "slots": 1,
+      "reqInt": 23,
+      "reqFai": 18,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746854,
+      "fp": 17,
+      "slots": 1,
+      "reqInt": 28,
+      "reqFai": 20,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746864,
+      "fp": 28,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 47,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073746924,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 19,
+      "reqFai": 0,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1073746934,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 25,
+      "reqFai": 0,
+      "reqArc": 18
+    },
+    {
+      "itemId": 1073747824,
+      "fp": 10,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 8,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747825,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 16,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747834,
+      "fp": 11,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747844,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 28,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747854,
+      "fp": 19,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 13,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747864,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747874,
+      "fp": 28,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747884,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747924,
+      "fp": 30,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 30,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747934,
+      "fp": 34,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 41,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073747944,
+      "fp": 26,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748034,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 20,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748044,
+      "fp": 1,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 9,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748054,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 28,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748064,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 42,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748074,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 17,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748084,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 30,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748094,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 26,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748124,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 13,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1073748134,
+      "fp": 13,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 14,
+      "reqArc": 17
+    },
+    {
+      "itemId": 1073748144,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 10
+    },
+    {
+      "itemId": 1073748154,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748164,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 35,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748224,
+      "fp": 9,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748234,
+      "fp": 40,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 32,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748244,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 8,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748245,
+      "fp": 32,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748246,
+      "fp": 45,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748247,
+      "fp": 55,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 20,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748248,
+      "fp": 65,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 42,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748254,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748255,
+      "fp": 60,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 38,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748264,
+      "fp": 7,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748265,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748274,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748284,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748294,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748304,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748314,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748324,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 14,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748334,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748344,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 13,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748354,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 18,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748424,
+      "fp": 47,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 25,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748524,
+      "fp": 3,
+      "slots": 1,
+      "reqInt": 13,
+      "reqFai": 13,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748525,
+      "fp": 23,
+      "slots": 1,
+      "reqInt": 23,
+      "reqFai": 23,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748534,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 31,
+      "reqFai": 31,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748544,
+      "fp": 41,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 50,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748554,
+      "fp": 55,
+      "slots": 1,
+      "reqInt": 37,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748564,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 19,
+      "reqFai": 19,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748574,
+      "fp": 17,
+      "slots": 1,
+      "reqInt": 17,
+      "reqFai": 17,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748584,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 29,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748594,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 13,
+      "reqFai": 13,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748604,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 11,
+      "reqFai": 11,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748624,
+      "fp": 7,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748634,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 13,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748644,
+      "fp": 10,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 8,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748654,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748664,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748674,
+      "fp": 10,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 9,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748724,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 17,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748734,
+      "fp": 36,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 26,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748744,
+      "fp": 19,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 28,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748745,
+      "fp": 29,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 34,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748754,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748764,
+      "fp": 25,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 32,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748765,
+      "fp": 35,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 46,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748774,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 40,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748784,
+      "fp": 27,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748794,
+      "fp": 35,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 23,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748795,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 21,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748824,
+      "fp": 28,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 12
+    },
+    {
+      "itemId": 1073748825,
+      "fp": 36,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 23,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1073748834,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 14,
+      "reqArc": 10
+    },
+    {
+      "itemId": 1073748835,
+      "fp": 45,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 21,
+      "reqArc": 14
+    },
+    {
+      "itemId": 1073748844,
+      "fp": 36,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 12
+    },
+    {
+      "itemId": 1073748845,
+      "fp": 48,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 23,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1073748854,
+      "fp": 36,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 12
+    },
+    {
+      "itemId": 1073748855,
+      "fp": 48,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 23,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1073748864,
+      "fp": 28,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 15,
+      "reqArc": 12
+    },
+    {
+      "itemId": 1073748865,
+      "fp": 36,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 23,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1073748874,
+      "fp": 62,
+      "slots": 3,
+      "reqInt": 0,
+      "reqFai": 36,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073748884,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 17,
+      "reqArc": 13
+    },
+    {
+      "itemId": 1073748904,
+      "fp": 34,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 16
+    },
+    {
+      "itemId": 1073748914,
+      "fp": 50,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 28,
+      "reqArc": 17
+    },
+    {
+      "itemId": 1073749024,
+      "fp": 19,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 11,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749034,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 11,
+      "reqArc": 16
+    },
+    {
+      "itemId": 1073749044,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 12,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749054,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 10,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749064,
+      "fp": 48,
+      "slots": 3,
+      "reqInt": 0,
+      "reqFai": 35,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749124,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 21,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749134,
+      "fp": 16,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 16,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749135,
+      "fp": 22,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 31,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749144,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 22,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749154,
+      "fp": 21,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 33,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749324,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749334,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749344,
+      "fp": 28,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749354,
+      "fp": 26,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 46,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749724,
+      "fp": 26,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 19,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1073749727,
+      "fp": 30,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746124,
+      "fp": 9,
+      "slots": 1,
+      "reqInt": 26,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746134,
+      "fp": 19,
+      "slots": 1,
+      "reqInt": 28,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746144,
+      "fp": 47,
+      "slots": 2,
+      "reqInt": 72,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746324,
+      "fp": 10,
+      "slots": 1,
+      "reqInt": 18,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746334,
+      "fp": 23,
+      "slots": 1,
+      "reqInt": 32,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746524,
+      "fp": 18,
+      "slots": 2,
+      "reqInt": 48,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746534,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 36,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746724,
+      "fp": 9,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 20,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746734,
+      "fp": 15,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075746824,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 24,
+      "reqFai": 18,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748024,
+      "fp": 29,
+      "slots": 2,
+      "reqInt": 32,
+      "reqFai": 26,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748034,
+      "fp": 41,
+      "slots": 1,
+      "reqInt": 28,
+      "reqFai": 22,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748124,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 19,
+      "reqArc": 27
+    },
+    {
+      "itemId": 1075748224,
+      "fp": 45,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 18,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748474,
+      "fp": 14,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748484,
+      "fp": 23,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 27,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748494,
+      "fp": 30,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 70,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748504,
+      "fp": 40,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 58,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748514,
+      "fp": 18,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 34,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748524,
+      "fp": 48,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 72,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748534,
+      "fp": 23,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 36,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748624,
+      "fp": 17,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 14,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748724,
+      "fp": 29,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 36,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748734,
+      "fp": 35,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 52,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748744,
+      "fp": 26,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 30,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075748824,
+      "fp": 46,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 0,
+      "reqArc": 49
+    },
+    {
+      "itemId": 1075748834,
+      "fp": 43,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 0,
+      "reqArc": 53
+    },
+    {
+      "itemId": 1075748844,
+      "fp": 36,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 23,
+      "reqArc": 15
+    },
+    {
+      "itemId": 1075749024,
+      "fp": 48,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 33,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749034,
+      "fp": 28,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 26,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749124,
+      "fp": 22,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 41,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749234,
+      "fp": 26,
+      "slots": 1,
+      "reqInt": 42,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749244,
+      "fp": 20,
+      "slots": 1,
+      "reqInt": 36,
+      "reqFai": 0,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749424,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 26,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749524,
+      "fp": 12,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 22,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749534,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 34,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749544,
+      "fp": 10,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 48,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749554,
+      "fp": 24,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 28,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749564,
+      "fp": 3,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 24,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749624,
+      "fp": 11,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 16,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749634,
+      "fp": 27,
+      "slots": 1,
+      "reqInt": 0,
+      "reqFai": 52,
+      "reqArc": 0
+    },
+    {
+      "itemId": 1075749644,
+      "fp": 31,
+      "slots": 2,
+      "reqInt": 0,
+      "reqFai": 60,
+      "reqArc": 0
+    }
+  ]
+}

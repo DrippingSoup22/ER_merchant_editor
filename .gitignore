@@ -1,0 +1,10 @@
+/save_files/
+/working_copies/
+/.claude/
+/CLAUDE.md
+__pycache__/
+*.pyc
+/tools/.venv/
+/app/shopwrite/shopwrite
+/tools/itemdb_extract/itemdb_extract
+/app/dist/

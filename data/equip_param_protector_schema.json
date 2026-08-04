@@ -1,0 +1,1455 @@
+{
+  "param_type": "EQUIP_PARAM_PROTECTOR_ST",
+  "row_size": 416,
+  "fields": [
+    {
+      "name": "_bitfield_pad@0",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 0,
+      "size": 1
+    },
+    {
+      "name": "disableParamReserve2",
+      "type": "dummy8",
+      "array_length": 3,
+      "offset": 1,
+      "size": 3
+    },
+    {
+      "name": "sortId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 4,
+      "size": 4
+    },
+    {
+      "name": "wanderingEquipId",
+      "type": "u32",
+      "array_length": 1,
+      "offset": 8,
+      "size": 4
+    },
+    {
+      "name": "resistSleep",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 12,
+      "size": 2
+    },
+    {
+      "name": "resistMadness",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 14,
+      "size": 2
+    },
+    {
+      "name": "saDurability",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 16,
+      "size": 4
+    },
+    {
+      "name": "toughnessCorrectRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 20,
+      "size": 4
+    },
+    {
+      "name": "fixPrice",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 24,
+      "size": 4
+    },
+    {
+      "name": "basicPrice",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 28,
+      "size": 4
+    },
+    {
+      "name": "sellValue",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 32,
+      "size": 4
+    },
+    {
+      "name": "weight",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 36,
+      "size": 4
+    },
+    {
+      "name": "residentSpEffectId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 40,
+      "size": 4
+    },
+    {
+      "name": "residentSpEffectId2",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 44,
+      "size": 4
+    },
+    {
+      "name": "residentSpEffectId3",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 48,
+      "size": 4
+    },
+    {
+      "name": "materialSetId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 52,
+      "size": 4
+    },
+    {
+      "name": "partsDamageRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 56,
+      "size": 4
+    },
+    {
+      "name": "corectSARecover",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 60,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 64,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro1",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 68,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro2",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 72,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro3",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 76,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro4",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 80,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro5",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 84,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro6",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 88,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro7",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 92,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro8",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 96,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro9",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 100,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro10",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 104,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro11",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 108,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro12",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 112,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro13",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 116,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro14",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 120,
+      "size": 4
+    },
+    {
+      "name": "originEquipPro15",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 124,
+      "size": 4
+    },
+    {
+      "name": "faceScaleM_ScaleX",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 128,
+      "size": 4
+    },
+    {
+      "name": "faceScaleM_ScaleZ",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 132,
+      "size": 4
+    },
+    {
+      "name": "faceScaleM_MaxX",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 136,
+      "size": 4
+    },
+    {
+      "name": "faceScaleM_MaxZ",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 140,
+      "size": 4
+    },
+    {
+      "name": "faceScaleF_ScaleX",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 144,
+      "size": 4
+    },
+    {
+      "name": "faceScaleF_ScaleZ",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 148,
+      "size": 4
+    },
+    {
+      "name": "faceScaleF_MaxX",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 152,
+      "size": 4
+    },
+    {
+      "name": "faceScaleF_MaxZ",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 156,
+      "size": 4
+    },
+    {
+      "name": "qwcId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 160,
+      "size": 4
+    },
+    {
+      "name": "equipModelId",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 164,
+      "size": 2
+    },
+    {
+      "name": "iconIdM",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 166,
+      "size": 2
+    },
+    {
+      "name": "iconIdF",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 168,
+      "size": 2
+    },
+    {
+      "name": "knockBack",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 170,
+      "size": 2
+    },
+    {
+      "name": "knockbackBounceRate",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 172,
+      "size": 2
+    },
+    {
+      "name": "durability",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 174,
+      "size": 2
+    },
+    {
+      "name": "durabilityMax",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 176,
+      "size": 2
+    },
+    {
+      "name": "pad03",
+      "type": "dummy8",
+      "array_length": 2,
+      "offset": 178,
+      "size": 2
+    },
+    {
+      "name": "defFlickPower",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 180,
+      "size": 2
+    },
+    {
+      "name": "defensePhysics",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 182,
+      "size": 2
+    },
+    {
+      "name": "defenseMagic",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 184,
+      "size": 2
+    },
+    {
+      "name": "defenseFire",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 186,
+      "size": 2
+    },
+    {
+      "name": "defenseThunder",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 188,
+      "size": 2
+    },
+    {
+      "name": "defenseSlash",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 190,
+      "size": 2
+    },
+    {
+      "name": "defenseBlow",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 192,
+      "size": 2
+    },
+    {
+      "name": "defenseThrust",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 194,
+      "size": 2
+    },
+    {
+      "name": "resistPoison",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 196,
+      "size": 2
+    },
+    {
+      "name": "resistDisease",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 198,
+      "size": 2
+    },
+    {
+      "name": "resistBlood",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 200,
+      "size": 2
+    },
+    {
+      "name": "resistCurse",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 202,
+      "size": 2
+    },
+    {
+      "name": "reinforceTypeId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 204,
+      "size": 2
+    },
+    {
+      "name": "trophySGradeId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 206,
+      "size": 2
+    },
+    {
+      "name": "shopLv",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 208,
+      "size": 2
+    },
+    {
+      "name": "knockbackParamId",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 210,
+      "size": 1
+    },
+    {
+      "name": "flickDamageCutRate",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 211,
+      "size": 1
+    },
+    {
+      "name": "equipModelCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 212,
+      "size": 1
+    },
+    {
+      "name": "equipModelGender",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 213,
+      "size": 1
+    },
+    {
+      "name": "protectorCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 214,
+      "size": 1
+    },
+    {
+      "name": "rarity",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 215,
+      "size": 1
+    },
+    {
+      "name": "sortGroupId",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 216,
+      "size": 1
+    },
+    {
+      "name": "partsDmgType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 217,
+      "size": 1
+    },
+    {
+      "name": "pad04",
+      "type": "dummy8",
+      "array_length": 2,
+      "offset": 218,
+      "size": 2
+    },
+    {
+      "name": "_bitfield_pad@220",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 220,
+      "size": 1
+    },
+    {
+      "name": "defenseMaterialVariationValue_Weak",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 221,
+      "size": 1
+    },
+    {
+      "name": "autoFootEffectDecalBaseId2",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 222,
+      "size": 2
+    },
+    {
+      "name": "autoFootEffectDecalBaseId3",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 224,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterialVariationValue",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 226,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@227",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 227,
+      "size": 1
+    },
+    {
+      "name": "neutralDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 228,
+      "size": 4
+    },
+    {
+      "name": "slashDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 232,
+      "size": 4
+    },
+    {
+      "name": "blowDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 236,
+      "size": 4
+    },
+    {
+      "name": "thrustDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 240,
+      "size": 4
+    },
+    {
+      "name": "magicDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 244,
+      "size": 4
+    },
+    {
+      "name": "fireDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 248,
+      "size": 4
+    },
+    {
+      "name": "thunderDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 252,
+      "size": 4
+    },
+    {
+      "name": "defenseMaterialSfx1",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 256,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterialSfx_Weak1",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 258,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterial1",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 260,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterial_Weak1",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 262,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterialSfx2",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 264,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterialSfx_Weak2",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 266,
+      "size": 2
+    },
+    {
+      "name": "footMaterialSe",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 268,
+      "size": 2
+    },
+    {
+      "name": "defenseMaterial_Weak2",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 270,
+      "size": 2
+    },
+    {
+      "name": "autoFootEffectDecalBaseId1",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 272,
+      "size": 4
+    },
+    {
+      "name": "toughnessDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 276,
+      "size": 4
+    },
+    {
+      "name": "toughnessRecoverCorrection",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 280,
+      "size": 4
+    },
+    {
+      "name": "darkDamageCutRate",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 284,
+      "size": 4
+    },
+    {
+      "name": "defenseDark",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 288,
+      "size": 2
+    },
+    {
+      "name": "_bitfield_pad@290",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 290,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@291",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 291,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@292",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 292,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@293",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 293,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@294",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 294,
+      "size": 1
+    },
+    {
+      "name": "postureControlId",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 295,
+      "size": 1
+    },
+    {
+      "name": "pad2",
+      "type": "dummy8",
+      "array_length": 4,
+      "offset": 296,
+      "size": 4
+    },
+    {
+      "name": "saleValue",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 300,
+      "size": 4
+    },
+    {
+      "name": "resistFreeze",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 304,
+      "size": 2
+    },
+    {
+      "name": "invisibleFlag_SexVer00",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 306,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer01",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 307,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer02",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 308,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer03",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 309,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer04",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 310,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer05",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 311,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer06",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 312,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer07",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 313,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer08",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 314,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer09",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 315,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer10",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 316,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer11",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 317,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer12",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 318,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer13",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 319,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer14",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 320,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer15",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 321,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer16",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 322,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer17",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 323,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer18",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 324,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer19",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 325,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer20",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 326,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer21",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 327,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer22",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 328,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer23",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 329,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer24",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 330,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer25",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 331,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer26",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 332,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer27",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 333,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer28",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 334,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer29",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 335,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer30",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 336,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer31",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 337,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer32",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 338,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer33",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 339,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer34",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 340,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer35",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 341,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer36",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 342,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer37",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 343,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer38",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 344,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer39",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 345,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer40",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 346,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer41",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 347,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer42",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 348,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer43",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 349,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer44",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 350,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer45",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 351,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer46",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 352,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer47",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 353,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer48",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 354,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer49",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 355,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer50",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 356,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer51",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 357,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer52",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 358,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer53",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 359,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer54",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 360,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer55",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 361,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer56",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 362,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer57",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 363,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer58",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 364,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer59",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 365,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer60",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 366,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer61",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 367,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer62",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 368,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer63",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 369,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer64",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 370,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer65",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 371,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer66",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 372,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer67",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 373,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer68",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 374,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer69",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 375,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer70",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 376,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer71",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 377,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer72",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 378,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer73",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 379,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer74",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 380,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer75",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 381,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer76",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 382,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer77",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 383,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer78",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 384,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer79",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 385,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer80",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 386,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer81",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 387,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer82",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 388,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer83",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 389,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer84",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 390,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer85",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 391,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer86",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 392,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer87",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 393,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer88",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 394,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer89",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 395,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer90",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 396,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer91",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 397,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer92",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 398,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer93",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 399,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer94",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 400,
+      "size": 1
+    },
+    {
+      "name": "invisibleFlag_SexVer95",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 401,
+      "size": 1
+    },
+    {
+      "name": "pad404",
+      "type": "dummy8",
+      "array_length": 14,
+      "offset": 402,
+      "size": 14
+    }
+  ]
+}

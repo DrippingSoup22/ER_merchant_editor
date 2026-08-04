@@ -1,0 +1,573 @@
+{
+  "param_type": "EQUIP_PARAM_GOODS_ST",
+  "row_size": 176,
+  "fields": [
+    {
+      "name": "_bitfield_pad@0",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 0,
+      "size": 1
+    },
+    {
+      "name": "disableParamReserve2",
+      "type": "dummy8",
+      "array_length": 3,
+      "offset": 1,
+      "size": 3
+    },
+    {
+      "name": "refId_default",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 4,
+      "size": 4
+    },
+    {
+      "name": "sfxVariationId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 8,
+      "size": 4
+    },
+    {
+      "name": "weight",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 12,
+      "size": 4
+    },
+    {
+      "name": "basicPrice",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 16,
+      "size": 4
+    },
+    {
+      "name": "sellValue",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 20,
+      "size": 4
+    },
+    {
+      "name": "behaviorId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 24,
+      "size": 4
+    },
+    {
+      "name": "replaceItemId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 28,
+      "size": 4
+    },
+    {
+      "name": "sortId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 32,
+      "size": 4
+    },
+    {
+      "name": "appearanceReplaceItemId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 36,
+      "size": 4
+    },
+    {
+      "name": "yesNoDialogMessageId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 40,
+      "size": 4
+    },
+    {
+      "name": "useEnableSpEffectType",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 44,
+      "size": 2
+    },
+    {
+      "name": "potGroupId",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 46,
+      "size": 1
+    },
+    {
+      "name": "pad",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 47,
+      "size": 1
+    },
+    {
+      "name": "iconId",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 48,
+      "size": 2
+    },
+    {
+      "name": "modelId",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 50,
+      "size": 2
+    },
+    {
+      "name": "shopLv",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 52,
+      "size": 2
+    },
+    {
+      "name": "compTrophySedId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 54,
+      "size": 2
+    },
+    {
+      "name": "trophySeqId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 56,
+      "size": 2
+    },
+    {
+      "name": "maxNum",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 58,
+      "size": 2
+    },
+    {
+      "name": "consumeHeroPoint",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 60,
+      "size": 1
+    },
+    {
+      "name": "overDexterity",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 61,
+      "size": 1
+    },
+    {
+      "name": "goodsType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 62,
+      "size": 1
+    },
+    {
+      "name": "refCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 63,
+      "size": 1
+    },
+    {
+      "name": "spEffectCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 64,
+      "size": 1
+    },
+    {
+      "name": "pad3",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 65,
+      "size": 1
+    },
+    {
+      "name": "goodsUseAnim",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 66,
+      "size": 1
+    },
+    {
+      "name": "opmeMenuType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 67,
+      "size": 1
+    },
+    {
+      "name": "useLimitCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 68,
+      "size": 1
+    },
+    {
+      "name": "replaceCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 69,
+      "size": 1
+    },
+    {
+      "name": "reserve4",
+      "type": "dummy8",
+      "array_length": 2,
+      "offset": 70,
+      "size": 2
+    },
+    {
+      "name": "_bitfield_pad@72",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 72,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@73",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 73,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@74",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 74,
+      "size": 1
+    },
+    {
+      "name": "syncNumVaryId",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 75,
+      "size": 1
+    },
+    {
+      "name": "refId_1",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 76,
+      "size": 4
+    },
+    {
+      "name": "refVirtualWepId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 80,
+      "size": 4
+    },
+    {
+      "name": "vagrantItemLotId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 84,
+      "size": 4
+    },
+    {
+      "name": "vagrantBonusEneDropItemLotId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 88,
+      "size": 4
+    },
+    {
+      "name": "vagrantItemEneDropItemLotId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 92,
+      "size": 4
+    },
+    {
+      "name": "castSfxId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 96,
+      "size": 4
+    },
+    {
+      "name": "fireSfxId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 100,
+      "size": 4
+    },
+    {
+      "name": "effectSfxId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 104,
+      "size": 4
+    },
+    {
+      "name": "_bitfield_pad@108",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 108,
+      "size": 1
+    },
+    {
+      "name": "suppleType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 109,
+      "size": 1
+    },
+    {
+      "name": "autoReplenishType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 110,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@111",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 111,
+      "size": 1
+    },
+    {
+      "name": "maxRepositoryNum",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 112,
+      "size": 2
+    },
+    {
+      "name": "sortGroupId",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 114,
+      "size": 1
+    },
+    {
+      "name": "_bitfield_pad@115",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 115,
+      "size": 1
+    },
+    {
+      "name": "saleValue",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 116,
+      "size": 4
+    },
+    {
+      "name": "rarity",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 120,
+      "size": 1
+    },
+    {
+      "name": "useLimitSummonBuddy",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 121,
+      "size": 1
+    },
+    {
+      "name": "useLimitSpEffectType",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 122,
+      "size": 2
+    },
+    {
+      "name": "aiUseJudgeId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 124,
+      "size": 4
+    },
+    {
+      "name": "consumeMP",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 128,
+      "size": 2
+    },
+    {
+      "name": "consumeHP",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 130,
+      "size": 2
+    },
+    {
+      "name": "reinforceGoodsId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 132,
+      "size": 4
+    },
+    {
+      "name": "reinforceMaterialId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 136,
+      "size": 4
+    },
+    {
+      "name": "reinforcePrice",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 140,
+      "size": 4
+    },
+    {
+      "name": "useLevel_vowType0",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 144,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType1",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 145,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType2",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 146,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType3",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 147,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType4",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 148,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType5",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 149,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType6",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 150,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType7",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 151,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType8",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 152,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType9",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 153,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType10",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 154,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType11",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 155,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType12",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 156,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType13",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 157,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType14",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 158,
+      "size": 1
+    },
+    {
+      "name": "useLevel_vowType15",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 159,
+      "size": 1
+    },
+    {
+      "name": "useLevel",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 160,
+      "size": 2
+    },
+    {
+      "name": "reserve5",
+      "type": "dummy8",
+      "array_length": 2,
+      "offset": 162,
+      "size": 2
+    },
+    {
+      "name": "itemGetTutorialFlagId",
+      "type": "u32",
+      "array_length": 1,
+      "offset": 164,
+      "size": 4
+    },
+    {
+      "name": "reserve3",
+      "type": "dummy8",
+      "array_length": 8,
+      "offset": 168,
+      "size": 8
+    }
+  ]
+}
