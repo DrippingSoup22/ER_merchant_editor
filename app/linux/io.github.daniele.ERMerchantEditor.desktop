@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=ER Merchant Editor
-Comment=Elden Ring merchant save editor
-Exec=@EXECUTABLE@
-Icon=io.github.daniele.ERMerchantEditor
-Terminal=false
-Categories=Utility;Game;
-StartupWMClass=io.github.daniele.ERMerchantEditor

@@ -6,7 +6,7 @@ stock slot for any of 2596 items, set its price, quantity and upgrade
 level, and unlock stock that's still gated behind progression — then write
 it all out to a new save in one batch.
 
-Portable Windows and Linux builds, no installer.
+Single portable `.exe`, no installer, nothing else to download.
 
 **[Download the latest release →](../../releases/latest)**
 
@@ -87,20 +87,11 @@ first.
 
 ## Using it
 
-1. Download the build for your platform and run it:
-   - Windows: `ERMerchantEditor-windows-amd64.exe`
-   - Linux (x86_64): `chmod +x ERMerchantEditor-linux-amd64 && ./ERMerchantEditor-linux-amd64`
-     (optional: run `./install-linux-desktop.sh` once to install the menu and
-     taskbar icon for your user account). On WSLg, use
-     `ER_MERCHANT_EDITOR_SCALE=1.25 ./ERMerchantEditor-linux-amd64` if the UI
-     appears smaller than your Windows apps.
+1. Run `ERMerchantEditor.exe` — that's the whole install. Windows only.
 2. Paste or browse to your decrypted `.dat` save and hit **Load**.
 3. Edit. Every change is staged, not applied — **Pending (N)** shows
    exactly what will be written, and anything can be removed before saving.
 4. **Save File...** opens a picker for the destination.
-5. Re-encrypt/sign and restore the edited save with your usual save tool.
-   If you play online, fully close Elden Ring and launch it again before the
-   changes will appear. Offline play loads the edits on the first launch.
 
 Your original file is never modified. Nothing is written at all unless the
 fully rebuilt save passes a byte-exact round-trip check first — if it
@@ -113,13 +104,13 @@ pulls the pinned newer toolchain itself via `GOTOOLCHAIN=auto`; the first
 build needs network access for the module cache).
 
 ```
-bash app/build.sh        # Windows + native Linux GUI, and shopwrite CLI
+bash app/build.sh        # Windows exe + shopwrite CLI, from any OS
 go run ./app/cmd/editor  # or run the GUI directly
                          # (Linux needs X11/EGL dev packages — see docs/PACKAGING.md)
 ```
 
-The Windows build is pure Go with no cgo and cross-compiles from Linux.
-The Linux GUI is built natively on the GitHub Actions Linux runner.
+The Windows build is pure Go with no cgo, so it cross-compiles from Linux
+or macOS; that's exactly what GitHub Actions does for each release tag.
 
 ## Under the hood
 

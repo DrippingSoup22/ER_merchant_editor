@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
-# Builds everything we ship, from WSL/Linux/CI alike -- Go builds, no Python:
+# Builds everything we ship, from WSL/Linux/CI alike -- pure `go build`
+# cross-compilation, no cgo, no Python, no target-OS toolchain:
 #
-#   app/dist/ERMerchantEditor-windows-amd64.exe
-#                                          the Windows GUI (icons + data
+#   app/dist/ERMerchantEditor.exe          the Windows GUI (icons + data
 #                                          embedded; ~90MB, single file)
-#   app/dist/ERMerchantEditor-linux-amd64  the native Linux GUI (same embedded
-#                                          data; needs the usual desktop libs)
-#   app/dist/io.github.daniele.ERMerchantEditor.desktop
-#   app/dist/install-linux-desktop.sh       optional Linux menu/icon installer
-#   app/dist/shopwrite/<goos>-<goarch>/    the shopwrite CLI, 2 targets,
+#   app/dist/shopwrite/<goos>-<goarch>/    the shopwrite CLI, 4 targets,
 #                                          schema embedded, standalone
 #
 # The Windows resource object (exe icon, manifest, version info) is the
@@ -22,27 +18,16 @@ DIST=app/dist
 rm -rf "$DIST"
 mkdir -p "$DIST"
 
-echo "building ERMerchantEditor-windows-amd64.exe (windows/amd64)..."
+echo "building ERMerchantEditor.exe (windows/amd64)..."
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 \
-  go build -trimpath -ldflags "-H windowsgui -s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
-  -o "$DIST/ERMerchantEditor-windows-amd64.exe" ./app/cmd/editor
-
-echo "building ERMerchantEditor-linux-amd64 (linux/amd64)..."
-CGO_ENABLED=1 GOOS=linux GOARCH=amd64 \
-  go build -trimpath -ldflags "-s -w -X gioui.org/app.ID=io.github.daniele.ERMerchantEditor" \
-  -o "$DIST/ERMerchantEditor-linux-amd64" ./app/cmd/editor
-
-# A bare executable cannot carry an icon on Linux: desktop shells associate
-# an icon with the Wayland/X11 app ID through a .desktop entry. Ship the
-# source icon and a tiny opt-in installer next to the portable binary.
-cp app/winres/icon.png "$DIST/io.github.daniele.ERMerchantEditor.png"
-cp app/linux/io.github.daniele.ERMerchantEditor.desktop "$DIST/"
-cp app/linux/install-linux-desktop.sh "$DIST/"
-chmod +x "$DIST/install-linux-desktop.sh"
+  go build -trimpath -ldflags "-H windowsgui -s -w" \
+  -o "$DIST/ERMerchantEditor.exe" ./app/cmd/editor
 
 targets=(
   "linux amd64"
   "windows amd64"
+  "darwin amd64"
+  "darwin arm64"
 )
 for t in "${targets[@]}"; do
   read -r goos goarch <<<"$t"
@@ -55,4 +40,4 @@ for t in "${targets[@]}"; do
 done
 
 echo "done:"
-ls -lh "$DIST/ERMerchantEditor-windows-amd64.exe" "$DIST/ERMerchantEditor-linux-amd64"
+ls -lh "$DIST/ERMerchantEditor.exe"
