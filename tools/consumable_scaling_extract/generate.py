@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive data/consumable_scaling.json: the attribute scaling of damage-
+"""Derive internal/assets/data/consumable_scaling.json: the attribute scaling of damage-
 dealing throwable consumables (Fire Pot, Lightning Pot, throwing daggers,
 stones, ...) so the item-info popup can show a Scaling panel for them like
 weapons.
@@ -12,7 +12,7 @@ coefficients. We read those straight from the fixture save's regulation.bin
 tools/savescan.py) -- ground truth, same source the game uses.
 
 The popup grades these with the same standard breakpoints it uses for
-weapons (app/editor: scalingGrade). Note the wiki's per-item damage-curve
+weapons (internal/ui/gio: scalingGrade). Note the wiki's per-item damage-curve
 grades can differ by a letter for some throwables (e.g. Fire Pot); we
 deliberately grade from the raw coefficients for consistency with weapon
 cards rather than scraping per-item wiki values (user decision 2026-08-03).
@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = TOOLS_DIR.parent / "data"
+DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
 FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
 
 sys.path.insert(0, str(TOOLS_DIR))

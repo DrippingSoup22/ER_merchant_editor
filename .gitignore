@@ -5,6 +5,7 @@
 __pycache__/
 *.pyc
 /tools/.venv/
-/app/shopwrite/shopwrite
 /tools/itemdb_extract/itemdb_extract
+/dist/
+# Kept for developers who built the pre-restructure layout locally.
 /app/dist/

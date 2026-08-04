@@ -9,11 +9,11 @@ Needed for the price=0 fix (see docs/MERCHANT_DATA.md's 2026-07-30 entry):
 a row's price can only safely go to 0 if the item's OWN sellValue field
 (in its EquipParam* entry, a completely separate table from
 ShopLineupParam) is also -1 ("cannot be sold back") -- confirmed by
-decoding these tables against real items. app/shopwrite needs the full row
+decoding these tables against real items. internal/savefile needs the full row
 schema (not just sellValue's offset) to write it correctly, same reasoning
 every other table in this project uses.
 
-Regenerate: python3 generate.py  (run from this directory; writes ../../data/)
+Regenerate: python3 generate.py  (run from this directory; writes ../../internal/assets/data/)
 """
 
 import json
@@ -36,7 +36,7 @@ TABLES = {
 
 
 def main():
-    data_dir = Path(__file__).resolve().parents[2] / "data"
+    data_dir = Path(__file__).resolve().parents[2] / "internal" / "assets" / "data"
 
     for equip_type, (def_name, out_name) in TABLES.items():
         schema = build_schema(fetch(BASE_URL + def_name + ".xml"))

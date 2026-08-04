@@ -29,7 +29,7 @@ how this fits the bigger picture.
 | 48     | 2    | s16    | menuIconId           | -1 = don't override |
 | 50     | 2    | dummy8 | pad                  | |
 
-`data/shop_lineup_schema.json` holds this as structured data (regenerable,
+`internal/assets/data/shop_lineup_schema.json` holds this as structured data (regenerable,
 see below) — this table is just the human-readable summary.
 
 ## `equipId` -> item-id conversion (see `docs/ITEM_IDS.md`)
@@ -97,14 +97,14 @@ also flags the two data-quality exceptions below inline as `warnings`.
 
 Comes straight from Paramdex's `ER/Names/ShopLineupParam.txt`
 (`row_id -> "[Merchant Name] Item Name"`, 1261 entries) — vendored as
-`data/shop_row_names.json`. No TalkParam/event-script RE needed. Not every
+`internal/assets/data/shop_row_names.json`. No TalkParam/event-script RE needed. Not every
 row has a name-file entry (16/1277 in our fixture didn't) — those are
 untitled/unused-looking rows, not evidence the mapping is wrong.
 
 **Its raw `merchant` string is not a clean merchant list** — conflates one
 NPC's multiple unlock tiers, distinct NPCs with similar `"Name - Suffix"`
 naming, and non-NPC mechanic pseudo-shops (Alteration/Reversion/Dragon
-Communion). Reconciled into `data/merchant_catalog.json` (35 real
+Communion). Reconciled into `internal/assets/data/merchant_catalog.json` (35 real
 merchants) by `tools/merchant_catalog/generate.py` — see
 [MERCHANTS.md](MERCHANTS.md) for the full research and rules. Anything
 merchant-identity-related in the app should read that file, not the raw
@@ -118,8 +118,8 @@ cd tools/paramdex_extract && python3 generate.py
 
 Fetches `ER/Defs/ShopLineupParam.xml`, `ER/Names/ShopLineupParam.txt`, and
 `ER/Defs/EquipMtrlSetParam.xml` from Paramdex's `master` branch
-(stdlib-only, no vendored deps) and writes `data/shop_lineup_schema.json` +
-`data/shop_row_names.json` + `data/equip_mtrl_set_schema.json`. The schema
+(stdlib-only, no vendored deps) and writes `internal/assets/data/shop_lineup_schema.json` +
+`internal/assets/data/shop_row_names.json` + `internal/assets/data/equip_mtrl_set_schema.json`. The schema
 builder collapses PARAMDEF bitfields (`type name:bits`) into a single
 padding entry so offset math stays correct without needing to address
 individual bits (only `EquipMtrlSetParam` has any, all unused by us). Since
@@ -218,14 +218,14 @@ Cathedral/Grand Altar split above).
   purchases — `value`/`costType` are near-universally 0). Confirmed not
   garbage, still low priority/out of scope for the editor.
 
-## `data/vanilla_shop_lineup.json` — Reset to Vanilla baseline (2026-07-31)
+## `internal/assets/data/vanilla_shop_lineup.json` — Reset to Vanilla baseline (2026-07-31)
 
 Embedded snapshot of every row's original FromSoftware value for the 8
 fields a merchant-row edit can ever touch (`equipId`, `equipType`,
 `value`, `sellQuantity`, plus the 4 name/icon override fields), keyed by
 row id as a JSON string (same convention as `shop_row_names.json`/
 `merchant_catalog.json`). Powers the Settings view's "Reset to Vanilla"
-button (`app/catalog/vanilla.go`'s `DiffFromVanilla`/`VanillaDiffs`):
+button (`internal/catalog/vanilla.go`'s `DiffFromVanilla`/`VanillaDiffs`):
 diffs the currently loaded save's live rows against this baseline and
 stages a revert for whatever differs, undoing drift from any number of
 past sessions, not just the current one.

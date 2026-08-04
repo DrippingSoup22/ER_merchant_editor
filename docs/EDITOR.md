@@ -2,25 +2,25 @@
 
 Gio (gioui.org) desktop app, pure Go (replaced a same-day Dear PyGui
 version — see `PACKAGING.md`'s "Superseded"). One process, one binary:
-`app/editor/` (GUI) calls `app/catalog/` in-process for reads and
-`app/shopwrite/`'s `Apply` in-process for writes. No Python at runtime.
+`internal/ui/gio/` (GUI) calls `internal/catalog/` in-process for reads and
+`internal/savefile/`'s `Apply` in-process for writes. No Python at runtime.
 
 ## Run (dev)
 
-`go run ./app/cmd/editor` (repo root). Starts with no save loaded; the
+`go run ./cmd/ermerchanteditor` (repo root). Starts with no save loaded; the
 header opens one via a native dialog (ncruces/zenity — pure syscalls on
 Windows, the `zenity` binary on Linux dev). `ER_EDITOR_SAVE=<path>` loads a
 save at startup — dev only, never point it at `save_files/` (copy to
 `working_copies/` first). Linux dev builds need cgo + X11/EGL dev packages
 (see PACKAGING.md); the Windows target is cgo-free.
 
-Starts maximized (`app/cmd/editor/main.go`). Gotcha: `app.Size` resets the
+Starts maximized (`cmd/ermerchanteditor/main.go`). Gotcha: `app.Size` resets the
 window mode to Windowed per its own doc comment, so `app.Maximized.Option()`
 must come AFTER `app.Size`/`app.MinSize` in the option list to take effect.
 
-## Data/logic layer (`app/catalog`, package catalog)
+## Data/logic layer (`internal/catalog`, package catalog)
 
-Port of the former `app/catalog.py` + `savescan.py` enrichment, golden-
+Port of the former Python catalog and `tools/savescan.py` enrichment, golden-
 tested field-for-field against `tools/savescan.py rows` (1277 rows, zero
 mismatches — `decode_test.go`, regenerate the golden with
 `tools/.venv/bin/python tools/savescan.py rows save_files/vanilla_fresh_character.dat > working_copies/rows.golden.jsonl`).
@@ -45,7 +45,7 @@ mismatches — `decode_test.go`, regenerate the golden with
   save becomes outPath, row cache invalidated). `shopwrite.Apply` itself
   round-trip-verifies before writing (see `WRITEBACK.md`).
 
-## GUI architecture (`app/editor`, package editor)
+## GUI architecture (`internal/ui/gio`, package gio)
 
 `state.go` owns shared state: the `Catalog`, staged `PendingEdits` (keyed by
 row id; staging a field back to its original value unstages it, empty
@@ -471,7 +471,7 @@ title+X, gold rule, scrollable body; same Phase-1 Press-based scrim-close
 fix, its own `itemInfoModalHit`/`itemInfoPanelHit` pair) showing icon,
 category/subcategory, in-game description, and — for weapons/armor/spells —
 damage/scaling/requirements/negation/FP cost from `catalog.ItemDetails`
-(`data/item_details.json`, generated alongside `items.json` by
+(`internal/assets/data/item_details.json`, generated alongside `items.json` by
 `tools/itemdb_extract` from SaveForge's own already-computed item text/stat
 fields, see `docs/ITEM_IDS.md`). The merchant grid resolves a row's
 CURRENTLY DISPLAYED item (`rowEffectiveItemID` — a staged swap's target
@@ -513,7 +513,7 @@ catalog grid", never "unresolvable"; guarded by
 - `icons.go` — lazy icon cache: PNG from the root `assets` embed, downscale
   256→128 RGBA, cached `paint.ImageOp` (UI goroutine only).
 
-## Settings view (`app/editor/settings.go`)
+## Settings view (`internal/ui/gio/settings.go`)
 
 Header "Settings" tab. Controls grouped with a `settingsGroupDivider` (14dp +
 `horizontalDivider`) between clusters: Theme/Font (+ Reset to Vanilla), the
@@ -544,7 +544,7 @@ two MUST move together or the grids stop matching their panels.
 sturdier serif) or "Cinzel" (inscriptional dark-fantasy titling face matching
 the game's own UI font character; its lowercase glyphs are cap-height by
 design). Both are Google Fonts (SIL OFL, vendored in
-`app/editor/assets/fonts/` with `*-OFL.txt`), embedded via `fonts.go`'s
+`internal/ui/gio/assets/fonts/` with `*-OFL.txt`), embedded via `fonts.go`'s
 `customFontCollection()` into a `text.NewShaper(text.WithCollection(...))`
 built once (`applyTheme`, "don't discard the shaper's cache" rule) — additive
 to Gio's own system-font fallback, so non-Latin glyphs are unaffected. `th.Face`
@@ -644,14 +644,14 @@ Character-unlock flags already written to disk in a past session CANNOT be
 reverted (no baseline tracked); only flag edits staged this session but not yet
 saved are discarded (`PendingFlagEdits`/`PendingBellBearingEdits` cleared) —
 the confirm dialog says so. See `docs/SHOP_LINEUP.md`'s
-"`data/vanilla_shop_lineup.json`" entry for the baseline dataset;
-`app/catalog/vanilla_test.go` (against `BetterPSN.dat`) is the end-to-end
+"`internal/assets/data/vanilla_shop_lineup.json`" entry for the baseline dataset;
+`internal/catalog/vanilla_test.go` (against `BetterPSN.dat`) is the end-to-end
 write proof.
 
-## Characters view (`app/editor/character_panel.go` + `character_panel_tmh.go`)
+## Characters view (`internal/ui/gio/character_panel.go` + `character_panel_tmh.go`)
 
 The app's landing view (`viewCharacters`, `NewState` default), a per-character
-merchant-unlock UI over `app/charunlock`. Full design writeup + history in
+merchant-unlock UI over `internal/character`. Full design writeup + history in
 `docs/CHAR_UNLOCK.md`. Two bands:
 
 - **Top** (`layoutOpenBar`): a typed-path `Editor` capped at 2/5 of the bar's
@@ -779,8 +779,8 @@ chrome, editor seeding), plus a new `widgets.Backdrop`/`BackdropStyle` shared by
 
 **Phase 4**: pure code-motion file splits, no logic change, each verified by
 diffing the complete top-level declaration set before/after.
-`app/shopwrite/pipeline.go` → `pipeline_schema.go`/`pipeline_crypto.go`/
-`pipeline_bnd4.go`/`pipeline_param.go`. `app/shopwrite/apply.go`'s
+`internal/savefile/pipeline.go` → `pipeline_schema.go`/`pipeline_crypto.go`/
+`pipeline_bnd4.go`/`pipeline_param.go`. `internal/savefile/apply.go`'s
 `applyWithSchema` (the function behind both the 2026-07-27 corruption and the
 2026-08-02 crash) split into named steps (`patchRows`/`verifyRecompressed`/
 `buildRegBlob`/`encryptAndSplice`) with zero reordering; a real write through
@@ -793,9 +793,9 @@ extracted into named methods (`layoutOverlays`/`handleStrictDeselect`), called
 at their exact original positions (NOT reordered — a confirm click inside
 `layoutOverlays` synchronously stages edits the footer reads the same frame).
 
-**Phase 5**: comment-only trim across 13 files (app/catalog/{catalog,items,
-sellvalue}.go, app/editor/{character_panel,character_panel_tmh,pending_edits,
-row_edit_form,row_edit_layout,settings,state}.go, app/editor/widgets/{iconcell,
-lock_badge}.go, app/shopwrite/recompress.go) — deleted dated "Round N" changelog
+**Phase 5**: comment-only trim across 13 files (internal/catalog/{catalog,items,
+sellvalue}.go, internal/ui/gio/{character_panel,character_panel_tmh,pending_edits,
+row_edit_form,row_edit_layout,settings,state}.go, internal/ui/gio/components/{iconcell,
+lock_badge}.go, internal/savefile/recompress.go) — deleted dated "Round N" changelog
 narration, kept every genuine non-obvious WHY. See git log for finer-grained
 history.

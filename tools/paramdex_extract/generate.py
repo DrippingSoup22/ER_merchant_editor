@@ -5,7 +5,7 @@ row-name source, see docs/SHOP_LINEUP.md). Stdlib only, no vendored copies
 of the source files. Schema building itself lives in ../paramdex_schema.py,
 shared with tools/weapon_reinforce_extract.
 
-Regenerate: python3 generate.py  (run from this directory; writes ../../data/)
+Regenerate: python3 generate.py  (run from this directory; writes ../../internal/assets/data/)
 """
 
 import json
@@ -40,7 +40,7 @@ def build_names(names_text: str) -> dict:
 
 
 def main():
-    data_dir = Path(__file__).resolve().parents[2] / "data"
+    data_dir = Path(__file__).resolve().parents[2] / "internal" / "assets" / "data"
 
     schema = build_schema(fetch(DEF_URL))
     (data_dir / "shop_lineup_schema.json").write_text(json.dumps(schema, indent=2) + "\n")

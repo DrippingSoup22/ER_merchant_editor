@@ -1,4 +1,4 @@
-module er_merchant_editor
+module github.com/DrippingSoup22/ER_merchant_editor
 
 // Floor set by the GUI deps (Gio v0.10.x needs >=1.24, x/image v0.44 >=1.25).
 // The apt toolchain is go1.22.2 with GOTOOLCHAIN=auto, which fetches the

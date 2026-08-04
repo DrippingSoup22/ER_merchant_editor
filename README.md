@@ -6,7 +6,8 @@ stock slot for any of 2596 items, set its price, quantity and upgrade
 level, and unlock stock that's still gated behind progression — then write
 it all out to a new save in one batch.
 
-Single portable `.exe`, no installer, nothing else to download.
+One native desktop application for Windows, Linux, and macOS, with the save
+editor core shared across every platform.
 
 **[Download the latest release →](../../releases/latest)**
 
@@ -87,7 +88,8 @@ first.
 
 ## Using it
 
-1. Run `ERMerchantEditor.exe` — that's the whole install. Windows only.
+1. Download the build for your platform. Run the Windows `.exe`, extract the
+   Linux archive and run `ERMerchantEditor`, or open the macOS `.app`.
 2. Paste or browse to your decrypted `.dat` save and hit **Load**.
 3. Edit. Every change is staged, not applied — **Pending (N)** shows
    exactly what will be written, and anything can be removed before saving.
@@ -104,13 +106,13 @@ pulls the pinned newer toolchain itself via `GOTOOLCHAIN=auto`; the first
 build needs network access for the module cache).
 
 ```
-bash app/build.sh        # Windows exe + shopwrite CLI, from any OS
-go run ./app/cmd/editor  # or run the GUI directly
-                         # (Linux needs X11/EGL dev packages — see docs/PACKAGING.md)
+scripts/build.sh              # build GUI targets supported by this host
+go run ./cmd/ermerchanteditor # or run the GUI directly
 ```
 
-The Windows build is pure Go with no cgo, so it cross-compiles from Linux
-or macOS; that's exactly what GitHub Actions does for each release tag.
+Windows cross-compiles without cgo. Linux and macOS releases are built and
+tested natively; see `docs/PACKAGING.md` for their toolchain and packaging
+requirements.
 
 ## Under the hood
 

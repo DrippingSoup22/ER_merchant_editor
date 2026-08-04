@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive data/spell_stats.json: for every sorcery/incantation items.json
+"""Derive internal/assets/data/spell_stats.json: for every sorcery/incantation items.json
 entry, its cast stats (FP cost, memory slots, INT/FAI/ARC requirements).
 
 Ground truth from MagicParam in our own fixture save's regulation.bin --
@@ -29,7 +29,7 @@ import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = TOOLS_DIR.parent / "data"
+DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
 FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
 
 sys.path.insert(0, str(TOOLS_DIR))

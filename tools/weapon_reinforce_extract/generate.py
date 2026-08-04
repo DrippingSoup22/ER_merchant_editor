@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive data/weapon_reinforce.json: for every weapon-table item.json entry
+"""Derive internal/assets/data/weapon_reinforce.json: for every weapon-table item.json entry
 (equipType 0 -- melee_armaments/shields/ranged_and_catalysts), its real max
 upgrade ("+N") level.
 
@@ -29,7 +29,7 @@ import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = TOOLS_DIR.parent / "data"
+DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
 FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
 
 sys.path.insert(0, str(TOOLS_DIR))

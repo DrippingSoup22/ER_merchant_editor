@@ -8,7 +8,7 @@ regular real-window use with no outstanding issues. Plan/phasing history:
 ## Why this exists
 
 `ShopLineupParam` rows carry `eventFlag_forRelease` (decoded by
-`app/catalog`'s `enrich.go`) — until that flag is set for the active
+`internal/catalog`'s `enrich.go`) — until that flag is set for the active
 character, the row stays locked in-game no matter what we write to
 `regulation.bin`. The flag lives in a **per-character-slot bit array**
 inside the save's `.sl2` character-slot region — a completely separate
@@ -26,7 +26,7 @@ specifically to permit porting EldenRing-SaveForge's proven algorithm and
 data tables. See `docs/SAVEFORGE_REFERENCE.md`'s "Attribution" section
 for exactly what was ported vs. independently derived.
 
-## `app/charflags` — flag ID -> byte/bit, get/set
+## `internal/character/flags` — flag ID -> byte/bit, get/set
 
 `Get(flags []byte, id uint32) (bool, error)` / `Set(flags []byte, id
 uint32, value bool) error` operate on a `FlagsByteCount` (`0x1BF99F`)
@@ -38,7 +38,7 @@ Cross-checked in `flags_test.go` against SaveForge's own
 `GetEventFlag`/`SetEventFlag` via a throwaway oracle, using real
 `eventFlag_forRelease` values pulled from the fixture save.
 
-## `app/charslot` — locate a slot's event-flags region + identity
+## `internal/character/slot` — locate a slot's event-flags region + identity
 
 PS4 `.sl2` layout (independently established, matches
 `tools/savescan.py`'s constants): `HeaderSize=0x70`, `SlotSize=0x280000`,
@@ -58,7 +58,7 @@ real slots across both fixture saves (`slot_test.go`).
 `magic - 0x11B`, level (u32) at `magic - 335`. Same test cross-checks
 name/level against the SaveForge oracle.
 
-## `app/charunlock` — read side
+## `internal/character` — read side
 
 `ListCharacters(saveData) []Character` enumerates non-empty slots
 (index + name/level, via `charslot`). `LockedRows(saveData, charIndex,
@@ -81,7 +81,7 @@ oracle — not a bug in this port). Already excluded by
 `Catalog.MerchantRows` (`isBrowsable`), so they never reach `charunlock`
 in real use; `LockedRows` skips an unresolvable row defensively anyway.
 
-## `app/charunlock` — write side
+## `internal/character` — write side
 
 `SetReleaseBatch(saveData, charIndex, targets []FlagTarget) (int, error)`
 is the core write. `FlagTarget` is `{FlagID int64; Released bool; Label
@@ -103,7 +103,7 @@ edit provably can't desync it. Verified by reading the hash source, not
 assumed.
 
 **Round-trip self-check before committing** (adapted from
-`app/shopwrite.Apply` to an in-place bit-flip): stage every write on a
+`internal/savefile.Apply` to an in-place bit-flip): stage every write on a
 scratch copy, then (1) confirm every byte outside the intended-touch set
 is unchanged (catches a `charflags` bug aliasing two flag IDs onto one
 byte), and (2) confirm every intended flag reads back at *its own* target
@@ -116,7 +116,7 @@ error)` reads inPath once, applies each character's batch to the same
 buffer in turn (safe: characters' flags never overlap), writes once.
 `ApplyToFile` is the single-character wrapper.
 
-`app/cmd/charunlock` is the CLI wrapper (`-list-chars`, `-list-locked`,
+`cmd/charunlock` is the CLI wrapper (`-list-chars`, `-list-locked`,
 `-merchant`/`-rows` + `-out` to write, `-lock` to reverse). **Byte-verified**
 against a `working_copies/` copy: unlocking a shared-flag row set changed
 exactly the 1 predicted byte at the exact absolute offset (`HeaderSize +
@@ -125,7 +125,7 @@ unchanged, reversible. Mixed-direction/multi-character cases covered by
 `TestSetReleaseBatchMixedDirections`/`TestApplyBatchToFileMultipleCharacters`
 (`write_test.go`, tempdir only).
 
-## Characters view GUI (`app/editor/character_panel.go`)
+## Characters view GUI (`internal/ui/gio/character_panel.go`)
 
 The **landing view** (`NewState` default). 3-column drill-down:
 characters -> that character's gated merchants -> per-merchant flag
@@ -202,7 +202,7 @@ now guarded by dimension-assertion tests:
   (`dividerBarHeight`) first.
 
 **Testing:** compiles, `go vet` clean, cross-compiles for Windows via
-`app/build.sh`. State machine cross-checked against `app/charunlock` in
+`scripts/build.sh`. State machine cross-checked against `internal/character` in
 `character_panel_test.go`/`merchant_panel_test.go`; combined-save covered
 by the end-to-end write test above. No GUI automation/screenshot tooling
 in this dev environment (`xdotool`/`import` absent, no sudo) — the user's
@@ -300,14 +300,14 @@ unrelated things share the name "Bell Bearing":
   opens that merchant's own existing row range through her (that
   merchant's own per-row gating still applies on top). **New support.**
 
-**Data**: `app/charunlock/bell_bearings.go`'s `BellBearing`/`BellBearings`
+**Data**: `internal/character/bell_bearings.go`'s `BellBearing`/`BellBearings`
 table (62 entries, ported from EldenRing-SaveForge, itself citing
 `er-save-manager` — see `docs/SAVEFORGE_REFERENCE.md`). `BellBearing`
 carries SaveForge's `Category` taxonomy (`npc`/`merchant`/`peddler`/
 `smithing`/`dlc`) as sourced data (not currently bucketed by in the UI).
 `BellBearingsForUI()` filters out the already-row-covered subset.
 Merchant-name mapping: the 15 NPC-category entries map 1:1 by name to
-`data/merchant_catalog.json`; of the 18 numbered wandering entries, only 8
+`internal/assets/data/merchant_catalog.json`; of the 18 numbered wandering entries, only 8
 got high-confidence Fextralife matches — the other 10 ship with
 `Merchant: ""` per the "don't guess-merge" rule (see `docs/MERCHANTS.md`'s
 `unknown_merchant` precedent).
@@ -371,7 +371,7 @@ remaining" covers both mechanisms (row groups + `BellBearingsForUI`).
 
 **Not verified in-game**: these ~40 flags have never been set by any tool
 (SaveForge only *lists* the table — it never wrote `ShopLineupParam`).
-`go test ./app/...`, `go vet ./...`, `app/build.sh` cross-compile, and a
+`go test ./...`, `go vet ./...`, `scripts/build.sh` cross-compile, and a
 headless run all pass; whether TMH actually shows the other merchant's
 wares afterward is the user's own follow-up.
 
@@ -388,7 +388,7 @@ scroll explains (each merchant's own independent questline-progress
 unlocks, e.g. Corhyn's Great Heal/Discus of Light/Immutable Shield,
 Sellen's Shard Spiral).
 
-**Data**: `app/editor/character_panel_scrolls.go`'s `scrollUnlocks` (11
+**Data**: `internal/ui/gio/character_panel_scrolls.go`'s `scrollUnlocks` (11
 scrolls with a real spell list; 3 more — Erdtree Prayerbook, Erdtree Codex,
 Golden Order Principles — have no spell list even in SaveForge's own data,
 likely non-functional cut-content duplicates of Golden Order Principia,
@@ -420,8 +420,8 @@ alongside the existing `twinMaidenHusksMerchantName` branch).
 
 ## Merchant ordering (`catalog.MerchantSortKey`)
 
-Exported from `app/catalog/catalog.go` (was `merchantSortKey`) so
-`app/editor` reuses the identical scheme (SSOT) for both the Shop Editor
+Exported from `internal/catalog/catalog.go` (was `merchantSortKey`) so
+`internal/ui/gio` reuses the identical scheme (SSOT) for both the Shop Editor
 filter dropdown and the Characters view merchant column
 (`sortedGatedMerchants` sorts by it). Group order:
 
@@ -448,8 +448,8 @@ and the full Nomadic sequence plus the other Shop 4 families at right. The
 Shop Editor filter uses the same shared sort key. Shops 1 and 2 use the
 game's named-bearing sequence (the game itself turns each into one item-sorted
 stock grid, so it has no seller-order view). Guarded by
-`TestMerchantSortKeyOrdersGroups` (`app/catalog`),
+`TestMerchantSortKeyOrdersGroups` (`internal/catalog`),
 `TestBellBearingGroupRankClustersShopFamilies` /
 `TestBellBearingSortKeyGroupsFamiliesByNumber` /
-`TestNamedBellBearingShopSequence` (`app/editor`), and
-`TestThiollierHasNoSeparateTMHBearing` (`app/charunlock`).
+`TestNamedBellBearingShopSequence` (`internal/ui/gio`), and
+`TestThiollierHasNoSeparateTMHBearing` (`internal/character`).

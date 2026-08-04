@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive data/weapon_reinforce_rates.json: the per-upgrade-level multiplier
+"""Derive internal/assets/data/weapon_reinforce_rates.json: the per-upgrade-level multiplier
 curves the game applies to a weapon's base (+0) attack / scaling / guard
 stats, so the item-info popup can show a weapon's stats AT its actual "+N"
 level instead of always +0 (user request 2026-08-03: "a max level weapon has
@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = TOOLS_DIR.parent / "data"
+DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
 FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
 
 sys.path.insert(0, str(TOOLS_DIR))

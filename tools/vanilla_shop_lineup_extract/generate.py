@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Derive data/vanilla_shop_lineup.json: for every ShopLineupParam row, its
+"""Derive internal/assets/data/vanilla_shop_lineup.json: for every ShopLineupParam row, its
 original FromSoftware vanilla value for each of the 8 fields a merchant-row
 edit can ever touch (equipId/equipType/value/sellQuantity plus the 4
-name/icon override fields -- see app/catalog/enrich.go's
+name/icon override fields -- see internal/catalog/enrich.go's
 nameIconOverrideFields). This is the baseline the GUI's "Reset to Vanilla"
 button diffs a loaded save against.
 
@@ -24,14 +24,14 @@ import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = TOOLS_DIR.parent / "data"
+DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
 FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
 
 sys.path.insert(0, str(TOOLS_DIR))
 import savescan as sc  # noqa: E402
 
 # The complete editable surface of a ShopLineupParam row -- mirrors
-# app/catalog/enrich.go's own field list exactly (equipId/equipType/value/
+# internal/catalog/enrich.go's own field list exactly (equipId/equipType/value/
 # sellQuantity plus nameIconOverrideFields).
 FIELDS = ["equipId", "equipType", "value", "sellQuantity",
           "iconId", "nameMsgId", "menuTitleMsgId", "menuIconId"]

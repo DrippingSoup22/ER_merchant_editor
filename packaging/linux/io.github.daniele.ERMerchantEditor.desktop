@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ER Merchant Editor
+Comment=Edit Elden Ring merchant data in decrypted save files
+Exec=ERMerchantEditor
+Icon=ERMerchantEditor
+Terminal=false
+Categories=Utility;Game;
+MimeType=application/octet-stream;

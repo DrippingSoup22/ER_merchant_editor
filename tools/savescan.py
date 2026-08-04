@@ -5,7 +5,7 @@ Pipeline (see docs/MERCHANT_DATA.md for the full writeup + citations):
     save file -> UserData11 (fixed offset) -> AES-256-CBC decrypt
     -> DCX decompress (zstd/deflate) -> BND4 archive of named param files
     -> (per named .param file) its own PARAM container header + row table
-    -> (per row, given a schema from data/shop_lineup_schema.json) named
+    -> (per row, given a schema from internal/assets/data/shop_lineup_schema.json) named
        fields.
 
 No write-back here — this is the discovery-phase tool, not the editor.
@@ -20,7 +20,7 @@ from pathlib import Path
 
 import zstandard
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "internal" / "assets" / "data"
 
 # PARAM container header flags (Format2D), per SoulsFormats' PARAM.cs —
 # this is the *inner* .param file's own header, distinct from the outer

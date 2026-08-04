@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive data/item_sort_order.json: {itemId: {sortId, sortGroupId}} for
+"""Derive internal/assets/data/item_sort_order.json: {itemId: {sortId, sortGroupId}} for
 every items.json entry that has real game-defined sort data, per user
 request (2026-08-01): reorder the Catalog grid to match the game's own
 in-menu order instead of raw item-id order.
@@ -20,7 +20,7 @@ EquipParamWeapon/Protector/Accessory (melee/ranged/shields/armor/talismans),
 EquipParamGem (ashes_of_war), EquipParamGoods (tools/crafting_materials/
 bolstering_materials/sorceries/incantations/key_items/info/gestures/ashes --
 every "Goods"-offset category). Items with no sortId (or sortId==0, which
-Paramdex disables) are simply absent from the output; app/catalog falls
+Paramdex disables) are simply absent from the output; internal/catalog falls
 back to id order for those.
 
 Regenerate: tools/.venv/bin/python3 generate.py (run from this directory;
@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = TOOLS_DIR.parent / "data"
+DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
 FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
 
 sys.path.insert(0, str(TOOLS_DIR))
@@ -85,7 +85,7 @@ def main():
     (DATA_DIR / "item_sort_order.json").write_text(
         json.dumps({str(k): v for k, v in sorted(out.items())}, indent=2) + "\n"
     )
-    print("wrote data/item_sort_order.json")
+    print("wrote internal/assets/data/item_sort_order.json")
 
 
 if __name__ == "__main__":

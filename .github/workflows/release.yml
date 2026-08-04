@@ -1,9 +1,4 @@
-name: Release
-
-# The whole app is pure Go (no cgo on the Windows target), so an
-# ubuntu-latest runner cross-compiles the Windows exe with a plain
-# `go build` -- no Windows runner, no Python, no PyInstaller. See
-# docs/PACKAGING.md.
+name: Build and release
 
 on:
   push:
@@ -15,36 +10,103 @@ permissions:
   contents: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  linux:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-go@v5
         with:
-          go-version: stable
-
-      - name: Vet and test
-        # The GUI's native-Linux target needs X11/Wayland cgo dev packages
-        # (dev-only; the shipped exe is the CGO-free Windows target), so the
-        # full tree is vetted under GOOS=windows and tests run on the pure-Go
-        # packages. Tests needing the (gitignored) fixture save self-skip.
+          go-version-file: go.mod
+      - name: Install Gio build dependencies
         run: |
-          go test ./app/catalog/... ./app/shopwrite/...
-          CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go vet ./...
+          sudo apt-get update
+          sudo apt-get install -y \
+            gcc pkg-config libwayland-dev libx11-dev libx11-xcb-dev \
+            libxkbcommon-x11-dev libgles2-mesa-dev libegl1-mesa-dev \
+            libffi-dev libxcursor-dev libxfixes-dev libvulkan-dev
+      - name: Test and vet
+        run: |
+          go test ./...
+          go vet ./...
+      - name: Build Linux release
+        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build-linux.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-amd64
+          path: dist/ERMerchantEditor-linux-amd64.tar.gz
+          if-no-files-found: error
 
-      - name: Build (Windows exe + shopwrite CLI, all targets)
-        run: bash app/build.sh
+  windows:
+    runs-on: windows-2025
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Test and vet
+        run: |
+          go test ./...
+          go vet ./...
+      - name: Build Windows release
+        run: scripts/build-windows.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-amd64
+          path: |
+            dist/windows-amd64/ERMerchantEditor.exe
+            dist/windows-amd64/shopwrite.exe
+          if-no-files-found: error
 
-      - name: Upload build artifact (manual runs, no tag)
+  macos:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15-intel
+            arch: amd64
+          - runner: macos-15
+            arch: arm64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Verify native architecture
+        run: test "$(go env GOARCH)" = "${{ matrix.arch }}"
+      - name: Test and vet
+        run: |
+          go test ./...
+          go vet ./...
+      - name: Build macOS app bundle
+        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build-macos.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-${{ matrix.arch }}
+          path: dist/ERMerchantEditor-macos-${{ matrix.arch }}.zip
+          if-no-files-found: error
+
+  publish:
+    needs: [linux, windows, macos]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: release
+          merge-multiple: true
+      - name: Show release payload
+        run: find release -maxdepth 1 -type f -printf '%f\n' | sort
+      - name: Upload combined manual-build artifact
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
         uses: actions/upload-artifact@v4
         with:
-          name: ERMerchantEditor-windows
-          path: app/dist/ERMerchantEditor.exe
+          name: ERMerchantEditor-all-platforms
+          path: release/*
           if-no-files-found: error
-
-      - name: Attach to GitHub Release (tag push only)
+      - name: Attach artifacts to draft release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         env:
@@ -52,4 +114,4 @@ jobs:
         with:
           draft: true
           name: "ER Merchant Editor ${{ github.ref_name }}"
-          files: app/dist/ERMerchantEditor.exe
+          files: release/*

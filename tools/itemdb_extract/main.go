@@ -13,7 +13,7 @@
 // GetAllItems didn't already return, keyed by id -- regenerable, not a
 // hand-maintained list.
 //
-// Regenerate: go run . > ../../data/items.json  (run from this directory)
+// Regenerate: go run . > ../../internal/assets/data/items.json  (run from this directory)
 package main
 
 import (

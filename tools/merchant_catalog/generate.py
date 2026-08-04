@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Derive data/merchant_catalog.json: a curated row_id -> canonical-merchant
-mapping, built on top of data/shop_row_names.json (Paramdex's raw Names
+"""Derive internal/assets/data/merchant_catalog.json: a curated row_id -> canonical-merchant
+mapping, built on top of internal/assets/data/shop_row_names.json (Paramdex's raw Names
 file, left untouched for reference/debugging) plus manual research findings
 (see docs/MERCHANTS.md). Paramdex's raw `merchant` field conflates three
 different things under similar-looking "Name - Suffix" strings: one NPC's
@@ -10,13 +10,13 @@ real merchant at all). This script is what reconciles that; nothing here is
 re-derived from Paramdex automatically, it encodes decisions made in
 docs/MERCHANTS.md.
 
-Regenerate: python3 generate.py  (run from this directory; writes ../../data/)
+Regenerate: python3 generate.py  (run from this directory; writes ../../internal/assets/data/)
 """
 
 import json
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "internal" / "assets" / "data"
 
 # One NPC across every unlock tier -- Paramdex splits each into "Name - tier"
 # per prayerbook/scroll/quest-stage. Collapse to the bare name.

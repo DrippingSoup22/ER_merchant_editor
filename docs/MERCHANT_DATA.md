@@ -70,7 +70,7 @@ attempted purchase). User also independently observed visible **footer
 icon corruption once a displayed number needs a 7th digit**, a real
 rendering-buffer overflow symptom, not just a blank-text one — meaning
 values in the low-millions-and-up range risk visible UI corruption, not
-merely an unreadable price. Editor's `priceMax` (`app/editor/
+merely an unreadable price. Editor's `priceMax` (`internal/ui/gio/
 row_edit_form.go`) tightened from the raw s32 ceiling (2147483647) to
 `999999` (6 digits) as a safe conservative bound. Exact
 boundary between 999999 and 999999998 not pinned (nothing in that range
@@ -92,7 +92,7 @@ fixture) — neither is a bug in the shipped editor:
 
 1. **sellValue never synced.** Every generator called `catalog.ApplyEdits`
    directly, which writes **only** `ShopLineupParam` — never an item's own
-   `EquipParam*.sellValue`. The real GUI's save path (`app/editor/
+   `EquipParam*.sellValue`. The real GUI's save path (`internal/ui/gio/
    state.go`'s `startCombinedSave`) always calls `BuildEdits()` **and**
    `BuildEquipParamEdits()` together, lowering the swapped-in item's
    sellValue to match the newly staged price whenever it would otherwise
@@ -103,7 +103,7 @@ fixture) — neither is a bug in the shipped editor:
    above the 100-rune test price — the game was correctly hiding them per
    the existing rule, not exhibiting a new bug.
 2. **Gated rows weren't checked against the real save.** The row-selection
-   step (a Python pre-pass over `data/vanilla_shop_lineup.json`) checked
+   step (a Python pre-pass over `internal/assets/data/vanilla_shop_lineup.json`) checked
    for an `eventFlag_forRelease` key that dataset doesn't even carry —
    always reading as unset, so gated rows silently passed the "ungated"
    filter. Real gate state (checked via the Go `catalog`/`charunlock`
@@ -174,7 +174,7 @@ Correction trail (why we believe this):
 - First hypothesis (2026-07-30): `eventFlag_forRelease` gating. A byte audit
   showed `value==0 && flag!=0` never occurs for a real player-visible
   vanilla row, only Enia's 15 Forging rows (`ENIA_FORGING_ROW_IDS`,
-  `app/catalog/enrich.go`). Wrong: an auto-clear guard fixed nothing
+  `internal/catalog/enrich.go`). Wrong: an auto-clear guard fixed nothing
   in-game.
 - Second (2026-07-30, same day): the real second field is `sellValue`;
   every item that survives price 0 (Cracked Pots, Stonesword Key, etc.) has
@@ -221,7 +221,7 @@ requirement in `regulation.bin` (for every character/save) whenever a staged
 price hit 0 — but the flag gates the SLOT, not the item in it, and must
 never move as a side effect of a price/item edit. Deleted outright; no
 staging path touches `eventFlag_forRelease` now. Unlock state changes only
-via `app/charunlock` (reversible per-character bit, Enia excluded — see
+via `internal/character` (reversible per-character bit, Enia excluded — see
 `docs/CHAR_UNLOCK.md`). `staging_test.go` asserts the gate is never staged.
 
 ### Write-path capacity → full recompression (2026-08-02)

@@ -8,7 +8,7 @@ Elden Ring save-file editor, focused on merchant shop contents.
 `ShopLineupParam` rows: swap the item, set price, set quantity. Unlock
 gating (`eventFlag_forRelease`) is never touched by item edits (2026-08-02
 — it gates the SLOT, not the item in it) — the only way to change unlock
-state is per-character via `app/charunlock`/the Characters view, see
+state is per-character via `internal/character`/the Characters view, see
 `docs/CHAR_UNLOCK.md`. Value edits only, never add/remove rows (see
 "Row-count ceiling" below). Originally framed as two stages ("super-merchant"
 selling every item, then a full editor) — dropped, since one merchant
@@ -107,8 +107,8 @@ SaveForge's name-derived guesses (same method as the Rotten Staff/
 ## Next: public release
 
 Shipped: the app is a downloadable GitHub-release tool (5 public releases
-through v1.1.0). It's one pure-Go binary — Gio GUI + `app/catalog` read +
-`app/shopwrite` engine in-process, icons/data JSONs embedded via go:embed,
+through v1.1.0). It's one pure-Go binary — Gio GUI + `internal/catalog` read +
+`internal/savefile` engine in-process, icons/data JSONs embedded via go:embed,
 87MB windows/amd64 exe cross-compiled from WSL with plain `go build` (no
 cgo). No hardcoded default save (user opens one explicitly); edits stage
 client-side and write once on Save. See `docs/EDITOR.md`, `docs/PACKAGING.md`,
@@ -131,10 +131,10 @@ independent encryption layers:
 ## External reference tools
 
 - `/mnt/c/Users/danie/Desktop/EldenRing-SaveForge-main` — external, trusted
-  full save editor. Source of `data/items.json` + Bell Bearing/TMH mechanism
+  full save editor. Source of `internal/assets/data/items.json` + Bell Bearing/TMH mechanism
   (now superseded by our own findings). See [SAVEFORGE_REFERENCE.md](SAVEFORGE_REFERENCE.md).
 - `/mnt/c/Users/danie/Desktop/er_pvp_mod` — the user's own tool; its PS4
-  zstd raw-block-patch technique is what `app/shopwrite` adapts and
+  zstd raw-block-patch technique is what `internal/savefile` adapts and
   generalizes. Note: PS4 edits only need a *second* game launch to take
   effect when playing **online**; offline, edits load correctly from the
   first launch. See [ER_PVP_MOD_REFERENCE.md](ER_PVP_MOD_REFERENCE.md).
@@ -146,7 +146,7 @@ independent encryption layers:
 ## Tooling plan
 
 See `CLAUDE.md`'s "Tooling strategy": everything shipped is Go (one binary:
-Gio GUI + `app/catalog` reads + `app/shopwrite` writes). Python survives
+Gio GUI + `internal/catalog` reads + `internal/savefile` writes). Python survives
 only in dev-side `tools/` (`savescan.py` = the independent read oracle for
 golden tests, `paramdex_extract`, `merchant_catalog`).
 
@@ -197,8 +197,8 @@ Both treated as read-only (see CLAUDE.md for the copy/backup rule).
   TutorialData magic + constant `0x425` offset, verified vs all 15 slots in
   both fixtures); the flag-ID -> byte/bit packing could **not** be
   reconstructed from public data, so relicensed MIT -> GPLv3 to port
-  SaveForge's algorithm/tables (`app/charflags`; attribution in
-  `docs/SAVEFORGE_REFERENCE.md`). Added `app/charslot` + `app/charunlock`
+  SaveForge's algorithm/tables (`internal/character/flags`; attribution in
+  `docs/SAVEFORGE_REFERENCE.md`). Added `internal/character/slot` + `internal/character`
   (bidirectional staged writes). No checksum recompute needed — the only
   slot-internal hash (`CSPlayerGameDataHash`) never covers the flag region —
   but writes still round-trip self-check. CLI-verified both directions;
@@ -206,10 +206,10 @@ Both treated as read-only (see CLAUDE.md for the copy/backup rule).
 - 2026-07-28: editor polish — display-override auto-reset, material-locked
   rows hidden, stale-swap-tooltip/WebP-icon fixes, DLC merchant mapping,
   catalog dedup, Debug mode (red-borders risky/cut-content items).
-- 2026-07-28: weapon "+N" leveling shipped (`data/weapon_reinforce.json`,
+- 2026-07-28: weapon "+N" leveling shipped (`internal/assets/data/weapon_reinforce.json`,
   staging + GUI); `docs/ITEM_IDS.md`.
 - 2026-07-31: Settings view reworked — theme/font pickers, auto-swap
-  defaults, and "Reset to Vanilla" (new `data/vanilla_shop_lineup.json`
+  defaults, and "Reset to Vanilla" (new `internal/assets/data/vanilla_shop_lineup.json`
   baseline + diff/stage revert); `docs/EDITOR.md`.
 - 2026-08-02: write path **replaced per-block Raw-patch with full zstd
   recompression** (removes the ~5-6-touched-block-per-write ceiling; value
@@ -220,4 +220,4 @@ Both treated as read-only (see CLAUDE.md for the copy/backup rule).
   all-merchants swap loaded, every item correct); `docs/WRITEBACK.md`.
   Same day: item edits confirmed to gate the SLOT not the item, so item edits
   never touch `eventFlag_forRelease` anymore; and a reload bug for leveled
-  rows fixed (`resolveItemIDWithLevel`, `app/catalog`).
+  rows fixed (`resolveItemIDWithLevel`, `internal/catalog`).
