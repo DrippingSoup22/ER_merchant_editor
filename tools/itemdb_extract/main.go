@@ -335,10 +335,10 @@ var iconPathOverrides = map[uint32]string{
 	// its (Lord) twin -- the same physical sword, differing only in weapon
 	// skill per Fextralife -- already has the correct unique icon.
 	0x00456D70: "items/melee_armaments/greatsword_of_radahn_lord.png", // Greatsword of Radahn (Light) (was generic greatsword.png)
-	// Golden Beast Crest Shield showed the Golden Lion Shield (a different
-	// DLC greatshield); correct art vendored 2026-07-28 from
-	// eldenring.wiki.gg (game-extracted original, downscaled to 256px --
-	// recipe in docs/ITEM_IDS.md).
+	// Golden Beast Crest Shield previously resolved to the Golden Lion Shield
+	// path (a different DLC shield). Keep the catalog override pointing at the
+	// already-correct Golden Beast asset; the Golden Lion PNG itself is pinned
+	// separately in internal/assets/icons/embed_test.go.
 	0x01E9A790: "items/shields/golden_beast_crest_shield.png", // Golden Beast Crest Shield (was golden_lion_shield.png)
 }
 

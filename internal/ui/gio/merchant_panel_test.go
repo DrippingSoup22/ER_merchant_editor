@@ -369,12 +369,21 @@ func TestCellBorder(t *testing.T) {
 		}
 	})
 
-	t.Run("pending beats warn", func(t *testing.T) {
+	t.Run("pending does not hide warning", func(t *testing.T) {
 		s := newState()
 		row := &catalog.Row{RowID: 1, Warnings: []string{hazard}}
 		s.PendingEdits[1] = &RowEdit{}
-		if got := s.cellBorder(row); got != &borderPending {
-			t.Errorf("pending+warn row border = %v, want &borderPending", got)
+		if got := s.cellBorder(row); got != &borderWarn {
+			t.Errorf("pending+warn row border = %v, want &borderWarn", got)
+		}
+	})
+
+	t.Run("pending only uses marker not border", func(t *testing.T) {
+		s := newState()
+		row := &catalog.Row{RowID: 1}
+		s.PendingEdits[1] = &RowEdit{}
+		if got := s.cellBorder(row); got != nil {
+			t.Errorf("pending row border = %v, want nil", got)
 		}
 	})
 

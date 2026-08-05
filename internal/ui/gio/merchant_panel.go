@@ -24,12 +24,12 @@ import (
 	"github.com/DrippingSoup22/ER_merchant_editor/internal/ui/gio/components"
 )
 
-// Merchant-cell border colors, in precedence order (see cellBorder). Locked
-// is no longer a border color (2026-07-29) -- see components.IconCell.Locked's
-// corner badge instead.
+// Merchant-cell border colors, in precedence order (see cellBorder). Edited
+// cells use IconCell.Edited's compact teal corner marker instead of a full
+// border, leaving amber exclusively for the live drag-and-drop target.
 var (
 	borderSelected = color.NRGBA{R: 0x5A, G: 0xA0, B: 0xFA, A: 0xFF} // #5AA0FA
-	borderPending  = color.NRGBA{R: 0xF0, G: 0xB4, B: 0x50, A: 0xFF} // #F0B450
+	borderDrop     = color.NRGBA{R: 0xF0, G: 0xB4, B: 0x50, A: 0xFF} // #F0B450
 	borderWarn     = color.NRGBA{R: 0xDC, G: 0x5A, B: 0x5A, A: 0xFF} // #DC5A5A
 )
 
@@ -387,7 +387,7 @@ func (s *State) layoutRowGrid(gtx layout.Context, th *material.Theme, rows []*ca
 
 		border, borderW := s.cellBorder(row), unit.Dp(0)
 		if span[row.RowID] {
-			border = &borderPending // would-be-replaced cell: amber wins during a drag
+			border = &borderDrop // would-be-replaced cell: amber wins during a drag
 		}
 		// A staged (or drafted-but-not-yet-applied, see effectiveRowEdit)
 		// item swap shows the NEW item's icon (the row's own icon would
@@ -402,6 +402,7 @@ func (s *State) layoutRowGrid(gtx layout.Context, th *material.Theme, rows []*ca
 			Size:        s.merchantCellSize(),
 			Border:      border,
 			BorderWidth: borderW,
+			Edited:      s.effectiveRowEdit(row.RowID) != nil,
 			Locked:      s.rowLockedForDisplay(row),
 			CornerBadge: qtyBadgeText(qty),
 			Footer:      s.rowPriceFooter(th, row),
@@ -682,17 +683,18 @@ func hazardWarnings(row *catalog.Row) []string {
 	return out
 }
 
-// cellBorder resolves the border color by precedence: selected > pending >
-// has-warnings > none. (Material-locked rows never reach the grid —
-// filtered in fetchMerchantRows.) Locked-for-character is drawn as a
-// separate corner badge (rowLockedForDisplay), not a border, so it can
-// layer with any of these instead of being mutually exclusive.
+// cellBorder resolves the border color by precedence: selected >
+// has-warnings > none. Edited is deliberately independent and drawn as a
+// compact corner marker by IconCell, so it can coexist with either state and
+// cannot be confused with the amber full-border drag target. (Material-locked
+// rows never reach the grid — filtered in fetchMerchantRows.)
+// Locked-for-character is drawn as a separate corner badge
+// (rowLockedForDisplay), not a border, so it can layer with any of these
+// instead of being mutually exclusive.
 func (s *State) cellBorder(row *catalog.Row) *color.NRGBA {
 	switch {
 	case s.isRowSelected(row.RowID):
 		return &borderSelected
-	case s.effectiveRowEdit(row.RowID) != nil:
-		return &borderPending
 	case len(hazardWarnings(row)) > 0:
 		return &borderWarn
 	default:

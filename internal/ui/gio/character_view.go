@@ -435,47 +435,51 @@ func (s *State) layoutMerchantRow(gtx layout.Context, th *material.Theme, name s
 }
 
 func (s *State) layoutFlagsColumn(gtx layout.Context, th *material.Theme) layout.Dimensions {
-	if s.SelectedChar < 0 {
-		lbl := material.Body2(th, "Pick a character, then a merchant, to see its flags.")
-		lbl.Color = colorMuted
-		return lbl.Layout(gtx)
-	}
-	if s.UnlockMerchant == "" {
-		lbl := material.Body2(th, "Pick a merchant to see its flags.")
-		lbl.Color = colorMuted
-		return lbl.Layout(gtx)
-	}
-
 	lockedCount := s.flagsColumnLockedCount()
 	allLockedCount := s.allMerchantsLockedCount()
 	merchantUndo := s.merchantUnlockUndo != nil
 	allUndo := s.allMerchantsUndo != nil
+	merchantEnabled, allEnabled := s.bulkUnlockAvailability(lockedCount, allLockedCount)
 
 	header := layout.Rigid(func(gtx layout.Context) layout.Dimensions {
+		title := s.UnlockMerchant
+		if title == "" {
+			title = "Merchant unlocks"
+		}
 		return layout.Flex{Axis: layout.Horizontal, Alignment: layout.Middle}.Layout(gtx,
-			layout.Rigid(material.H6(th, s.UnlockMerchant).Layout),
+			layout.Rigid(material.H6(th, title).Layout),
 			layout.Flexed(1, flexSpacer),
-			layout.Rigid(func(gtx layout.Context) layout.Dimensions {
-				label := fmt.Sprintf("Unlock all merchants (%d)", allLockedCount)
-				if allUndo {
-					label = "Undo all-merchant unlock"
-				}
-				return actionButton(gtx, th, &s.unlockAllMerchantsBtn, label, allUndo || allLockedCount > 0)
-			}),
-			layout.Rigid(func(gtx layout.Context) layout.Dimensions {
-				return layout.Spacer{Width: unit.Dp(8)}.Layout(gtx)
-			}),
 			layout.Rigid(func(gtx layout.Context) layout.Dimensions {
 				label := fmt.Sprintf("Unlock this merchant (%d)", lockedCount)
 				if merchantUndo {
 					label = "Undo merchant unlock"
 				}
-				return actionButton(gtx, th, &s.unlockAllBtn, label, merchantUndo || lockedCount > 0)
+				return actionButton(gtx, th, &s.unlockAllBtn, label, merchantEnabled)
+			}),
+			layout.Rigid(func(gtx layout.Context) layout.Dimensions {
+				return layout.Spacer{Width: unit.Dp(8)}.Layout(gtx)
+			}),
+			layout.Rigid(func(gtx layout.Context) layout.Dimensions {
+				label := fmt.Sprintf("Unlock all merchants (%d)", allLockedCount)
+				if allUndo {
+					label = "Undo all-merchant unlock"
+				}
+				return actionButton(gtx, th, &s.unlockAllMerchantsBtn, label, allEnabled)
 			}),
 		)
 	})
 
 	body := layout.Flexed(1, func(gtx layout.Context) layout.Dimensions {
+		if s.SelectedChar < 0 {
+			lbl := material.Body2(th, "Pick a character, then a merchant, to see its flags.")
+			lbl.Color = colorMuted
+			return lbl.Layout(gtx)
+		}
+		if s.UnlockMerchant == "" {
+			lbl := material.Body2(th, "Pick a merchant to see its flags.")
+			lbl.Color = colorMuted
+			return lbl.Layout(gtx)
+		}
 		if s.UnlockMerchant == twinMaidenHusksMerchantName {
 			return s.layoutTMHFlagsGrid(gtx, th)
 		}
@@ -496,6 +500,15 @@ func (s *State) layoutFlagsColumn(gtx layout.Context, th *material.Theme) layout
 		layout.Rigid(layout.Spacer{Height: unit.Dp(8)}.Layout),
 		body,
 	)
+}
+
+// bulkUnlockAvailability keeps the two header buttons' prerequisites
+// intentionally different: the character-wide action needs only a selected
+// character, while the merchant-scoped action also needs an open merchant.
+func (s *State) bulkUnlockAvailability(lockedHere, lockedEverywhere int) (merchant, all bool) {
+	merchant = s.SelectedChar >= 0 && s.UnlockMerchant != "" && (s.merchantUnlockUndo != nil || lockedHere > 0)
+	all = s.SelectedChar >= 0 && (s.allMerchantsUndo != nil || lockedEverywhere > 0)
+	return merchant, all
 }
 
 // allMerchantsLockedCount is the total number of still-locked checkbox

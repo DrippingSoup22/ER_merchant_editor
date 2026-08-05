@@ -96,6 +96,28 @@ func TestSelectCharacterToggles(t *testing.T) {
 	}
 }
 
+func TestCharacterWideUnlockDoesNotRequireMerchantSelection(t *testing.T) {
+	s := NewState(loadedTestCatalog(t))
+	s.ensureCharList()
+	s.selectCharacter(7)
+	s.ensureMerchantGated()
+
+	if s.UnlockMerchant != "" {
+		t.Fatalf("test requires no merchant selection, got %q", s.UnlockMerchant)
+	}
+	lockedEverywhere := s.allMerchantsLockedCount()
+	if lockedEverywhere == 0 {
+		t.Fatal("fixture has no remaining character-wide unlocks")
+	}
+	merchantEnabled, allEnabled := s.bulkUnlockAvailability(s.flagsColumnLockedCount(), lockedEverywhere)
+	if merchantEnabled {
+		t.Error("merchant-scoped unlock enabled without a merchant selection")
+	}
+	if !allEnabled {
+		t.Error("character-wide unlock disabled despite a selected character and remaining flags")
+	}
+}
+
 func TestEnsureMerchantGatedMatchesCharunlock(t *testing.T) {
 	s := NewState(loadedTestCatalog(t))
 	s.ensureCharList()

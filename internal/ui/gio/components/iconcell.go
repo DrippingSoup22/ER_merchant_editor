@@ -36,6 +36,7 @@ var (
 	iconCellBg           = color.NRGBA{R: 0x26, G: 0x26, B: 0x28, A: 0xFF}
 	iconCellHoverBg      = color.NRGBA{R: 0x3A, G: 0x3A, B: 0x40, A: 0xFF}
 	iconCellBorder       = color.NRGBA{R: 0x3E, G: 0x3E, B: 0x44, A: 0xFF} // default contour, distinct from panel bg
+	editedMarkerColor    = color.NRGBA{R: 0x49, G: 0xC5, B: 0xB6, A: 0xFF} // compact edited-state accent; distinct from amber DnD
 	iconDimVeil          = color.NRGBA{A: 0x99}                            // translucent black over disabled cells
 	cornerBadgeTextColor = color.NRGBA{R: 0xFF, G: 0xFF, B: 0xFF, A: 0xFF} // CornerBadge's text -- no backing chip
 	tooltipBg            = color.NRGBA{R: 0x33, G: 0x33, B: 0x36, A: 0xF2}
@@ -67,12 +68,16 @@ type IconCell struct {
 	Border *color.NRGBA
 	// BorderWidth is the Border stroke width; 0 means the 2dp state default.
 	BorderWidth unit.Dp
+	// Edited draws a compact teal bracket in the icon square's top-left.
+	// Unlike a full contour it remains visually separate from selection,
+	// warnings, and the merchant grid's amber drag-and-drop target outline.
+	Edited bool
 	// Disabled dims the cell; click handling stays with the caller (which
 	// ignores clicks on disabled cells) so hover/tooltip still work.
 	Disabled bool
 	// Locked draws a small padlock badge in the icon square's top-right
 	// corner. Independent of Border: a locked cell can still show a selection/
-	// pending/warning border at the same time, the badge just layers on top.
+	// warning border or edited marker at the same time; the badge layers on top.
 	Locked bool
 	// CornerBadge, when non-empty, draws a small number in the icon square's
 	// BOTTOM-right corner (the merchant grid's stock quantity, mirroring how
@@ -183,6 +188,9 @@ func (c IconCell) content(gtx layout.Context, th *material.Theme, hovered bool) 
 		widget.Border{Color: iconCellBorder, Width: unit.Dp(1)}.Layout(gtx,
 			func(gtx layout.Context) layout.Dimensions { return layout.Dimensions{Size: iconSz} })
 	}
+	if c.Edited {
+		c.drawEditedMarker(gtx)
+	}
 
 	if c.Locked {
 		c.drawLockBadge(gtx, iconSz)
@@ -192,6 +200,23 @@ func (c IconCell) content(gtx layout.Context, th *material.Theme, hovered bool) 
 	}
 
 	return layout.Dimensions{Size: sz}
+}
+
+// drawEditedMarker paints two short strokes as a top-left corner bracket.
+// Its small footprint keeps a grid with many staged edits calm, while the
+// unique teal shape stays legible without competing with full-cell borders.
+func (c IconCell) drawEditedMarker(gtx layout.Context) {
+	inset := gtx.Dp(unit.Dp(4))
+	length := gtx.Dp(unit.Dp(17))
+	width := gtx.Dp(unit.Dp(3))
+	paint.FillShape(gtx.Ops, editedMarkerColor, clip.Rect{
+		Min: image.Pt(inset, inset),
+		Max: image.Pt(inset+length, inset+width),
+	}.Op())
+	paint.FillShape(gtx.Ops, editedMarkerColor, clip.Rect{
+		Min: image.Pt(inset, inset),
+		Max: image.Pt(inset+width, inset+length),
+	}.Op())
 }
 
 // drawLockBadge paints the pre-rendered padlock badge image (lock_badge.go)

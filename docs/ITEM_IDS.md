@@ -64,5 +64,13 @@ Important schema rule: adjacent PARAMDEF bitfields sharing one storage byte
 must remain one group even when one is declared `dummy8`; otherwise every
 following offset is wrong. `tools/paramdex_schema.py` owns this behavior.
 
-Generated JSON and icon trees are large. Query them selectively and never
-hand-edit them; put corrections in the relevant generator.
+Generated JSON and icon trees are large. Query them selectively. Put catalog
+metadata corrections in the relevant generator; document and pin any vendored
+image-byte corrections as below.
+
+Four misassigned vendored PNGs are intentionally replaced with verified item
+art from Gamer Guides and pinned by `internal/assets/icons/embed_test.go`:
+Scorpion Liver, Piquebone Arrow (Fletched), Serpent Crest Shield, and Golden
+Lion Shield. Each source image is downscaled to 256×256 with Lanczos3 before
+embedding. Their catalog paths remain the normal generated paths; the
+correction is to the image bytes, not item identity.
