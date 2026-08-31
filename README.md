@@ -1,9 +1,16 @@
 # ER Merchant Editor
 
-ER Merchant Editor is a free desktop save editor for **Elden Ring on PS4 and
-PS5**. It changes existing merchant stock: choose one of the game's 43
+ER Merchant Editor is a free desktop save editor for **Elden Ring on PS4, PS5
+and PC**. It changes existing merchant stock: choose one of the game's 43
 merchants, replace items, adjust prices and quantities, set weapon levels, and
 unlock progression-gated stock for individual characters.
+
+> **PC support is new and not yet validated in game.** The container work is
+> covered by tests — a real merchant edit applied to a real PC save keeps every
+> container checksum valid — but no edited PC save has been loaded by Elden Ring
+> yet. Treat it as experimental and keep a backup. A PC save that Steam
+> encrypted on Windows is not supported and is refused with an explanation
+> rather than opened.
 
 The application is available for **Windows and Linux**. Its editor core is
 platform-independent; macOS is future work and is not currently distributed.
@@ -13,9 +20,13 @@ platform-independent; macOS is future work and is not currently distributed.
 ## Read this first
 
 - **Always keep an untouched backup.** Never experiment on your only save.
-- The input must already be decrypted. PlayStation's outer save encryption and
-  signing are separate from this editor; use an appropriate third-party tool to
-  decrypt the save before editing and to prepare it for the console afterward.
+- **PlayStation:** the input must already be decrypted. PlayStation's outer save
+  encryption and signing are separate from this editor; use an appropriate
+  third-party tool to decrypt the save before editing and to prepare it for the
+  console afterward.
+- **PC:** open `ER0000.sl2` directly — it needs no decryption. The editor
+  identifies the container by its contents, not its file extension, and refuses
+  anything it cannot identify rather than guessing.
 - Changes are staged and written to a new file. The selected input file is
   never overwritten.
 - Cut-content and online-ban-risk items are hidden by default. Enabling them

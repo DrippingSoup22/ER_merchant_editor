@@ -16,6 +16,7 @@ package slot
 
 import (
 	"bytes"
+	"crypto/md5"
 	"encoding/binary"
 	"fmt"
 	"unicode/utf16"
@@ -24,23 +25,72 @@ import (
 const (
 	// HeaderSize is the fixed PS4 .sl2 header preceding the first slot.
 	HeaderSize = 0x70
+	// PCHeaderSize is the PC BND4 container header preceding the first slot.
+	PCHeaderSize = 0x300
+	// DigestSize is the MD5(region body) prefix PC gives every region. PS4
+	// regions carry no digest.
+	DigestSize = 0x10
 	// SlotSize is the fixed size of every character slot.
 	SlotSize = 0x280000
-	// NumSlots is the fixed number of character slots in a PS4 save.
+	// NumSlots is the fixed number of character slots in a save.
 	NumSlots = 10
 )
 
+// isPC reports whether data is a PC BND4 container rather than a decrypted
+// PlayStation one. Detection is by leading magic only, matching
+// internal/savefile's classifier; the two must not disagree about a file.
+func isPC(data []byte) bool {
+	return len(data) >= 4 && string(data[0:4]) == "BND4"
+}
+
+// slotStart returns the byte offset of the charIndex'th slot body.
+func slotStart(data []byte, i int) int {
+	if isPC(data) {
+		// PC prefixes every region with MD5(body), so each slot start is
+		// shifted by one digest and the running total gains one per slot.
+		return PCHeaderSize + i*(DigestSize+SlotSize) + DigestSize
+	}
+	return HeaderSize + i*SlotSize
+}
+
 // Slots splits a full save file's bytes into its NumSlots fixed-size
-// character-slot regions (after HeaderSize). Panics if data is too short
-// — callers should validate file size against USERDATA11's own bounds
+// character-slot regions. The container is detected from the data, so the
+// same call works for both platforms. Panics if data is too short —
+// callers should validate file size against USERDATA11's own bounds
 // check first, as the rest of this codebase already does.
+//
+// The returned slices are backed by data: mutating one mutates the save,
+// which is what the unlock path relies on. On PC that also invalidates the
+// slot's digest, so a mutating caller must call RefreshDigest.
 func Slots(data []byte) [][]byte {
 	out := make([][]byte, NumSlots)
 	for i := 0; i < NumSlots; i++ {
-		start := HeaderSize + i*SlotSize
+		start := slotStart(data, i)
 		out[i] = data[start : start+SlotSize]
 	}
 	return out
+}
+
+// RefreshDigest recomputes the PC container's MD5 for the charIndex'th slot,
+// in place. It is a no-op on PlayStation saves, which carry no digests.
+//
+// The game validates these digests, so a PC save whose slot was edited
+// without this is rejected on load. Call it after every mutation.
+func RefreshDigest(data []byte, i int) error {
+	if !isPC(data) {
+		return nil
+	}
+	if i < 0 || i >= NumSlots {
+		return fmt.Errorf("charslot: slot index %d out of range [0,%d)", i, NumSlots)
+	}
+	start := slotStart(data, i)
+	end := start + SlotSize
+	if end > len(data) {
+		return fmt.Errorf("charslot: slot %d region [0x%X,0x%X) exceeds file size 0x%X", i, start, end, len(data))
+	}
+	sum := md5.Sum(data[start:end])
+	copy(data[start-DigestSize:start], sum[:])
+	return nil
 }
 
 // Version is the u32 at the very start of a slot; 0 for an empty/unused

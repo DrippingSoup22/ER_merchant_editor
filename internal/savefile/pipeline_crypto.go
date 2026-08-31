@@ -10,6 +10,7 @@ package savefile
 // decompressed blob.
 
 import (
+	"bytes"
 	"crypto/aes"
 	"crypto/cipher"
 	"encoding/binary"
@@ -30,25 +31,93 @@ var regulationKey = []byte{
 
 const (
 	ps4HeaderSize  = 0x70
+	pcHeaderSize   = 0x300 // BND4 container header
+	md5Size        = 0x10  // PC only: MD5(entry body) prefixes every entry
 	slotSize       = 0x280000
 	numSlots       = 10
 	userdata10Size = 0x60000
-	ud11UnkHdrSize = 0x10 // unk header, starts with " GER" on PS4
+	ud11UnkHdrSize = 0x10 // unk header, starts with " GER" on both platforms
 	aesIVSize      = 16
 )
 
-// userData11Bounds returns the fixed PS4 [offset, end) of the UserData11 region.
-func userData11Bounds(fileSize int) (int, int) {
+// Platform distinguishes the two save containers this package can open. The
+// regulation inside them is identical -- same AES-256-CBC key, same DCX/ZSTD,
+// same BND4, same PARAM rows -- so platform only ever affects where UserData11
+// starts and whether an MD5 digest has to be refreshed on write.
+type Platform int
+
+const (
+	PlatformPS4 Platform = iota
+	PlatformPC
+)
+
+func (p Platform) String() string {
+	if p == PlatformPC {
+		return "PC"
+	}
+	return "PS4"
+}
+
+// ps4Magic is the first four bytes of a decrypted PlayStation container.
+var ps4Magic = []byte{0xCB, 0x01, 0x9C, 0x2C}
+
+// classifyContainer identifies the container by leading magic and nothing else.
+//
+// Never by file extension: .sl2 and .dat are conventions, not guarantees. Never
+// by trial decryption: accepting "decrypts to BND4" as proof of PC would let a
+// PlayStation-origin file be opened and then written back in the wrong
+// container shape, which is the worst failure available here. An unrecognized
+// container is refused rather than guessed at.
+//
+// A PC save that Steam encrypted on Windows desktop has no leading BND4 and is
+// therefore refused. That is deliberate: see errSteamEncrypted.
+func classifyContainer(data []byte) (Platform, error) {
+	if len(data) >= 4 {
+		if string(data[0:4]) == "BND4" {
+			return PlatformPC, nil
+		}
+		if bytes.Equal(data[0:4], ps4Magic) {
+			return PlatformPS4, nil
+		}
+	}
+	return 0, errUnknownContainer
+}
+
+var (
+	// errUnknownContainer covers both a genuinely unsupported file and a
+	// Steam-encrypted PC save, because from the leading bytes alone they are
+	// indistinguishable and neither can be written back safely.
+	errUnknownContainer = fmt.Errorf(
+		"unrecognized save container: expected a PC save starting with \"BND4\" or a decrypted " +
+			"PlayStation save starting with CB 01 9C 2C. A PC save encrypted by Steam on Windows " +
+			"is not supported yet; decrypt it first, or copy it from a Steam Deck where saves are " +
+			"stored unencrypted")
+)
+
+// userData11Bounds returns the [offset, end) of the UserData11 region.
+//
+// PS4 packs the twelve regions back to back after a 0x70 header. PC wraps them
+// in a 0x300 BND4 and prefixes each with MD5(body), so every region start is
+// shifted by one digest and the running total gains one per region.
+func userData11Bounds(platform Platform, fileSize int) (int, int) {
+	if platform == PlatformPC {
+		off := pcHeaderSize +
+			numSlots*(md5Size+slotSize) +
+			(md5Size + userdata10Size) +
+			md5Size // UserData11's own digest precedes its body
+		return off, fileSize
+	}
 	off := ps4HeaderSize + numSlots*slotSize + userdata10Size
 	return off, fileSize
 }
 
 // Regulation holds everything needed to re-splice a patched blob back.
 type Regulation struct {
-	FileBytes     []byte // entire original save file
-	UD11Off       int    // start of UserData11 within FileBytes
-	IV            []byte // 16-byte AES IV (reused verbatim on write)
-	CiphertextLen int    // fixed capacity of the encrypted region (== plaintext len)
+	FileBytes     []byte   // entire original save file
+	Platform      Platform // which container this was read from; decides MD5 refresh on write
+	UD11Off       int      // start of UserData11 within FileBytes
+	IV            []byte   // 16-byte AES IV (reused verbatim on write)
+	CiphertextLen int      // fixed capacity of the encrypted region (== plaintext len)
 
 	Plaintext []byte // decrypted DCX blob (76-byte header + zstd stream + zero pad)
 	CompSize  int    // DCX header compressed_size (length of the live zstd stream)
@@ -62,18 +131,27 @@ func LoadRegulation(savePath string) (*Regulation, error) {
 	if err != nil {
 		return nil, err
 	}
-	ud11Off, ud11End := userData11Bounds(len(fileBytes))
+	platform, err := classifyContainer(fileBytes)
+	if err != nil {
+		return nil, err
+	}
+
+	ud11Off, ud11End := userData11Bounds(platform, len(fileBytes))
 	if ud11Off >= len(fileBytes) {
-		return nil, fmt.Errorf("file too small (%d bytes) for PS4 UserData11 at 0x%X", len(fileBytes), ud11Off)
+		return nil, fmt.Errorf("file too small (%d bytes) for %s UserData11 at 0x%X", len(fileBytes), platform, ud11Off)
 	}
 	ud11 := fileBytes[ud11Off:ud11End]
 
-	// PS4 layout only: unk header (0x10, " GER" magic) then IV+ciphertext.
+	// Both containers hold the same UserData11: unk header (0x10, " GER"
+	// magic) then IV+ciphertext. Checking the magic at the computed offset is
+	// also the layout check -- if the platform arithmetic were wrong we would
+	// be pointing at the middle of a character slot and this would not match.
 	if len(ud11) < ud11UnkHdrSize+aesIVSize+16 {
 		return nil, fmt.Errorf("UserData11 too short: %d bytes", len(ud11))
 	}
 	if !(ud11[0] == 0x20 && ud11[1] == 0x47 && ud11[2] == 0x45 && ud11[3] == 0x52) {
-		return nil, fmt.Errorf("UserData11 unk header is not PS4 \" GER\" magic (got % X) - only PS4 saves are supported", ud11[0:4])
+		return nil, fmt.Errorf("UserData11 at 0x%X does not carry the \" GER\" magic (got % X); "+
+			"the file was read as a %s save but does not have that layout", ud11Off, ud11[0:4], platform)
 	}
 
 	iv := make([]byte, aesIVSize)
@@ -119,6 +197,7 @@ func LoadRegulation(savePath string) (*Regulation, error) {
 
 	return &Regulation{
 		FileBytes:     fileBytes,
+		Platform:      platform,
 		UD11Off:       ud11Off,
 		IV:            iv,
 		CiphertextLen: len(ciphertext),

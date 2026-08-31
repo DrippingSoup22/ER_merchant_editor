@@ -5,6 +5,7 @@ import (
 	"os"
 
 	charflags "github.com/DrippingSoup22/ER_merchant_editor/internal/character/flags"
+	charslot "github.com/DrippingSoup22/ER_merchant_editor/internal/character/slot"
 )
 
 // FlagTarget is one flag's desired released state, for a mixed-direction
@@ -37,11 +38,13 @@ func (t FlagTarget) diagLabel() string {
 // may mix both directions in one call. Rows already at their target value
 // are left alone; rows with no gate (UnlockFlag == 0) are ignored.
 //
-// Safety: no per-slot checksum needs recomputing for this edit —
+// Safety: no slot-INTERNAL checksum needs recomputing for this edit —
 // EldenRing-SaveForge's own CSPlayerGameDataHash (the only slot-internal
 // hash found; see docs/CHAR_UNLOCK.md) hashes Level/Stats/Class/Souls/
 // SoulMemory/Equipment, never the event-flags region, so flipping a flag
-// bit either direction cannot desync it. What SetReleaseBatch still guards
+// bit either direction cannot desync it. The PC container's per-region
+// MD5 is a different matter and IS refreshed below, because the game
+// validates it and the flags region sits inside it. What SetReleaseBatch still guards
 // against, mirroring savefile.Apply's round-trip self-check: a bug
 // in charflags' resolution accidentally aliasing two different flag IDs
 // onto the same byte, or touching bytes outside the flags it was asked to
@@ -108,6 +111,12 @@ func SetReleaseBatch(saveData []byte, charIndex int, targets []FlagTarget) (int,
 	}
 
 	copy(flags, work)
+	// The slot-internal hash above needs no refresh, but the PC container
+	// wraps every region in an MD5(body) the game does validate, and flags
+	// live inside that region. No-op on PlayStation.
+	if err := charslot.RefreshDigest(saveData, charIndex); err != nil {
+		return 0, fmt.Errorf("charunlock: %w", err)
+	}
 	return len(touches), nil
 }
 

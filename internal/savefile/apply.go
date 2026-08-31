@@ -12,6 +12,7 @@ import (
 	"bytes"
 	"crypto/aes"
 	"crypto/cipher"
+	"crypto/md5"
 	"encoding/binary"
 	"encoding/json"
 	"fmt"
@@ -219,9 +220,9 @@ func buildRegBlob(reg *Regulation, newStream []byte) ([]byte, int, error) {
 // encryptAndSplice re-encrypts newRegBlob (same IV/key, zero-padded to
 // capacity), splices it into a full copy of the original file's bytes
 // (only IV+ciphertext within UserData11 change -- the unk header at
-// [UD11Off:UD11Off+0x10] is left untouched), and writes the result to
-// outPath -- step 4, "encryptAndSplice," the only disk write in the whole
-// apply path.
+// [UD11Off:UD11Off+0x10] is left untouched), refreshes the PC container's
+// MD5 digest for that region, and writes the result to outPath -- step 4,
+// "encryptAndSplice," the only disk write in the whole apply path.
 func encryptAndSplice(reg *Regulation, newRegBlob []byte, capacity int, outPath string) error {
 	if capacity%aes.BlockSize != 0 {
 		return fmt.Errorf("ciphertext capacity %d is not AES-block-aligned; unexpected save format", capacity)
@@ -235,7 +236,28 @@ func encryptAndSplice(reg *Regulation, newRegBlob []byte, capacity int, outPath 
 	copy(result, reg.FileBytes)
 	copy(result[reg.UD11Off+ud11UnkHdrSize:], reg.IV)
 	copy(result[reg.UD11Off+ud11UnkHdrSize+aesIVSize:], ciphertext)
+	if err := refreshUD11Digest(reg, result); err != nil {
+		return err
+	}
 	return os.WriteFile(outPath, result, 0o644)
+}
+
+// refreshUD11Digest rewrites the PC container's MD5(UserData11 body) in the
+// sixteen bytes immediately preceding the region. The game validates these
+// digests, so a PC save spliced without this step is rejected on load -- and
+// this is the one write step with no PlayStation equivalent, because
+// PlayStation regions carry no digests. It is a no-op on PS4.
+func refreshUD11Digest(reg *Regulation, result []byte) error {
+	if reg.Platform != PlatformPC {
+		return nil
+	}
+	digestOff := reg.UD11Off - md5Size
+	if digestOff < 0 || reg.UD11Off > len(result) {
+		return fmt.Errorf("UserData11 digest slot at 0x%X is outside the file", digestOff)
+	}
+	sum := md5.Sum(result[reg.UD11Off:])
+	copy(result[digestOff:reg.UD11Off], sum[:])
+	return nil
 }
 
 // firstMismatch returns the first differing byte offset between a and b (a

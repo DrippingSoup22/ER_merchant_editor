@@ -25,7 +25,10 @@ func (Native) OpenSave() (string, error) {
 	return zenity.SelectFile(
 		zenity.Title("Open Elden Ring save file"),
 		zenity.FileFilters{
-			{Name: "Save files", Patterns: []string{"*.dat"}, CaseFold: true},
+			// .dat is the decrypted PlayStation export, .sl2 the PC save.
+			// The container is detected from its magic, never from the
+			// extension, so these patterns are a convenience only.
+			{Name: "Save files", Patterns: []string{"*.dat", "*.sl2"}, CaseFold: true},
 			{Name: "All files", Patterns: []string{"*"}},
 		},
 	)
@@ -38,7 +41,10 @@ func (Native) SaveAs(suggested string) (string, error) {
 		zenity.Filename(suggested),
 		zenity.ConfirmOverwrite(),
 		zenity.FileFilters{
-			{Name: "Save files", Patterns: []string{"*.dat"}, CaseFold: true},
+			// .dat is the decrypted PlayStation export, .sl2 the PC save.
+			// The container is detected from its magic, never from the
+			// extension, so these patterns are a convenience only.
+			{Name: "Save files", Patterns: []string{"*.dat", "*.sl2"}, CaseFold: true},
 			{Name: "All files", Patterns: []string{"*"}},
 		},
 	)
