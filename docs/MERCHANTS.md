@@ -37,6 +37,17 @@ Known row corrections live as data-generation rules, not runtime exceptions:
 - `100250-100252`: Sorcerer Thops, not Seluvis;
 - Raya Lucaria's generic merchant block: Isolated Merchant.
 
+Regulation 1.17 appends eleven retail slots to existing merchant blocks:
+
+- `100568`: Hefty Scimitar, Nomadic Merchant - East Limgrave;
+- `100666-100669`: the Steel set, Isolated Merchant - Weeping Peninsula;
+- `100709-100713`: Silver Grooved Shield and armor set, Nomadic Merchant - North Liurnia;
+- `101896`: Reverse-Bladed Sword, Twin Maiden Husks.
+
+Rows `110084-110085`, `111084-111085`, `110284-110285`, and
+`111284-111285` are 1.17 Alteration/Reversion services, not retail slots, and
+remain non-browsable.
+
 Do not infer ownership from row proximity or labels alone. Update
 `tools/merchant_catalog/generate.py`, cite the evidence in its comments, and
 regenerate:

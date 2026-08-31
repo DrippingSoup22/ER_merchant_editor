@@ -18,7 +18,8 @@ the fixed region size, and re-encrypts. See [WRITEBACK.md](WRITEBACK.md).
 
 ## Merchant mechanics
 
-`ShopLineupParam.param` contains 1,277 fixed rows. Important behavior:
+In regulation `11701000`, `ShopLineupParam.param` contains 1,296 fixed rows.
+Important behavior:
 
 - `sellQuantity`: `-1` unlimited, `0` unavailable, `1..255` safe finite
   stock. Larger values wrap through an 8-bit in-game counter.

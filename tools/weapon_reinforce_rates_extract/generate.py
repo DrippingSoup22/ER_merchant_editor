@@ -22,19 +22,18 @@ Output:
 Only reinforceTypeIds actually used by an items.json weapon-category entry are
 emitted, and only weapon-category items appear in "weapons".
 
-Regenerate: tools/.venv/bin/python3 generate.py (run from this directory;
+Regenerate: tools/.venv/bin/python3 generate.py --save /path/to/baseline.dat (run from this directory;
 needs the same venv as savescan.py -- cryptography + zstandard -- since it
 imports savescan.py directly to decode the fixture's regulation.bin).
 """
 
 import json
+import argparse
 import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
-FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
-
 sys.path.insert(0, str(TOOLS_DIR))
 from paramdex_schema import build_schema, fetch  # noqa: E402
 import savescan as sc  # noqa: E402
@@ -65,6 +64,10 @@ def max_level_for(reinforce_type, reinforce_row_ids):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--save", type=Path, required=True,
+                        help="decrypted save whose embedded regulation supplies reinforcement curves")
+    args = parser.parse_args()
     items_doc = json.loads((DATA_DIR / "items.json").read_text())
     items = items_doc["items"] if isinstance(items_doc, dict) and "items" in items_doc else items_doc
     weapons = [it for it in items if it["category"] in WEAPON_CATEGORIES]
@@ -73,7 +76,7 @@ def main():
     wschema = build_schema(fetch(WEAPON_DEF_URL))
     rschema = build_schema(fetch(REINFORCE_DEF_URL))
 
-    blob = sc._decoded_bnd4(str(FIXTURE_SAVE))
+    blob = sc._decoded_bnd4(str(args.save))
     wparam = sc.extract_bnd4_entry(blob, "EquipParamWeapon.param")
     rparam = sc.extract_bnd4_entry(blob, "ReinforceParamWeapon.param")
     wrows = {r["id"]: r["data_offset"] for r in sc.iter_param_rows(wparam, sc.parse_param_header(wparam))}

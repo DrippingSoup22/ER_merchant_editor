@@ -25,7 +25,7 @@ Out of scope:
 
 ## Hard row-count limit
 
-The save embeds 1,277 `ShopLineupParam` rows, all already used. An NPC's shop
+The 1.17 save embeds 1,296 `ShopLineupParam` rows, all already used. An NPC's shop
 range is selected by TalkESD scripts outside the save. The editor can therefore
 change row values but cannot make a merchant expose more rows. Full zstd
 recompression removes the old practical limit on how many existing values can

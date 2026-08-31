@@ -1,6 +1,6 @@
 # Item catalog data
 
-`internal/assets/data/items.json` is the generated catalog: 2,784 entries with
+`internal/assets/data/items.json` is the generated 1.17 catalog: 2,813 entries with
 ID, name, category, subcategory, icon path, and optional `hidden`/`risky`
 flags. Every icon path resolves under `internal/assets/icons/items/`.
 
@@ -9,6 +9,16 @@ flags. Every icon path resolves under `internal/assets/icons/items/`.
 - `risky` marks cut or online-ban-risk content. It is hidden by default; risk
   propagates from base armor to its altered counterpart by name.
 - Same-name items in different categories remain distinct.
+
+Regulation 1.17 adds eight public armament families and four armor sets. Both
+real altered armor rows are separate selectable items alongside their normal
+forms. The three Spectral Steed Attire goods are legitimate ownership tokens
+under `Key Items > Spectral Steed Attires`. Buying one unlocks it for the
+game's normal hub selector; the editor does not directly change the separate
+mutually-exclusive active-appearance flags. In-game testing confirmed all three
+purchase and activate safely. If a duplicate is purchased, the game's shop
+overflow can put the second copy in repository storage even though the item
+cannot be deposited manually; this caused no observed problem.
 
 ## ID spaces
 
@@ -29,10 +39,13 @@ implemented by `internal/catalog.EquipRefForItemID`.
   outer grouping, game order applies within it.
 - `item_details.json`: descriptions, locations, weight, and structured weapon,
   armor, spell, and scaling data used by the info popup.
+- `armor_stats.json`: generator input decoded from `EquipParamProtector`; it
+  supplies complete damage negation, resistance, poise, and weight data for
+  all 741 armor items.
 - `weapon_reinforce.json`: real maximum upgrade level per weapon.
 - `weapon_reinforce_rates.json`: per-level attack/scaling/guard multipliers.
 
-Spell stats and throwable scaling JSON files are generator inputs; they are
+Armor, spell, and throwable scaling JSON files are generator inputs; they are
 not embedded at runtime. `internal/assets/data/embed.go` is the authoritative
 list of embedded datasets.
 
@@ -52,13 +65,20 @@ icon overrides. Regenerate from that tool's directory:
 
 ```sh
 cd tools/itemdb_extract
-GOTOOLCHAIN=go1.25.0 go run . > ../../internal/assets/data/items.json
+GOTOOLCHAIN=go1.25.0 go run . -out ../../internal/assets/data/items.json
 ```
 
 Related generators under `tools/` rebuild sort order, spell stats,
 consumable scaling, reinforcement limits, and reinforcement curves from
 Paramdex schemas plus a read-only fixture. Run their prerequisite generators
 before `itemdb_extract` when refreshing derived details.
+
+Generate armor stats from a regulation-matching baseline first:
+
+```sh
+cd tools/armor_stats_extract
+ER_PARAMDEX_ROOT=/path/to/Paramdex ../.venv/bin/python3 generate.py --save /path/to/matching-baseline.dat
+```
 
 Important schema rule: adjacent PARAMDEF bitfields sharing one storage byte
 must remain one group even when one is declared `dummy8`; otherwise every

@@ -52,7 +52,7 @@ Paramdex row names are stored in `shop_row_names.json`; they are diagnostic
 input, not canonical merchant identity. Use `merchant_catalog.json`, described
 in [MERCHANTS.md](MERCHANTS.md).
 
-`vanilla_shop_lineup.json` stores the eight mutable fields for all 1,277 rows
+`vanilla_shop_lineup.json` stores the eight mutable fields for all 1,296 rows
 and powers Reset to Vanilla. It must be regenerated after a game patch changes
 the embedded regulation data.
 
@@ -65,5 +65,5 @@ python3 tools/paramdex_extract/generate.py
 Regenerate the baseline with:
 
 ```sh
-tools/.venv/bin/python3 tools/vanilla_shop_lineup_extract/generate.py
+tools/.venv/bin/python3 tools/vanilla_shop_lineup_extract/generate.py --save /path/to/matching-baseline.dat
 ```

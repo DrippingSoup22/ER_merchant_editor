@@ -22,6 +22,33 @@ MTRL_DEF_URL = "https://raw.githubusercontent.com/soulsmods/Paramdex/master/ER/D
 
 NAME_LINE_RE = re.compile(r"^(?P<id>\d+)\s+(?:\[(?P<merchant>[^\]]+)\]\s*)?(?P<label>.*)$")
 
+# Paramdex is current at ff7245e5 but its ShopLineup row-name file predates
+# regulation 1.17. These identities come from the new rows themselves plus
+# their contiguous merchant/service families in the 1.17 regulation. Keep the
+# patch here so every regeneration retains the new slots until Paramdex gains
+# equivalent names.
+PATCH_117_NAMES = {
+    "100568": {"merchant": "Merchant - East Limgrave", "item_label": "Hefty Scimitar"},
+    "100666": {"merchant": "Isolated Merchant - Weeping Peninsula", "item_label": "Steel Helm"},
+    "100667": {"merchant": "Isolated Merchant - Weeping Peninsula", "item_label": "Steel Armor"},
+    "100668": {"merchant": "Isolated Merchant - Weeping Peninsula", "item_label": "Steel Gauntlets"},
+    "100669": {"merchant": "Isolated Merchant - Weeping Peninsula", "item_label": "Steel Greaves"},
+    "100709": {"merchant": "Merchant - North Liurnia", "item_label": "Silver Grooved Shield"},
+    "100710": {"merchant": "Merchant - North Liurnia", "item_label": "Silver Grooved Helm"},
+    "100711": {"merchant": "Merchant - North Liurnia", "item_label": "Silver Grooved Armor"},
+    "100712": {"merchant": "Merchant - North Liurnia", "item_label": "Silver Grooved Gauntlets"},
+    "100713": {"merchant": "Merchant - North Liurnia", "item_label": "Silver Grooved Greaves"},
+    "101896": {"merchant": "Twin Maiden Husks", "item_label": "Reverse-Bladed Sword"},
+    "110084": {"merchant": "Alteration", "item_label": "Silver Grooved Armor (Altered)"},
+    "111084": {"merchant": "Alteration", "item_label": "Silver Grooved Armor (Altered)"},
+    "110085": {"merchant": "Alteration", "item_label": "Leontiel's Hat (Altered)"},
+    "111085": {"merchant": "Alteration", "item_label": "Leontiel's Hat (Altered)"},
+    "110284": {"merchant": "Reversion", "item_label": "Silver Grooved Armor"},
+    "111284": {"merchant": "Reversion", "item_label": "Silver Grooved Armor"},
+    "110285": {"merchant": "Reversion", "item_label": "Leontiel's Hat"},
+    "111285": {"merchant": "Reversion", "item_label": "Leontiel's Hat"},
+}
+
 
 def build_names(names_text: str) -> dict:
     rows = {}
@@ -36,6 +63,7 @@ def build_names(names_text: str) -> dict:
             "merchant": m.group("merchant"),
             "item_label": m.group("label").strip(),
         }
+    rows.update(PATCH_117_NAMES)
     return rows
 
 

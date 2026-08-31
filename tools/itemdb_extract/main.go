@@ -6,18 +6,23 @@
 // "no_database" (SaveForge hides them from its own add-item picker since
 // they're single-use unlock triggers, not generically addable inventory
 // items -- see EldenRing-SaveForge's key_items_routing_test.go). That
-// exclusion doesn't apply to us: several (Memory Stone, Talisman Pouch,
-// Cracked Pot, Ritual Pot, Perfume Bottle, Hefty Cracked Pot) are real
-// ShopLineupParam-sold goods our editor needs to display (confirmed
-// 2026-07-25, see docs/ITEM_IDS.md). Merge in every data.KeyItems entry
-// GetAllItems didn't already return, keyed by id -- regenerable, not a
-// hand-maintained list.
+// exclusion doesn't apply wholesale to a merchant editor: several (Memory
+// Stone, Talisman Pouch, Cracked Pot, Ritual Pot, Perfume Bottle, Hefty
+// Cracked Pot) are real ShopLineupParam-sold goods we need to display
+// (confirmed 2026-07-25, see docs/ITEM_IDS.md). Other no_database entries
+// have historically remained available in Debug mode. Regulation 1.17's
+// three Spectral Steed Attires are legitimate ownership tokens. SaveForge
+// routes them through a dedicated World view because it also edits active
+// appearance flags; this merchant editor sells the ownership item and leaves
+// selection to the game's normal hub menu.
 //
-// Regenerate: go run . > ../../internal/assets/data/items.json  (run from this directory)
+// Regenerate: go run . -out ../../internal/assets/data/items.json
+// (run from this directory)
 package main
 
 import (
 	"encoding/json"
+	"flag"
 	"os"
 	"sort"
 	"strings"
@@ -67,7 +72,7 @@ var riskyOverrides = map[uint32]bool{
 // list them here.
 // gestures + non-purchasable info items (2026-07-30): cross-referenced every
 // gestures/info item name against every real ShopLineupParam row in the
-// fixture save (base game + DLC, 1277 rows) -- see docs/ITEM_IDS.md. Never
+// 1.17 baseline (base game + DLC, 1296 rows) -- see docs/ITEM_IDS.md. Never
 // meant to be merchant stock, so hidden from the browsable catalog entirely
 // (not just Debug-mode-gated like `risky`).
 var hiddenItemIDs = map[uint32]bool{
@@ -278,6 +283,9 @@ var categoryOverrides = map[uint32]struct{ Category, SubCategory string }{
 	0x400006E0: {"tools", "Throwables"},                          // Ruin Fragment
 	0x401ED2BB: {"tools", "Throwables"},                          // Roundrock
 	0x401EA302: {"incantations", "Messmer's Flame Incantations"}, // Rain of Fire
+	0x401EAA00: {"key_items", "Spectral Steed Attires"},          // Tree Sentinel attire
+	0x401EAA0A: {"key_items", "Spectral Steed Attires"},          // Silver of Caria attire
+	0x401EAA14: {"key_items", "Spectral Steed Attires"},          // Funereal Night attire
 }
 
 // Manual patch: 0x400000FA ("Flask of Wondrous Physick", filled) is a real
@@ -290,6 +298,11 @@ var categoryOverrides = map[uint32]struct{ Category, SubCategory string }{
 // Husks) sells this id.
 var manualPatchItems = []itemRecord{
 	{ID: 0x400000FA, Name: "Flask of Wondrous Physick", Category: "tools", SubCategory: "Flasks", IconPath: "items/tools/flask_of_wondrous_physick.png"},
+	// SaveForge intentionally omits altered 1.17 armor from its public picker,
+	// but both are real EquipParamProtector rows and tailoring results. Reuse
+	// the family icon, as the game does for other altered armor.
+	{ID: 0x1051A6BC, Name: "Silver Grooved Armor (Altered)", Category: "chest", IconPath: "items/chest/silver_grooved_armor.png"},
+	{ID: 0x1051CD68, Name: "Leontiel's Hat (Altered)", Category: "head", IconPath: "items/head/leontiel_s_hat.png"},
 }
 
 // toolSubCategoryOverrides: small hand-picked tools sub-category moves,
@@ -383,6 +396,9 @@ func propagateRiskyToAltered(out []itemRecord) {
 }
 
 func main() {
+	outPath := flag.String("out", "", "write items JSON to this path instead of stdout")
+	flag.Parse()
+
 	items := db.GetAllItems("ps4")
 
 	if err := writeItemDetails(items); err != nil {
@@ -478,7 +494,16 @@ func main() {
 
 	sort.Slice(out, func(i, j int) bool { return out[i].ID < out[j].ID })
 
-	enc := json.NewEncoder(os.Stdout)
+	w := os.Stdout
+	if *outPath != "" {
+		f, err := os.Create(*outPath)
+		if err != nil {
+			panic(err)
+		}
+		defer f.Close()
+		w = f
+	}
+	enc := json.NewEncoder(w)
 	enc.SetIndent("", "  ")
 	if err := enc.Encode(out); err != nil {
 		panic(err)

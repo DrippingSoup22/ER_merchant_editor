@@ -19,19 +19,18 @@ Two sources, both read the same way every other table in this project is:
   subcategory" guessing: every weapon's real max comes straight from which
   ReinforceParamWeapon rows actually exist.
 
-Regenerate: tools/.venv/bin/python3 generate.py (run from this directory;
+Regenerate: tools/.venv/bin/python3 generate.py --save /path/to/baseline.dat (run from this directory;
 needs the same venv as savescan.py -- cryptography + zstandard -- since it
 imports savescan.py directly to decode the fixture's regulation.bin).
 """
 
 import json
+import argparse
 import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
-FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
-
 sys.path.insert(0, str(TOOLS_DIR))
 from paramdex_schema import build_schema, fetch  # noqa: E402
 import savescan as sc  # noqa: E402
@@ -57,6 +56,10 @@ def max_level_for(reinforce_type: int, reinforce_row_ids: set[int]) -> int | Non
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--save", type=Path, required=True,
+                        help="decrypted save whose embedded regulation supplies weapon rows")
+    args = parser.parse_args()
     items_doc = json.loads((DATA_DIR / "items.json").read_text())
     items = items_doc["items"] if isinstance(items_doc, dict) and "items" in items_doc else items_doc
     weapon_items = [it for it in items if it["category"] in WEAPON_CATEGORIES]
@@ -67,7 +70,7 @@ def main():
     print(f"EquipParamWeapon: {len(weapon_schema['fields'])} fields, row_size={weapon_schema['row_size']}")
     print(f"ReinforceParamWeapon: {len(reinforce_schema['fields'])} fields, row_size={reinforce_schema['row_size']}")
 
-    blob = sc._decoded_bnd4(str(FIXTURE_SAVE))
+    blob = sc._decoded_bnd4(str(args.save))
     weapon_param = sc.extract_bnd4_entry(blob, "EquipParamWeapon.param")
     reinforce_param = sc.extract_bnd4_entry(blob, "ReinforceParamWeapon.param")
 

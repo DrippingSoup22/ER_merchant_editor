@@ -5,8 +5,10 @@ approach and docs/ITEM_IDS.md for the bitfield-grouping gotcha this fixed.
 """
 
 import re
+import os
 import urllib.request
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 TYPE_SIZES = {
     "s8": 1, "u8": 1, "dummy8": 1,
@@ -22,6 +24,13 @@ BITFIELD_DEF_RE = re.compile(r"^(?P<type>\w+)\s+(?P<name>\w+):(?P<bits>\d+)(\s*=
 
 
 def fetch(url: str) -> str:
+    # Prefer the workspace's pinned checkout when supplied. This keeps data
+    # refreshes reproducible and avoids silently following Paramdex master.
+    root = os.environ.get("ER_PARAMDEX_ROOT")
+    marker = "/Paramdex/master/"
+    if root and marker in url:
+        relative = url.split(marker, 1)[1]
+        return (Path(root) / relative).read_text(encoding="utf-8-sig")
     with urllib.request.urlopen(url) as resp:
         return resp.read().decode("utf-8-sig")
 

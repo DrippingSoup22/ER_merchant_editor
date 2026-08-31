@@ -47,14 +47,14 @@ type weaponDetail struct {
 	// Guard cut rates (%) + guard boost, and crit rate -- sourced from the
 	// richer WeaponStatsV1ByID record (the legacy db.ItemEntry.Weapon shape
 	// drops them). Crit is the in-game display value (base 100 pre-added).
-	GuardPhys  uint32           `json:"guardPhys,omitempty"`
-	GuardMag   uint32           `json:"guardMag,omitempty"`
-	GuardFire  uint32           `json:"guardFire,omitempty"`
-	GuardLit   uint32           `json:"guardLit,omitempty"`
-	GuardHoly  uint32           `json:"guardHoly,omitempty"`
-	GuardBoost uint32           `json:"guardBoost,omitempty"`
-	Crit       uint32           `json:"crit,omitempty"`
-	Passives   []weaponPassive  `json:"passives,omitempty"`
+	GuardPhys  uint32          `json:"guardPhys,omitempty"`
+	GuardMag   uint32          `json:"guardMag,omitempty"`
+	GuardFire  uint32          `json:"guardFire,omitempty"`
+	GuardLit   uint32          `json:"guardLit,omitempty"`
+	GuardHoly  uint32          `json:"guardHoly,omitempty"`
+	GuardBoost uint32          `json:"guardBoost,omitempty"`
+	Crit       uint32          `json:"crit,omitempty"`
+	Passives   []weaponPassive `json:"passives,omitempty"`
 }
 
 type armorDetail struct {
@@ -157,12 +157,13 @@ func cleanText(s string) string {
 
 // buildItemDetails projects db.GetAllItems' ItemEntry slice down to just
 // the item-info-popup fields, skipping any entry with nothing to show
-// (no description AND no stat block -- most of the ~700 data.KeyItems-only
+// (no description, weight, or stat block -- most of the ~700 data.KeyItems-only
 // merges in main() fall in here, since SaveForge's own text/stats
 // enrichment only covers db.GetAllItems' own output).
 func buildItemDetails(items []db.ItemEntry) []itemDetail {
 	spellStats := loadSpellStats()
 	consumableScaling := loadConsumableScaling()
+	armorStats := loadArmorStats()
 	out := make([]itemDetail, 0, len(items))
 	for _, it := range items {
 		d := itemDetail{
@@ -190,6 +191,13 @@ func buildItemDetails(items []db.ItemEntry) []itemDetail {
 				Focus: it.Armor.Focus, Vitality: it.Armor.Vitality,
 			}
 		}
+		// EquipParamProtector is complete and authoritative. SaveForge's
+		// hand-curated ArmorStats table is useful for prose but covers only a
+		// subset of armor, so always replace its numeric block here.
+		if a, ok := armorStats[it.ID]; ok {
+			d.Weight = a.Weight
+			d.Armor = a.Armor
+		}
 		if it.Spell != nil {
 			d.Spell = &spellDetail{
 				FPCost: it.Spell.FPCost, Slots: it.Spell.Slots,
@@ -205,10 +213,60 @@ func buildItemDetails(items []db.ItemEntry) []itemDetail {
 		if sc, ok := consumableScaling[it.ID]; ok {
 			d.Scaling = sc
 		}
-		if d.Description == "" && d.Weapon == nil && d.Armor == nil && d.Spell == nil && d.Scaling == nil {
+		if d.Description == "" && d.Weight == 0 && d.Weapon == nil && d.Armor == nil && d.Spell == nil && d.Scaling == nil {
 			continue
 		}
 		out = append(out, d)
+	}
+	return out
+}
+
+type generatedArmorDetail struct {
+	Weight float64
+	Armor  *armorDetail
+}
+
+// loadArmorStats reads armor_stats.json, generated directly from the matching
+// regulation's EquipParamProtector. Missing data is fatal: silently falling
+// back would recreate the partial popup coverage this dataset fixes.
+func loadArmorStats() map[uint32]generatedArmorDetail {
+	raw, err := os.ReadFile("../../internal/assets/data/armor_stats.json")
+	if err != nil {
+		panic("read armor_stats.json (run tools/armor_stats_extract first): " + err.Error())
+	}
+	var doc struct {
+		Armor []struct {
+			ItemID     uint32  `json:"itemId"`
+			Weight     float64 `json:"weight"`
+			Physical   float64 `json:"physical"`
+			Strike     float64 `json:"strike"`
+			Slash      float64 `json:"slash"`
+			Pierce     float64 `json:"pierce"`
+			Magic      float64 `json:"magic"`
+			Fire       float64 `json:"fire"`
+			Lightning  float64 `json:"lightning"`
+			Holy       float64 `json:"holy"`
+			Poise      float64 `json:"poise"`
+			Immunity   uint32  `json:"immunity"`
+			Robustness uint32  `json:"robustness"`
+			Focus      uint32  `json:"focus"`
+			Vitality   uint32  `json:"vitality"`
+		} `json:"armor"`
+	}
+	if err := json.Unmarshal(raw, &doc); err != nil {
+		panic("parse armor_stats.json: " + err.Error())
+	}
+	out := make(map[uint32]generatedArmorDetail, len(doc.Armor))
+	for _, a := range doc.Armor {
+		out[a.ItemID] = generatedArmorDetail{
+			Weight: a.Weight,
+			Armor: &armorDetail{
+				Physical: a.Physical, Strike: a.Strike, Slash: a.Slash, Pierce: a.Pierce,
+				Magic: a.Magic, Fire: a.Fire, Lightning: a.Lightning, Holy: a.Holy,
+				Poise: a.Poise, Immunity: a.Immunity, Robustness: a.Robustness,
+				Focus: a.Focus, Vitality: a.Vitality,
+			},
+		}
 	}
 	return out
 }
@@ -326,6 +384,16 @@ func enrichWeaponV1(w *weaponDetail, id uint32) {
 // until crystal tears are mixed in), not a placeholder.
 var detailAliases = map[uint32]uint32{
 	0x400000FA: 0x400000FB, // Flask of Wondrous Physick: filled <- empty
+	0x1051A6BC: 0x1051A2D4, // Silver Grooved Armor (Altered) <- base
+	0x1051CD68: 0x1051C980, // Leontiel's Hat (Altered) <- base
+}
+
+// detailWeightOverrides correct fields that differ from the aliased base
+// record. The rest of each armor detail is inherited until SaveForge exposes
+// the altered rows directly.
+var detailWeightOverrides = map[uint32]float64{
+	0x1051A6BC: 6.5,
+	0x1051CD68: 3.0,
 }
 
 // applyDetailAliases appends an entry for every detailAliases id missing
@@ -347,6 +415,9 @@ func applyDetailAliases(details []itemDetail) []itemDetail {
 		}
 		clone := details[i]
 		clone.ID = alias
+		if weight, ok := detailWeightOverrides[alias]; ok {
+			clone.Weight = weight
+		}
 		details = append(details, clone)
 	}
 	return details

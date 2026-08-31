@@ -2059,6 +2059,16 @@
     "sellQuantity": 3,
     "value": 200
   },
+  "100568": {
+    "equipId": 8530000,
+    "equipType": 0,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 2400
+  },
   "100575": {
     "equipId": 9321,
     "equipType": 3,
@@ -2639,6 +2649,46 @@
     "sellQuantity": 3,
     "value": 400
   },
+  "100666": {
+    "equipId": 5370000,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
+  },
+  "100667": {
+    "equipId": 5370100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1500
+  },
+  "100668": {
+    "equipId": 5370200,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
+  },
+  "100669": {
+    "equipId": 5370300,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
+  },
   "100675": {
     "equipId": 9422,
     "equipType": 3,
@@ -2848,6 +2898,56 @@
     "nameMsgId": -1,
     "sellQuantity": 1,
     "value": 1500
+  },
+  "100709": {
+    "equipId": 31540000,
+    "equipType": 0,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 2000
+  },
+  "100710": {
+    "equipId": 5350000,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
+  },
+  "100711": {
+    "equipId": 5350100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1500
+  },
+  "100712": {
+    "equipId": 5350200,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
+  },
+  "100713": {
+    "equipId": 5350300,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
   },
   "100714": {
     "equipId": 190,
@@ -5719,6 +5819,16 @@
     "sellQuantity": -1,
     "value": 800
   },
+  "101896": {
+    "equipId": 64530000,
+    "equipType": 0,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": 1,
+    "value": 1000
+  },
   "101898": {
     "equipId": 8180,
     "equipType": 2,
@@ -8069,6 +8179,26 @@
     "sellQuantity": -1,
     "value": 0
   },
+  "110084": {
+    "equipId": 5351100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 0
+  },
+  "110085": {
+    "equipId": 5361000,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 0
+  },
   "110100": {
     "equipId": 461100,
     "equipType": 1,
@@ -8891,6 +9021,26 @@
   },
   "110282": {
     "equipId": 5180100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 0
+  },
+  "110284": {
+    "equipId": 5350100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 0
+  },
+  "110285": {
+    "equipId": 5360000,
     "equipType": 1,
     "iconId": -1,
     "menuIconId": -1,
@@ -9729,6 +9879,26 @@
     "sellQuantity": -1,
     "value": 500
   },
+  "111084": {
+    "equipId": 5351100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 500
+  },
+  "111085": {
+    "equipId": 5361000,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 500
+  },
   "111100": {
     "equipId": 461100,
     "equipType": 1,
@@ -10551,6 +10721,26 @@
   },
   "111282": {
     "equipId": 5180100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 500
+  },
+  "111284": {
+    "equipId": 5350100,
+    "equipType": 1,
+    "iconId": -1,
+    "menuIconId": -1,
+    "menuTitleMsgId": -1,
+    "nameMsgId": -1,
+    "sellQuantity": -1,
+    "value": 500
+  },
+  "111285": {
+    "equipId": 5360000,
     "equipType": 1,
     "iconId": -1,
     "menuIconId": -1,

@@ -21,3 +21,12 @@ SaveForge does not edit `ShopLineupParam`; the merchant schema, canonical
 merchant mapping, write-back implementation, and Gio UI were developed in this
 repository. This file records attribution without treating the external tool
 as runtime architecture.
+
+SaveForge marks Spectral Steed Attire goods `no_database` because its dedicated
+World view owns both inventory visibility and active appearance flags. That is
+a routing/read-only marker, not a ban-risk classification. This merchant editor
+offers the three legitimate ownership items and leaves appearance selection to
+the game's hub menu. An in-game 1.17 test confirmed all three purchase and
+activate correctly. Duplicate shop delivery may automatically overflow one copy
+into repository storage despite manual deposit being disabled; that behavior is
+game-side and produced no observed fault.

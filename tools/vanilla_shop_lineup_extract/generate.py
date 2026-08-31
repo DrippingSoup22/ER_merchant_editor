@@ -6,27 +6,24 @@ name/icon override fields -- see internal/catalog/enrich.go's
 nameIconOverrideFields). This is the baseline the GUI's "Reset to Vanilla"
 button diffs a loaded save against.
 
-Ground truth: save_files/vanilla_fresh_character.dat, this project's own
-trusted, never-edited vanilla fixture (same file tools/savescan.py's golden
-test and every other "vanilla" cross-check in this repo already trusts).
-ShopLineupParam lives in regulation.bin, which is shared game-version data,
-not per-character -- any unedited save of the same game patch has byte-
-identical rows. Caveat: this baseline goes stale if FromSoftware ever
-patches these values; re-run against a fresh vanilla save if that happens.
+Ground truth is supplied explicitly with --save. ShopLineupParam lives in
+regulation.bin, which is shared game-version data, not per-character -- any
+unedited save of the same game patch has byte-identical rows. The shipped
+dataset was generated from regulation 11701000; always provide a matching
+baseline when FromSoftware patches it.
 
-Regenerate: tools/.venv/bin/python3 generate.py (run from this directory;
+Regenerate: tools/.venv/bin/python3 generate.py --save /path/to/baseline.dat (run from this directory;
 needs the same venv as savescan.py -- cryptography + zstandard -- since it
 imports savescan.py directly to decode the fixture's regulation.bin).
 """
 
 import json
+import argparse
 import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
-FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
-
 sys.path.insert(0, str(TOOLS_DIR))
 import savescan as sc  # noqa: E402
 
@@ -38,9 +35,13 @@ FIELDS = ["equipId", "equipType", "value", "sellQuantity",
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--save", type=Path, required=True,
+                        help="decrypted save whose embedded regulation supplies the vanilla rows")
+    args = parser.parse_args()
     schema = sc.load_schema("shop_lineup_schema.json")
 
-    blob = sc._decoded_bnd4(str(FIXTURE_SAVE))
+    blob = sc._decoded_bnd4(str(args.save))
     param = sc.extract_bnd4_entry(blob, "ShopLineupParam.param")
     header = sc.parse_param_header(param)
     rows = sc.iter_param_rows(param, header)

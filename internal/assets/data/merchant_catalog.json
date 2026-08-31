@@ -803,6 +803,10 @@
     "kind": "merchant",
     "merchant": "Nomadic Merchant - East Limgrave"
   },
+  "100568": {
+    "kind": "merchant",
+    "merchant": "Nomadic Merchant - East Limgrave"
+  },
   "100575": {
     "kind": "merchant",
     "merchant": "Nomadic Merchant - Coastal Cave"
@@ -1035,6 +1039,22 @@
     "kind": "merchant",
     "merchant": "Isolated Merchant - Weeping Peninsula"
   },
+  "100666": {
+    "kind": "merchant",
+    "merchant": "Isolated Merchant - Weeping Peninsula"
+  },
+  "100667": {
+    "kind": "merchant",
+    "merchant": "Isolated Merchant - Weeping Peninsula"
+  },
+  "100668": {
+    "kind": "merchant",
+    "merchant": "Isolated Merchant - Weeping Peninsula"
+  },
+  "100669": {
+    "kind": "merchant",
+    "merchant": "Isolated Merchant - Weeping Peninsula"
+  },
   "100675": {
     "kind": "merchant",
     "merchant": "Isolated Merchant - Academy of Raya Lucaria"
@@ -1116,6 +1136,26 @@
     "merchant": "Nomadic Merchant - North Liurnia"
   },
   "100706": {
+    "kind": "merchant",
+    "merchant": "Nomadic Merchant - North Liurnia"
+  },
+  "100709": {
+    "kind": "merchant",
+    "merchant": "Nomadic Merchant - North Liurnia"
+  },
+  "100710": {
+    "kind": "merchant",
+    "merchant": "Nomadic Merchant - North Liurnia"
+  },
+  "100711": {
+    "kind": "merchant",
+    "merchant": "Nomadic Merchant - North Liurnia"
+  },
+  "100712": {
+    "kind": "merchant",
+    "merchant": "Nomadic Merchant - North Liurnia"
+  },
+  "100713": {
     "kind": "merchant",
     "merchant": "Nomadic Merchant - North Liurnia"
   },
@@ -2267,6 +2307,10 @@
     "kind": "merchant",
     "merchant": "Twin Maiden Husks"
   },
+  "101896": {
+    "kind": "merchant",
+    "merchant": "Twin Maiden Husks"
+  },
   "101898": {
     "kind": "merchant",
     "merchant": "Enia"
@@ -3207,6 +3251,14 @@
     "kind": "special_exchange",
     "merchant": "Alteration"
   },
+  "110084": {
+    "kind": "special_exchange",
+    "merchant": "Alteration"
+  },
+  "110085": {
+    "kind": "special_exchange",
+    "merchant": "Alteration"
+  },
   "110100": {
     "kind": "special_exchange",
     "merchant": "Alteration"
@@ -3536,6 +3588,14 @@
     "merchant": "Reversion"
   },
   "110282": {
+    "kind": "special_exchange",
+    "merchant": "Reversion"
+  },
+  "110284": {
+    "kind": "special_exchange",
+    "merchant": "Reversion"
+  },
+  "110285": {
     "kind": "special_exchange",
     "merchant": "Reversion"
   },
@@ -3871,6 +3931,14 @@
     "kind": "special_exchange",
     "merchant": "Alteration"
   },
+  "111084": {
+    "kind": "special_exchange",
+    "merchant": "Alteration"
+  },
+  "111085": {
+    "kind": "special_exchange",
+    "merchant": "Alteration"
+  },
   "111100": {
     "kind": "special_exchange",
     "merchant": "Alteration"
@@ -4200,6 +4268,14 @@
     "merchant": "Reversion"
   },
   "111282": {
+    "kind": "special_exchange",
+    "merchant": "Reversion"
+  },
+  "111284": {
+    "kind": "special_exchange",
+    "merchant": "Reversion"
+  },
+  "111285": {
     "kind": "special_exchange",
     "merchant": "Reversion"
   },

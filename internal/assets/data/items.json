@@ -483,6 +483,13 @@
     "iconPath": "items/melee_armaments/greatsword_of_solitude.png"
   },
   {
+    "id": 3560000,
+    "name": "Leontiel's Greatsword",
+    "category": "melee_armaments",
+    "subCategory": "Greatswords",
+    "iconPath": "items/melee_armaments/leontiels_greatsword.png"
+  },
+  {
     "id": 4000000,
     "name": "Greatsword",
     "category": "melee_armaments",
@@ -889,6 +896,13 @@
     "iconPath": "items/melee_armaments/horned_warriors_greatsword.png"
   },
   {
+    "id": 8530000,
+    "name": "Hefty Scimitar",
+    "category": "melee_armaments",
+    "subCategory": "Curved Greatswords",
+    "iconPath": "items/melee_armaments/hefty_scimitar.png"
+  },
+  {
     "id": 9000000,
     "name": "Uchigatana",
     "category": "melee_armaments",
@@ -1286,6 +1300,13 @@
     "category": "melee_armaments",
     "subCategory": "Flails",
     "iconPath": "items/melee_armaments/serpent_flail.png"
+  },
+  {
+    "id": 13510000,
+    "name": "Golden Order Flail",
+    "category": "melee_armaments",
+    "subCategory": "Flails",
+    "iconPath": "items/melee_armaments/golden_order_flail.png"
   },
   {
     "id": 14000000,
@@ -2146,7 +2167,7 @@
     "name": "Rotten Staff",
     "category": "melee_armaments",
     "subCategory": "Colossal Weapons",
-    "iconPath": "items/ranged_and_catalysts/rotten_staff.png"
+    "iconPath": "items/melee_armaments/rotten_staff.png"
   },
   {
     "id": 23150000,
@@ -2574,6 +2595,13 @@
     "category": "shields",
     "subCategory": "Medium Shields",
     "iconPath": "items/shields/golden_lion_shield.png"
+  },
+  {
+    "id": 31540000,
+    "name": "Silver Grooved Shield",
+    "category": "shields",
+    "subCategory": "Medium Shields",
+    "iconPath": "items/shields/silver_grooved_shield.png"
   },
   {
     "id": 32000000,
@@ -3496,7 +3524,7 @@
     "id": 51500000,
     "name": "Igon's Harpoon",
     "category": "arrows_and_bolts",
-    "subCategory": "Greatbolts",
+    "subCategory": "Greatarrows",
     "iconPath": "items/arrows_and_bolts/igons_harpoon.png"
   },
   {
@@ -3745,6 +3773,13 @@
     "iconPath": "items/shields/carian_thrusting_shield.png"
   },
   {
+    "id": 62520000,
+    "name": "Ritual Thrusting Shield",
+    "category": "shields",
+    "subCategory": "Thrusting Shields",
+    "iconPath": "items/shields/ritual_thrusting_shield.png"
+  },
+  {
     "id": 63500000,
     "name": "Smithscript Dagger",
     "category": "melee_armaments",
@@ -3773,6 +3808,13 @@
     "iconPath": "items/melee_armaments/curseblades_cirque.png"
   },
   {
+    "id": 64530000,
+    "name": "Reverse-Bladed Sword",
+    "category": "melee_armaments",
+    "subCategory": "Backhand Blades",
+    "iconPath": "items/melee_armaments/reverse_bladed_sword.png"
+  },
+  {
     "id": 66500000,
     "name": "Great Katana",
     "category": "melee_armaments",
@@ -3794,6 +3836,13 @@
     "iconPath": "items/melee_armaments/rakshasas_great_katana.png"
   },
   {
+    "id": 66530000,
+    "name": "Reed Great Katana",
+    "category": "melee_armaments",
+    "subCategory": "Great Katanas",
+    "iconPath": "items/melee_armaments/reed_great_katana.png"
+  },
+  {
     "id": 67500000,
     "name": "Milady",
     "category": "melee_armaments",
@@ -3813,6 +3862,13 @@
     "category": "melee_armaments",
     "subCategory": "Light Greatswords",
     "iconPath": "items/melee_armaments/rellanas_twin_blades.png"
+  },
+  {
+    "id": 67530000,
+    "name": "Idus Sword",
+    "category": "melee_armaments",
+    "subCategory": "Light Greatswords",
+    "iconPath": "items/melee_armaments/idus_sword.png"
   },
   {
     "id": 68500000,
@@ -8184,6 +8240,114 @@
     "name": "Imp Head (Lion)",
     "category": "head",
     "iconPath": "items/head/imp_head_lion.png"
+  },
+  {
+    "id": 273775456,
+    "name": "Broken Gold Mask",
+    "category": "head",
+    "iconPath": "items/head/broken_gold_mask.png"
+  },
+  {
+    "id": 273775556,
+    "name": "Gold Tattoo (Chest)",
+    "category": "chest",
+    "iconPath": "items/chest/gold_tattoo_chest.png"
+  },
+  {
+    "id": 273775656,
+    "name": "Gold Tattoo (Arm)",
+    "category": "arms",
+    "iconPath": "items/arms/gold_tattoo_arm.png"
+  },
+  {
+    "id": 273775756,
+    "name": "Gold Tattoo (Leg)",
+    "category": "legs",
+    "iconPath": "items/legs/gold_tattoo_leg.png"
+  },
+  {
+    "id": 273785456,
+    "name": "Silver Grooved Helm",
+    "category": "head",
+    "iconPath": "items/head/silver_grooved_helm.png"
+  },
+  {
+    "id": 273785556,
+    "name": "Silver Grooved Armor",
+    "category": "chest",
+    "iconPath": "items/chest/silver_grooved_armor.png"
+  },
+  {
+    "id": 273785656,
+    "name": "Silver Grooved Gauntlets",
+    "category": "arms",
+    "iconPath": "items/arms/silver_grooved_gauntlets.png"
+  },
+  {
+    "id": 273785756,
+    "name": "Silver Grooved Greaves",
+    "category": "legs",
+    "iconPath": "items/legs/silver_grooved_greaves.png"
+  },
+  {
+    "id": 273786556,
+    "name": "Silver Grooved Armor (Altered)",
+    "category": "chest",
+    "iconPath": "items/chest/silver_grooved_armor.png"
+  },
+  {
+    "id": 273795456,
+    "name": "Leontiel's Hat",
+    "category": "head",
+    "iconPath": "items/head/leontiel_s_hat.png"
+  },
+  {
+    "id": 273795556,
+    "name": "Leontiel's Armor",
+    "category": "chest",
+    "iconPath": "items/chest/leontiel_s_armor.png"
+  },
+  {
+    "id": 273795656,
+    "name": "Leontiel's Leather Gloves",
+    "category": "arms",
+    "iconPath": "items/arms/leontiel_s_leather_gloves.png"
+  },
+  {
+    "id": 273795756,
+    "name": "Leontiel's Boots",
+    "category": "legs",
+    "iconPath": "items/legs/leontiel_s_boots.png"
+  },
+  {
+    "id": 273796456,
+    "name": "Leontiel's Hat (Altered)",
+    "category": "head",
+    "iconPath": "items/head/leontiel_s_hat.png"
+  },
+  {
+    "id": 273805456,
+    "name": "Steel Helm",
+    "category": "head",
+    "iconPath": "items/head/steel_helm.png"
+  },
+  {
+    "id": 273805556,
+    "name": "Steel Armor",
+    "category": "chest",
+    "iconPath": "items/chest/steel_armor.png"
+  },
+  {
+    "id": 273805656,
+    "name": "Steel Gauntlets",
+    "category": "arms",
+    "iconPath": "items/arms/steel_gauntlets.png"
+  },
+  {
+    "id": 273805756,
+    "name": "Steel Greaves",
+    "category": "legs",
+    "iconPath": "items/legs/steel_greaves.png"
   },
   {
     "id": 536871912,
@@ -13295,7 +13459,8 @@
     "name": "The Carian Oath",
     "category": "gestures",
     "iconPath": "items/gestures/missing_icon.png",
-    "hidden": true
+    "hidden": true,
+    "risky": true
   },
   {
     "id": 1073750850,
@@ -13386,7 +13551,8 @@
     "name": "Fetal Position",
     "category": "gestures",
     "iconPath": "items/gestures/missing_icon.png",
-    "hidden": true
+    "hidden": true,
+    "risky": true
   },
   {
     "id": 1073750863,
@@ -14647,7 +14813,7 @@
   },
   {
     "id": 1073752826,
-    "name": "Crimson Crystal Tear (Variant)",
+    "name": "Crimson Crystal Tear",
     "category": "key_items",
     "subCategory": "Crystal Tears",
     "iconPath": "items/key_items/crimson_crystal_tear.png"
@@ -16578,7 +16744,7 @@
     "name": "Rain of Fire",
     "category": "incantations",
     "subCategory": "Messmer's Flame Incantations",
-    "iconPath": "items/sorceries/rain_of_fire.png"
+    "iconPath": "items/incantations/rain_of_fire.png"
   },
   {
     "id": 1075749644,
@@ -17313,6 +17479,27 @@
     "category": "key_items",
     "subCategory": "Containers",
     "iconPath": "items/key_items/hefty_cracked_pot.png"
+  },
+  {
+    "id": 1075751424,
+    "name": "Tree Sentinel Spectral Steed Attire",
+    "category": "key_items",
+    "subCategory": "Spectral Steed Attires",
+    "iconPath": "items/key_items/tree_sentinel_spectral_steed_attire.png"
+  },
+  {
+    "id": 1075751434,
+    "name": "Silver of Caria Spectral Steed Attire",
+    "category": "key_items",
+    "subCategory": "Spectral Steed Attires",
+    "iconPath": "items/key_items/silver_of_caria_spectral_steed_attire.png"
+  },
+  {
+    "id": 1075751444,
+    "name": "Funereal Night Spectral Steed Attire",
+    "category": "key_items",
+    "subCategory": "Spectral Steed Attires",
+    "iconPath": "items/key_items/funereal_night_spectral_steed_attire.png"
   },
   {
     "id": 1075751824,

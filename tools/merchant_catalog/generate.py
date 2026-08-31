@@ -130,6 +130,24 @@ ROW_REASSIGNMENTS = {
     100252: "Sorcerer Thops",  # Starlight
 }
 
+# Regulation 1.17 appended retail rows into four existing merchant blocks.
+# Paramdex has not named them yet; tools/paramdex_extract supplies the raw
+# labels and this table pins the canonical ownership independently so a later
+# upstream label change cannot silently move the slots.
+ROW_REASSIGNMENTS.update({
+    100568: "Nomadic Merchant - East Limgrave",
+    100666: "Isolated Merchant - Weeping Peninsula",
+    100667: "Isolated Merchant - Weeping Peninsula",
+    100668: "Isolated Merchant - Weeping Peninsula",
+    100669: "Isolated Merchant - Weeping Peninsula",
+    100709: "Nomadic Merchant - North Liurnia",
+    100710: "Nomadic Merchant - North Liurnia",
+    100711: "Nomadic Merchant - North Liurnia",
+    100712: "Nomadic Merchant - North Liurnia",
+    100713: "Nomadic Merchant - North Liurnia",
+    101896: "Twin Maiden Husks",
+})
+
 # Enia's "Forging" rows (Paramdex's own raw label) sell the Remembrance
 # item itself at price 0/no material, each with a unique per-boss unlock
 # flag unlike every other Enia row -- confirmed (2026-07-25, see

@@ -23,18 +23,17 @@ every "Goods"-offset category). Items with no sortId (or sortId==0, which
 Paramdex disables) are simply absent from the output; internal/catalog falls
 back to id order for those.
 
-Regenerate: tools/.venv/bin/python3 generate.py (run from this directory;
+Regenerate: tools/.venv/bin/python3 generate.py --save /path/to/baseline.dat (run from this directory;
 needs the same venv as savescan.py).
 """
 
 import json
+import argparse
 import sys
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = TOOLS_DIR.parent / "internal" / "assets" / "data"
-FIXTURE_SAVE = TOOLS_DIR.parent / "save_files" / "vanilla_fresh_character.dat"
-
 sys.path.insert(0, str(TOOLS_DIR))
 from paramdex_schema import build_schema, fetch  # noqa: E402
 import savescan as sc  # noqa: E402
@@ -53,11 +52,15 @@ TABLES = [
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--save", type=Path, required=True,
+                        help="decrypted save whose embedded regulation supplies item sort data")
+    args = parser.parse_args()
     items = json.loads((DATA_DIR / "items.json").read_text())
     item_ids = {it["id"] for it in items}
     print(f"{len(item_ids)} items.json entries")
 
-    blob = sc._decoded_bnd4(str(FIXTURE_SAVE))
+    blob = sc._decoded_bnd4(str(args.save))
 
     out = {}
     for table, entry_name, offset in TABLES:

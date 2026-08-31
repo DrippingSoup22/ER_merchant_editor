@@ -277,6 +277,10 @@
       "maxLevel": 10
     },
     {
+      "itemId": 3560000,
+      "maxLevel": 10
+    },
+    {
       "itemId": 4000000,
       "maxLevel": 25
     },
@@ -509,6 +513,10 @@
       "maxLevel": 10
     },
     {
+      "itemId": 8530000,
+      "maxLevel": 25
+    },
+    {
       "itemId": 9000000,
       "maxLevel": 25
     },
@@ -734,6 +742,10 @@
     },
     {
       "itemId": 13500000,
+      "maxLevel": 10
+    },
+    {
+      "itemId": 13510000,
       "maxLevel": 10
     },
     {
@@ -1473,6 +1485,10 @@
       "maxLevel": 10
     },
     {
+      "itemId": 31540000,
+      "maxLevel": 25
+    },
+    {
       "itemId": 32000000,
       "maxLevel": 25
     },
@@ -1869,6 +1885,10 @@
       "maxLevel": 25
     },
     {
+      "itemId": 62520000,
+      "maxLevel": 25
+    },
+    {
       "itemId": 63500000,
       "maxLevel": 25
     },
@@ -1885,6 +1905,10 @@
       "maxLevel": 10
     },
     {
+      "itemId": 64530000,
+      "maxLevel": 25
+    },
+    {
       "itemId": 66500000,
       "maxLevel": 25
     },
@@ -1897,6 +1921,10 @@
       "maxLevel": 10
     },
     {
+      "itemId": 66530000,
+      "maxLevel": 25
+    },
+    {
       "itemId": 67500000,
       "maxLevel": 25
     },
@@ -1907,6 +1935,10 @@
     {
       "itemId": 67520000,
       "maxLevel": 10
+    },
+    {
+      "itemId": 67530000,
+      "maxLevel": 25
     },
     {
       "itemId": 68500000,

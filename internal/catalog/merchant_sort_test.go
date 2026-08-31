@@ -106,6 +106,38 @@ func TestMerchantSortKeyOrdersBellBearingFamilies(t *testing.T) {
 	}
 }
 
+func TestRegulation117MerchantSlots(t *testing.T) {
+	c, err := New()
+	if err != nil {
+		t.Fatal(err)
+	}
+	want := map[int64]string{
+		100568: "Nomadic Merchant - East Limgrave",
+		100666: "Isolated Merchant - Weeping Peninsula",
+		100667: "Isolated Merchant - Weeping Peninsula",
+		100668: "Isolated Merchant - Weeping Peninsula",
+		100669: "Isolated Merchant - Weeping Peninsula",
+		100709: "Nomadic Merchant - North Liurnia",
+		100710: "Nomadic Merchant - North Liurnia",
+		100711: "Nomadic Merchant - North Liurnia",
+		100712: "Nomadic Merchant - North Liurnia",
+		100713: "Nomadic Merchant - North Liurnia",
+		101896: "Twin Maiden Husks",
+	}
+	for rowID, merchant := range want {
+		cc := c.canonicalFor(rowID)
+		if cc.Kind != "merchant" || cc.Merchant != merchant || !isBrowsable(cc) {
+			t.Errorf("row %d = %#v, want browsable merchant %q", rowID, cc, merchant)
+		}
+	}
+	for _, rowID := range []int64{110084, 111084, 110085, 111085, 110284, 111284, 110285, 111285} {
+		cc := c.canonicalFor(rowID)
+		if cc.Kind != "special_exchange" || isBrowsable(cc) {
+			t.Errorf("tailoring row %d = %#v, want non-browsable special exchange", rowID, cc)
+		}
+	}
+}
+
 // TestMerchantRowsKeepEditLayoutOrderAfterItemSwap keeps the editor's default
 // layout stable while a user is assembling a merchant. The separate UI Game
 // Preview applies the in-game sort only when explicitly requested.

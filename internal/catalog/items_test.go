@@ -8,6 +8,57 @@ import (
 	"testing"
 )
 
+// TestRegulation117Catalog pins the public Tarnished Pack additions and the
+// boundary around its special steed-attire unlock tokens. Armor variants are
+// independent selectable rows, not aliases of their normal forms.
+func TestRegulation117Catalog(t *testing.T) {
+	_, byID, err := loadItems()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := len(byID); got != 2813 {
+		t.Fatalf("items.json entries = %d, want 2813 for regulation 1.17", got)
+	}
+
+	cases := []struct {
+		id       int64
+		name     string
+		category string
+		sub      string
+	}{
+		{0x00365240, "Leontiel's Greatsword", "melee_armaments", "Greatswords"},
+		{0x00822850, "Hefty Scimitar", "melee_armaments", "Curved Greatswords"},
+		{0x00CE2570, "Golden Order Flail", "melee_armaments", "Flails"},
+		{0x01E14320, "Silver Grooved Shield", "shields", "Medium Shields"},
+		{0x03B9FAC0, "Ritual Thrusting Shield", "shields", "Thrusting Shields"},
+		{0x03D8A650, "Reverse-Bladed Sword", "melee_armaments", "Backhand Blades"},
+		{0x03F72AD0, "Reed Great Katana", "melee_armaments", "Great Katanas"},
+		{0x04066D10, "Idus Sword", "melee_armaments", "Light Greatswords"},
+		{0x1051A2D4, "Silver Grooved Armor", "chest", ""},
+		{0x1051A6BC, "Silver Grooved Armor (Altered)", "chest", ""},
+		{0x1051C980, "Leontiel's Hat", "head", ""},
+		{0x1051CD68, "Leontiel's Hat (Altered)", "head", ""},
+		{0x401EAA00, "Tree Sentinel Spectral Steed Attire", "key_items", "Spectral Steed Attires"},
+		{0x401EAA0A, "Silver of Caria Spectral Steed Attire", "key_items", "Spectral Steed Attires"},
+		{0x401EAA14, "Funereal Night Spectral Steed Attire", "key_items", "Spectral Steed Attires"},
+	}
+	for _, tc := range cases {
+		it := byID[tc.id]
+		if it == nil {
+			t.Errorf("%s (0x%08X) missing", tc.name, tc.id)
+			continue
+		}
+		if it.Name != tc.name || it.Category != tc.category || it.SubCategory != tc.sub {
+			t.Errorf("0x%08X = %q/%q/%q, want %q/%q/%q", tc.id,
+				it.Name, it.Category, it.SubCategory, tc.name, tc.category, tc.sub)
+		}
+		if it.IconPath == "" {
+			t.Errorf("%s has no icon path", tc.name)
+		}
+	}
+
+}
+
 func TestEquipRefRoundTrip(t *testing.T) {
 	items, byID, err := loadItems()
 	if err != nil {
