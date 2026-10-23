@@ -3,6 +3,7 @@ package character
 import (
 	"bytes"
 	"crypto/md5"
+	"errors"
 	"os"
 	"path/filepath"
 	"testing"
@@ -184,6 +185,19 @@ func TestSetReleaseBatchRefusesContradictoryTargets(t *testing.T) {
 	_, err := setReleaseBatch(data, 0, []FlagTarget{{FlagID: flag, Released: true}, {FlagID: flag, Released: false}})
 	if err == nil || !bytes.Equal(data, original) {
 		t.Fatalf("err = %v, save changed %v", err, !bytes.Equal(data, original))
+	}
+}
+
+// A boss-defeat flag is refused in either direction, even beside a valid
+// target, and the save is left untouched.
+func TestSetReleaseBatchRefusesBossDefeatFlags(t *testing.T) {
+	data := readFixture(t, ps4Fixture)
+	original := bytes.Clone(data)
+	for _, released := range []bool{true, false} {
+		batch := []FlagTarget{{FlagID: int64(BellBearings[0].FlagID), Released: true}, {FlagID: 9130, Released: released}}
+		if _, err := setReleaseBatch(data, 0, batch); !errors.Is(err, ErrBossDefeatFlag) || !bytes.Equal(data, original) {
+			t.Fatalf("released %v: err = %v, save changed %v", released, err, !bytes.Equal(data, original))
+		}
 	}
 }
 

@@ -148,7 +148,8 @@ project's design and the game rules it keeps are in
 
 ## License and attribution
 
-GPLv3 — see [LICENSE](LICENSE).
+Copyright (C) 2026 DrippingSoup22. Free software under the GNU General Public
+License, version 3 or (at your option) any later version; see [LICENSE](LICENSE).
 [EldenRing-SaveForge](https://github.com/oisis/EldenRing-SaveForge) (GPLv3)
 supplied the item database and icons, the character identity offsets, the
 event-flag block table and the bell-bearing flags (which it credits to

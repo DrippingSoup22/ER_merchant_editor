@@ -1,8 +1,10 @@
 package application
 
 import (
+	"errors"
 	"fmt"
 	"os"
+	"path/filepath"
 
 	"github.com/DrippingSoup22/ER_merchant_editor/internal/character"
 	"github.com/DrippingSoup22/ER_merchant_editor/internal/savefile"
@@ -72,8 +74,9 @@ func (session *Session) PrepareSave() (*SavePlan, error) {
 }
 
 // Apply writes a prepared plan to outPath through the required ordered save
-// stages. Temporary intermediate saves are always removed. The loaded catalog
-// advances to the completed output only after every stage succeeds.
+// stages. Every stage but the last writes into a private folder beside the
+// output, removed at the end. The loaded catalog advances to the output only
+// after every stage succeeds; a failure leaves the input loaded.
 func (plan *SavePlan) Apply(outPath string) error {
 	session := plan.session
 	inPath := session.Catalog.SavePath()
@@ -114,20 +117,29 @@ func (plan *SavePlan) Apply(outPath string) error {
 		})
 	}
 
-	var temporary []string
-	defer func() {
-		for _, path := range temporary {
-			_ = os.Remove(path)
+	var stageDir string
+	if len(stages) > 1 {
+		dir, err := os.MkdirTemp(filepath.Dir(outPath), ".ermerchant-save-*")
+		if err != nil {
+			return err
 		}
-	}()
+		defer os.RemoveAll(dir)
+		stageDir = dir
+	}
 	current := inPath
 	for index, run := range stages {
 		target := outPath
 		if index < len(stages)-1 {
-			target = fmt.Sprintf("%s.tmp%d", outPath, index)
-			temporary = append(temporary, target)
+			target = filepath.Join(stageDir, fmt.Sprintf("stage%d.dat", index))
 		}
 		if err := run(current, target); err != nil {
+			// The item stage loads its input, which may be a stage file about
+			// to be removed: put the input back so the next save starts there.
+			if session.Catalog.SavePath() != inPath {
+				if reloadErr := session.Catalog.LoadSave(inPath); reloadErr != nil {
+					return errors.Join(err, reloadErr)
+				}
+			}
 			return err
 		}
 		current = target

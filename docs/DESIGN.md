@@ -31,9 +31,10 @@ cmd/shopwrite, cmd/charunlock (diagnostic CLIs) -> the same core
 Edits are staged on top of the loaded save and written together by
 `application.SavePlan`, a snapshot taken before the Save As dialog opens, so a
 change made while the dialog is open cannot slip into the write. The plan runs
-its stages through temporary files: character flags, then each `EquipParam*`
-table's `sellValue`, then shop rows. A successful save reloads the output and
-clears the pending edits; a failure keeps both.
+its stages through files in a private folder beside the output, removed at the
+end: character flags, then each `EquipParam*` table's `sellValue`, then shop
+rows. A successful save reloads the output and clears the pending edits; a
+failure keeps the input loaded and the edits pending.
 
 Every stage validates all its edits before writing anything, rebuilds the save,
 writes it beside the output, reopens it and checks it, and only then gives it
@@ -57,8 +58,9 @@ change any number of rows.
   +10 somber.
 - **Enia's release flags are never written.** They overlap the boss-defeat flags
   `9100-9199`, and changing them triggered boss cutscenes and teleports on real
-  hardware. She is left out of the Characters view, her gate action is disabled,
-  and staging checks her name again.
+  hardware. She is left out of the Characters view and her gate action is
+  disabled; underneath, the flag writer refuses every flag in `9100-9199`,
+  whatever asks for it, the `charunlock` CLI included.
 
 ## Character flags
 

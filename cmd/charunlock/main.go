@@ -100,7 +100,9 @@ func main() {
 	if *lock {
 		verb = "locked"
 	}
-	fmt.Fprintf(os.Stderr, "%s %d row(s), wrote %s\n", verb, n, *outPath)
+	// Rows often share a flag, and some were already right, so the flags
+	// changed are fewer than the rows.
+	fmt.Fprintf(os.Stderr, "%d row(s) now %s, %d flag(s) changed, wrote %s\n", len(rows), verb, n, *outPath)
 }
 
 // targetRows resolves the -merchant or -rows selection into catalog rows.

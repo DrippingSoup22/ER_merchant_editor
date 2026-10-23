@@ -2,12 +2,26 @@ package character
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 	"os"
 
 	"github.com/DrippingSoup22/ER_shared/charslot"
 	reg "github.com/DrippingSoup22/ER_shared/regulation"
 )
+
+// The game's boss-defeat flags. Enia's release flags are among them (her
+// Radahn armour and the Remembrance of the Starscourge both use 9130), and
+// setting or clearing one marks a boss defeated or alive: on real hardware it
+// forced the boss's cutscene and a teleport. No other merchant's row and no
+// bell bearing uses the range, so no flag in it is ever written, whatever asks.
+const (
+	firstBossDefeatFlag = 9100
+	lastBossDefeatFlag  = 9199
+)
+
+// ErrBossDefeatFlag refuses a write to a boss-defeat flag.
+var ErrBossDefeatFlag = errors.New("a boss-defeat flag is never written")
 
 // FlagTarget is one flag's wanted state: a row's gate or a bell bearing.
 // Label only names it in error messages.
@@ -47,6 +61,9 @@ func setReleaseBatch(saveData []byte, charIndex int, targets []FlagTarget) (int,
 	for _, t := range targets {
 		if t.FlagID == 0 {
 			continue
+		}
+		if t.FlagID >= firstBossDefeatFlag && t.FlagID <= lastBossDefeatFlag {
+			return 0, fmt.Errorf("charunlock: %s: flag %d: %w", t.diagLabel(), t.FlagID, ErrBossDefeatFlag)
 		}
 		flagID := uint32(t.FlagID)
 		already, err := charslot.GetFlag(work, flagID)

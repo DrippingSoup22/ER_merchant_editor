@@ -15,7 +15,7 @@ require github.com/klauspost/compress v1.17.11 // indirect
 
 require (
 	gioui.org/shader v1.0.8 // indirect
-	github.com/DrippingSoup22/ER_shared v0.1.0
+	github.com/DrippingSoup22/ER_shared v0.1.1
 	github.com/akavel/rsrc v0.10.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/dchest/jsmin v0.0.0-20220218165748-59f39799265f // indirect
