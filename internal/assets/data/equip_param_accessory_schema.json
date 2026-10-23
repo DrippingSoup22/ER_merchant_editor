@@ -1,0 +1,258 @@
+{
+  "param_type": "EQUIP_PARAM_ACCESSORY_ST",
+  "row_size": 96,
+  "fields": [
+    {
+      "name": "_bitfield_pad@0",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 0,
+      "size": 1
+    },
+    {
+      "name": "disableParamReserve2",
+      "type": "dummy8",
+      "array_length": 3,
+      "offset": 1,
+      "size": 3
+    },
+    {
+      "name": "refId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 4,
+      "size": 4
+    },
+    {
+      "name": "sfxVariationId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 8,
+      "size": 4
+    },
+    {
+      "name": "weight",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 12,
+      "size": 4
+    },
+    {
+      "name": "behaviorId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 16,
+      "size": 4
+    },
+    {
+      "name": "basicPrice",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 20,
+      "size": 4
+    },
+    {
+      "name": "sellValue",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 24,
+      "size": 4
+    },
+    {
+      "name": "sortId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 28,
+      "size": 4
+    },
+    {
+      "name": "qwcId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 32,
+      "size": 4
+    },
+    {
+      "name": "equipModelId",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 36,
+      "size": 2
+    },
+    {
+      "name": "iconId",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 38,
+      "size": 2
+    },
+    {
+      "name": "shopLv",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 40,
+      "size": 2
+    },
+    {
+      "name": "trophySGradeId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 42,
+      "size": 2
+    },
+    {
+      "name": "trophySeqId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 44,
+      "size": 2
+    },
+    {
+      "name": "equipModelCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 46,
+      "size": 1
+    },
+    {
+      "name": "equipModelGender",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 47,
+      "size": 1
+    },
+    {
+      "name": "accessoryCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 48,
+      "size": 1
+    },
+    {
+      "name": "refCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 49,
+      "size": 1
+    },
+    {
+      "name": "spEffectCategory",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 50,
+      "size": 1
+    },
+    {
+      "name": "sortGroupId",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 51,
+      "size": 1
+    },
+    {
+      "name": "vagrantItemLotId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 52,
+      "size": 4
+    },
+    {
+      "name": "vagrantBonusEneDropItemLotId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 56,
+      "size": 4
+    },
+    {
+      "name": "vagrantItemEneDropItemLotId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 60,
+      "size": 4
+    },
+    {
+      "name": "_bitfield_pad@64",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 64,
+      "size": 1
+    },
+    {
+      "name": "rarity",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 65,
+      "size": 1
+    },
+    {
+      "name": "pad2",
+      "type": "dummy8",
+      "array_length": 2,
+      "offset": 66,
+      "size": 2
+    },
+    {
+      "name": "saleValue",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 68,
+      "size": 4
+    },
+    {
+      "name": "accessoryGroup",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 72,
+      "size": 2
+    },
+    {
+      "name": "pad3",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 74,
+      "size": 1
+    },
+    {
+      "name": "compTrophySedId",
+      "type": "s8",
+      "array_length": 1,
+      "offset": 75,
+      "size": 1
+    },
+    {
+      "name": "residentSpEffectId1",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 76,
+      "size": 4
+    },
+    {
+      "name": "residentSpEffectId2",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 80,
+      "size": 4
+    },
+    {
+      "name": "residentSpEffectId3",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 84,
+      "size": 4
+    },
+    {
+      "name": "residentSpEffectId4",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 88,
+      "size": 4
+    },
+    {
+      "name": "pad1",
+      "type": "dummy8",
+      "array_length": 4,
+      "offset": 92,
+      "size": 4
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+/save_files/
+/.claude/
+__pycache__/
+*.pyc
+/tools/itemdb_extract/itemdb_extract
+/dist/

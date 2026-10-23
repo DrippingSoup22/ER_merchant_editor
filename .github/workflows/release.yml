@@ -1,0 +1,86 @@
+name: Build and release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Install Gio build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            gcc pkg-config libwayland-dev libx11-dev libx11-xcb-dev \
+            libxkbcommon-x11-dev libgles2-mesa-dev libegl1-mesa-dev \
+            libffi-dev libxcursor-dev libxfixes-dev libvulkan-dev
+      - name: Test and vet
+        run: |
+          go test ./...
+          go vet ./...
+      - name: Build Linux release
+        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build-linux.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-amd64
+          path: dist/ER-Merchant-Editor-linux-amd64-*.zip
+          if-no-files-found: error
+
+  windows:
+    runs-on: windows-2025
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Test and vet
+        run: |
+          go test ./...
+          go vet ./...
+      - name: Build Windows release
+        run: VERSION="${GITHUB_REF_NAME#v}" scripts/build-windows.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-amd64
+          path: dist/ER-Merchant-Editor-windows-amd64-*.zip
+          if-no-files-found: error
+
+  publish:
+    needs: [linux, windows]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: release
+          merge-multiple: true
+      - name: Show release payload
+        run: find release -maxdepth 1 -type f -printf '%f\n' | sort
+      - name: Upload combined manual-build artifact
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERMerchantEditor-windows-linux
+          path: release/*
+          if-no-files-found: error
+      - name: Attach artifacts to draft release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: true
+          name: "ER Merchant Editor ${{ github.ref_name }}"
+          files: release/*

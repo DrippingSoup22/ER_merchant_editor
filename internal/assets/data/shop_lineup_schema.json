@@ -1,0 +1,132 @@
+{
+  "param_type": "SHOP_LINEUP_PARAM",
+  "row_size": 52,
+  "fields": [
+    {
+      "name": "equipId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 0,
+      "size": 4
+    },
+    {
+      "name": "value",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 4,
+      "size": 4
+    },
+    {
+      "name": "mtrlId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 8,
+      "size": 4
+    },
+    {
+      "name": "eventFlag_forStock",
+      "type": "u32",
+      "array_length": 1,
+      "offset": 12,
+      "size": 4
+    },
+    {
+      "name": "eventFlag_forRelease",
+      "type": "u32",
+      "array_length": 1,
+      "offset": 16,
+      "size": 4
+    },
+    {
+      "name": "sellQuantity",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 20,
+      "size": 2
+    },
+    {
+      "name": "pad3",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 22,
+      "size": 1
+    },
+    {
+      "name": "equipType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 23,
+      "size": 1
+    },
+    {
+      "name": "costType",
+      "type": "u8",
+      "array_length": 1,
+      "offset": 24,
+      "size": 1
+    },
+    {
+      "name": "pad1",
+      "type": "dummy8",
+      "array_length": 1,
+      "offset": 25,
+      "size": 1
+    },
+    {
+      "name": "setNum",
+      "type": "u16",
+      "array_length": 1,
+      "offset": 26,
+      "size": 2
+    },
+    {
+      "name": "value_Add",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 28,
+      "size": 4
+    },
+    {
+      "name": "value_Magnification",
+      "type": "f32",
+      "array_length": 1,
+      "offset": 32,
+      "size": 4
+    },
+    {
+      "name": "iconId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 36,
+      "size": 4
+    },
+    {
+      "name": "nameMsgId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 40,
+      "size": 4
+    },
+    {
+      "name": "menuTitleMsgId",
+      "type": "s32",
+      "array_length": 1,
+      "offset": 44,
+      "size": 4
+    },
+    {
+      "name": "menuIconId",
+      "type": "s16",
+      "array_length": 1,
+      "offset": 48,
+      "size": 2
+    },
+    {
+      "name": "pad2",
+      "type": "dummy8",
+      "array_length": 2,
+      "offset": 50,
+      "size": 2
+    }
+  ]
+}
